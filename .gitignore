@@ -11,3 +11,7 @@ ehthumbs.db
 Gemfile.lock
 
 beautiful-jekyll-theme-*.gem
+
+# my changes
+_drafts/
+
