@@ -25,7 +25,9 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon-01.png"
+avatar: "/assets/img/avatar-icon-mandrill.png"
+# avatar: "/assets/img/avatar-icon-gorilla.png"
+# avatar: "/assets/img/avatar-icon-orangutan.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -74,7 +76,7 @@ share-links-active:
   twitter: true
   facebook: true
   linkedin: true
-  vk: false
+  vk: true
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
