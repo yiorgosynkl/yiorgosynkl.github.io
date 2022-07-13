@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git cheatsheet
+cover-img: ["assets/img/posts/pexels-git.png"]
 ---
 
 <!-- # Git Cheatsheet -->
