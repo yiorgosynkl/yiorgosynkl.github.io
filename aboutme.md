@@ -2,13 +2,12 @@
 layout: page
 title: About me
 subtitle: Get to know me better
-cover-img: ["assets/img/Crossing-Over-The-Cliffs.jpg"]
+cover-img: ["assets/img/posts/Crossing-Over-The-Cliffs.jpg"]
 ---
 
-<!-- ![cliffs]({{ 'assets/img/cliffs.jpg' | relative_url }}) -->
-
-
-Did you know that Bonobos and Chimps are the Closest Relatives to humans? So in a way, we are a modern version of bonobo, trying to communicate with one another and build a better world. So, since you can use the internet to reach this website, well ... probably you are a modern bonobo and thus the **Modern Bonobo Blog** is what you were looking for. Isn't that fascinating?
+Did you know that Bonobos and Chimps are the Closest Relatives to humans? So in a way, we are a modern version of bonobo, 
+trying to communicate with one another and build a better world. So, since you can use the internet to reach this website, 
+well ... probably you are a modern bonobo and thus the **Modern Bonobo Blog** is what you were looking for. Isn't that fascinating?
 
 ## about me
 
