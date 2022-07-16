@@ -3,6 +3,7 @@
 This is my blog, here is were I share my thoughts, feelings and reviews about stuff. 
 I explain concepts, use notes for me and for everyone to make simple, minimal and essentail tutorials.
 To run the server locally: `bundle exec jekyll serve`
+To also render the draft posts: `bundle exec jekyll serve --drafts`
 This blog is based on [beautifuljekyll](https://beautifuljekyll.com/). Learn more in the [official docs for jekyll](https://jekyllrb.com/docs/).
 
 ## Tips

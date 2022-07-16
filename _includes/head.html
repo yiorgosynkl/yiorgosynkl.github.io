@@ -41,6 +41,11 @@
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
 
+  <!-- added to be able to have a favicon -->
+	{% if site.favicon %}
+    <link rel="icon" href="{{ site.favicon | prepend: site.baseurl | replace: '//', '/' }}" />
+	{% endif %}
+
   {% include gtag.html %}
   {% include gtm_head.html %}
   {% include google_analytics.html %}
