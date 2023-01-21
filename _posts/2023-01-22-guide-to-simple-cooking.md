@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Guide to simple healthy elegant cooking
-cover-img: ["assets/img/posts/code-wide.png"]
+cover-img: ["cooking-eggs-wide.jpg"]
 tags: [life]
 ---
 
