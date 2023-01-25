@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Guide to finance
-cover-img: ["cooking-eggs-wide.jpg"]
+cover-img: ["Beach-Set.jpg"]
 tags: [finance]
 ---
 
