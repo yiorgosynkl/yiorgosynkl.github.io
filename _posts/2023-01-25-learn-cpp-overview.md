@@ -39,4 +39,7 @@ else
 
 ## Todos
 
-* 
+* accessor to database
+* CMakeLists for most projects guide
+* services vs tasks
+
