@@ -51,19 +51,15 @@ Sometimes we use auto or access an internal type. A quick dirty way to get the j
 template<typename T>
 void show_type_abort_helper()
 {
-    return __PRETTY_FUNCTION__;
+    return __PRETTY_FUNCTION__; // returning in void functions forces compiler to fail and abort
 }
-
 #define show_type_abort(x) show_type_abort_helper< decltype(x) >()
 
 
 // -------- use in .cpp file like --------
 std::vector< int > s{1, 2, 3};
-
-for (auto elem : s) {
-    show_type_abort(elem);
-    elem = 5;
-}
+show_type_abort(s);  // usage
+show_type_abort(s[0]);  // can be called multiple times
 
 // -------- you get an error message like --------
 // test.cpp:7:12: In instantiation of ‘void show_type_abort_helper() [with T = int]’:
