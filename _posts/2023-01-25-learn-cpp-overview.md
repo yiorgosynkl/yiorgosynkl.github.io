@@ -41,9 +41,38 @@ else
 }
 ```
 
+## Tips and Tricks
+
+#### Quick way to find the type of variable at compile time
+
+Sometimes we use auto or access an internal type. A quick dirty way to get the job done, following [this](https://stackoverflow.com/questions/39634609/get-type-of-expression-at-compile-time) stack overflow post is to define the `show_type_abort` in the header file:
+```cpp
+// -------- define in .h file --------
+template<typename T>
+void show_type_abort_helper()
+{
+    return __PRETTY_FUNCTION__;
+}
+
+#define show_type_abort(x) show_type_abort_helper< decltype(x) >()
+
+
+// -------- use in .cpp file like --------
+std::vector< int > s{1, 2, 3};
+
+for (auto elem : s) {
+    show_type_abort(elem);
+    elem = 5;
+}
+
+// -------- you get an error message like --------
+// test.cpp:7:12: In instantiation of ‘void show_type_abort_helper() [with T = int]’:
+//                                                                             ^^^ (the type I want)
+// test.cpp:7:12: error: return-statement with a value, in function returning 'void' [-fpermissive]
+```
+
 ## Todos
 
 * accessor to database
 * CMakeLists for most projects guide
 * services vs tasks
-
