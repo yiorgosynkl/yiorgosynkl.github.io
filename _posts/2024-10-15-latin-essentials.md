@@ -15,6 +15,9 @@ Some famous Latin phrases explained:
 * `De facto` means "in fact".
 * `Ante meridiem / Post meridiem` translates to "Before midday / after midday". We nowadays use `am` and `pm` in clocks.
 * `AD` stands for "Anno Domini" and translates to "In the Year of the Lord". We nowadays use it to refer to specific dates/years. Used alongside `BC` which stands for "Before Christ". In recent years, some have proposed using "BCE" ("Before Common Era") and "CE" ("Common Era") instead of BC and AD to make the system more inclusive and to avoid religious connotations).
+* `Eo Ipso` or **Ipso Facto** translates to "by the fact itself". It's a substitution for "therefore". Example sentance: "If everyone in the office is sick, there is ipso facto a virus going around"
+  * An **'ipso facto' clause** is a contractual provision that triggers a right to terminate or modify the operation of a contract simply because the counterparty becomes insolvent or specified insolvency related events occur affecting the counterparty, even if there has been no breach of the contract.
+* `ibid` stands for `ibidem` which translate to  "in the same place" or "the same as above" (roughtly "the aforementioned"). It is an abbreviation used in citations to direct the reader to a source that was previously cited.
 
 Legal phrases:
 * `ex rel` stands for `ex relatione` and means  "on behalf of", "for the use of", "on the relation of" and similar expressions. (legal terminology)
@@ -58,11 +61,14 @@ Sayings:
 * Astra inclinant, sed non obligant. - The stars incline us, they do not bind us. It's essentially an one-line refutation of fatalism (the belief that all events are predetermined and therefore inevitable). The phrase means that while fate — whether determined by the stars, the gods or something else entirely — might nudge us in a certain direction, we are never forced in it. Free will exists, and the decision of what to do in any circumstance is ultimately our own.
 * ἢ τὰν ἢ ἐπὶ τᾶς - Aut cum scuto aut in scuto. - Either with shield or on shield. Essentially it means to not surrender, never give up.
 * Gladiator in arena consilium capit. - The gladiator is formulating his plan in the arena. - This one comes to us from the philosopher, statesman and dramatist Seneca the Younger. Put simply, if you wait to formulate your plan until you're about to enter battle, you are too late. (letter 22)
-
-
-
-
-
+* Sine qua non - "without which not". It refers to a key critical component or aspect of a larger whole. Without this piece, the whole is nothing. Example sentance: "Patience is sine qua non for this role".
+  * A necessary condition is a condition that must be present for an event to occur.
+  * A sufficient condition is a condition or set of conditions that will produce the event.
+  * "If P then Q", Q is necessary for P (because the truth of Q is guaranteed by the truth of P) and P is sufficient for Q (because P being true always implies that Q is true, but P not being true does not always imply that Q is not true).
+* `Lorem ipsum` is a placeholder text commonly used to demonstrate the visual form of a document. The `Lorem ipsum` text is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin. The first two words themselves are a truncation of dolorem ipsum ("pain itself").
+* `Post Hoc, Ergo Propter Hoc` translate to "After this, therefore because of this". A logical fallacy where you inaccurately assume that because something happened first, it caused the second.
+* `Q.E.D.` stands for "Quod Erat Demonstrandum" which roughly translates to "the conclusions is exactly as I had predicted or set out to prove". It is a big exclamation point to saying you have proved your argument.
+* `Ad Hominem` translates to "To the man" or "At the man".  An ad hominem attack (or fallacy) is the process of criticizing the person, instead of their ideas in a debate, in an attempt win the argument. Example of an ad hominem attack: "Why should we listen to the ideas of someone who didn't graduate from the Ivy League?"
 
 
 More:
