@@ -34,7 +34,7 @@ Sayings:
 * Memento vivere. — Remember to live.
 * Memento mori. — Remember you must die
 * Amor fati. — love of fate
-* Si vis amari ama. — If you want to be loved, love. (seneca, sixth letter)
+* Si vis amari ama. — If you want to be loved, love. (seneca, letter 6)
 * Aut Caesar aut nihil. — Either Caesar or nothing. (all or nothing)
 * Ita vero. — Thus indeed. (Romans didn't use "yes". )
 * Plenus venter non studet libenter. — A full belly does not like studying.
@@ -53,6 +53,15 @@ Sayings:
 * a priori - translate to "from the former". Presupposed independent of experience; the reverse of a posteriori. Used in mathematics and logic to denote something that is known or postulated before a proof has been carried out. In philosophy, used to denote something is supposed without empirical evidence. In everyday speech, it denotes something occurring or being known before the event.
 * Alter Ego - tranlsates to "The other I". The term was coined in the 20th century, when psychologists discovered dissociative identity disorder. 
 * Errare humanum est - To err is human. The author credited with this famous statement is Cicero, a Roman politician and lawyer. The full sentence, “errare humanum est, sed perseverare autem diabolicum” translates to "anyone can err, but only the fool persists in his fault".
+* Vincit qui se vincit. - He conquers who conquers himself.
+* Non ducor, duco. - I am not led, I lead.
+* Astra inclinant, sed non obligant. - The stars incline us, they do not bind us. It's essentially an one-line refutation of fatalism (the belief that all events are predetermined and therefore inevitable). The phrase means that while fate — whether determined by the stars, the gods or something else entirely — might nudge us in a certain direction, we are never forced in it. Free will exists, and the decision of what to do in any circumstance is ultimately our own.
+* ἢ τὰν ἢ ἐπὶ τᾶς - Aut cum scuto aut in scuto. - Either with shield or on shield. Essentially it means to not surrender, never give up.
+* Gladiator in arena consilium capit. - The gladiator is formulating his plan in the arena. - This one comes to us from the philosopher, statesman and dramatist Seneca the Younger. Put simply, if you wait to formulate your plan until you're about to enter battle, you are too late. (letter 22)
+
+
+
+
 
 
 
