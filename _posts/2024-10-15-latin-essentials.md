@@ -13,6 +13,8 @@ Some famous Latin phrases explained:
 * `Status quo` means "The existing state (of affairs)". Mainly used with regard to social or political issues.
 * `Per se` means "By itself or in itself". Used to describe or talk about something on its own, rather than in connection with other things.
 * `De facto` means "in fact".
+* `Ante meridiem / Post meridiem` translates to "Before midday / after midday". We nowadays use `am` and `pm` in clocks.
+* `AD` stands for "Anno Domini" and translates to "In the Year of the Lord". We nowadays use it to refer to specific dates/years. Used alongside `BC` which stands for "Before Christ". In recent years, some have proposed using "BCE" ("Before Common Era") and "CE" ("Common Era") instead of BC and AD to make the system more inclusive and to avoid religious connotations).
 
 Legal phrases:
 * `ex rel` stands for `ex relatione` and means  "on behalf of", "for the use of", "on the relation of" and similar expressions. (legal terminology)
@@ -20,7 +22,7 @@ Legal phrases:
 
 Sayings: 
 * `Veni, vidi, vici.` means "I came, I saw, I conquered.". Said by Julius Caesar in a message he supposedly sent to the Roman Senate to describe his swift, conclusive victory against King Pharnaces II of Pontus near Zela in 47 BC.
-* Carpe diem. — Seize the day.
+* Carpe diem. — Seize the day. Horace said this around 0-100 BCE. It's Latin for YOLO. 
 * Carpe vinum. — Seize the wine.
 * Cogito, ergo sum. — I think, therefore I am.
 * In vino veritas. — In wine, there is truth.
@@ -28,6 +30,7 @@ Sayings:
 * Acta, non verba. — Deeds, not words. (res, non verba)
 * Barba non facit philosophum. — A beard doesn’t make one a philosopher.
 * Audentes fortuna iuvat. — Fortune favors the bold.
+* Audere est faucere. - To dare is to do.
 * Memento vivere. — Remember to live.
 * Memento mori. — Remember you must die
 * Amor fati. — love of fate
@@ -39,6 +42,18 @@ Sayings:
 * Nemo saltat sobrius. — Nobody dances sober. (Cicero)
 * Mulgere hircum. — To milk a male goat. (attempting the impossible)
 * Cui bono? — Good for whom? (Who benefits)
+* Magna est vis consuetudinis. — Great is the power of habit.
+* Suum cuique. — To each his own.
+* Calamus gladio fortior. — The pen is mightier than the sword.
+* Ad meliora. — Towards better things.
+* "Το γάρ έαρ ούτε μία χελιδών ποιεί ούτε μία ημέρα" - Αριστοτέλης. Η μετάφραση είναι "Την άνοιξη ούτε ένα χελιδόνι την κάνει ούτε μία μέρα", ενώ στα νέα ελληνικά λέμε "Ένα χελιδόνι δεν φέρνει την άνοιξη". In Latin, "Una hirundo non facit ver". In English, One swallow does not make a summer. It means that a single instance of something doesn't indicate a trend.
+* Hodie mihi, cras tibi. - Today it's me, tomorrow it will be you.
+* Amor vincit omnia. - Love conquers all.
+* a posteriori - tranlsates to "from the latter". it means "Based on observation", i. e., empirical evidence. the reverse of a priori.
+* a priori - translate to "from the former". Presupposed independent of experience; the reverse of a posteriori. Used in mathematics and logic to denote something that is known or postulated before a proof has been carried out. In philosophy, used to denote something is supposed without empirical evidence. In everyday speech, it denotes something occurring or being known before the event.
+* Alter Ego - tranlsates to "The other I". The term was coined in the 20th century, when psychologists discovered dissociative identity disorder. 
+* Errare humanum est - To err is human. The author credited with this famous statement is Cicero, a Roman politician and lawyer. The full sentence, “errare humanum est, sed perseverare autem diabolicum” translates to "anyone can err, but only the fool persists in his fault".
+
 
 
 More:
