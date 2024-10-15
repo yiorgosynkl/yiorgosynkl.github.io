@@ -69,9 +69,21 @@ Sayings:
 * `Post Hoc, Ergo Propter Hoc` translate to "After this, therefore because of this". A logical fallacy where you inaccurately assume that because something happened first, it caused the second.
 * `Q.E.D.` stands for "Quod Erat Demonstrandum" which roughly translates to "the conclusions is exactly as I had predicted or set out to prove". It is a big exclamation point to saying you have proved your argument.
 * `Ad Hominem` translates to "To the man" or "At the man".  An ad hominem attack (or fallacy) is the process of criticizing the person, instead of their ideas in a debate, in an attempt win the argument. Example of an ad hominem attack: "Why should we listen to the ideas of someone who didn't graduate from the Ivy League?"
+* `Dum spiro, spero` tranlsates to "While I breathe, I hope" and expresses persistent hope
+* `Tempus fugit` tranlsates to "Time flies" and it's an acknowledgment of the swift passage of time.
+* `Aurea mediocritas` translates to "The golden mean" and advocates for a balanced and moderate life.
+* `Nosce te ipsum` translates to "Know thyself" and is used to emphasise self-awareness and understanding
+* `Mens sana in corpore sano` translates to "A healthy mind in a healthy body" and it's the idea that promotes physical and mental well-being. Originally greek "νους υγιης σωματι υγιει".
+* `Deus ex machina` translates to "God from the machine" and is used when an unexpected intervention resolves a situation.
+* `habeas corpus` translates to "That you have the body" and is used usually in legal context. It's a writ (a form of written command in the name of a court or other legal authority) requiring a person under arrest to be brought before a judge or into court, especially to secure the person's release unless lawful grounds are shown for their detention.
+* `Veto` translates to "I forbid" and is used usually in political context. It denotes opposition to a decision (exercise a veto against a decision or proposal). Usually if even one party in a group exercises veto to a proposed plan/solution/decision, then it cannot go forward.
+* `Panem et circenses` translates to "Bread and circuses" and refers to superficial appeasement. It is attributed to Juvenal (poems Satires: Satire X), a Roman poet active around 100 AD. 
 
+It's worth mentioning the Latin numerical system: [Latin Numerals](https://en.wikipedia.org/wiki/Latin_numerals).
 
 More:
 * `fiat` means "let it be done". It expresses an arbitrary or authoritative command or order to do something.
 * `fiat justitia ruat caelum` means "let justice be done though the heavens fall". The maxim signifies the belief that justice must be realized regardless of consequences.
 
+Links:
+* [Quotes](https://superprof.co.uk/blog/inspirational-latin-quotes/)
