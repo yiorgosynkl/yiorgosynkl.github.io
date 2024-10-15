@@ -77,7 +77,14 @@ Sayings:
 * `Deus ex machina` translates to "God from the machine" and is used when an unexpected intervention resolves a situation.
 * `habeas corpus` translates to "That you have the body" and is used usually in legal context. It's a writ (a form of written command in the name of a court or other legal authority) requiring a person under arrest to be brought before a judge or into court, especially to secure the person's release unless lawful grounds are shown for their detention.
 * `Veto` translates to "I forbid" and is used usually in political context. It denotes opposition to a decision (exercise a veto against a decision or proposal). Usually if even one party in a group exercises veto to a proposed plan/solution/decision, then it cannot go forward.
-* `Panem et circenses` translates to "Bread and circuses" and refers to superficial appeasement. It is attributed to Juvenal (poems Satires: Satire X), a Roman poet active around 100 AD. 
+* `Panem et circenses` translates to "Bread and circuses" and refers to superficial appeasement. It is attributed to Juvenal (poems Satires: Satire X), a Roman poet active around 100 AD.
+* `Sub Rosa` translates to "under the rose" and means "private or secret" because from the Middle Ages (and with roots in Greek Mythology) a rose was suspended from the ceiling and what was said under the rose was secret (It is a way to denote that the conversation is private and confidential).
+* `Ceteris paribus` translates to "All other things being equal". Mainly used in economics to indicate the effect one economic variable has on another, provided all other variables remain the same.
+* `caveat emptor` and `caveat venditor` are two opposite concepts that translate to "buyer beware" and "seller beware". The first one expresses a buyer's responsibility for due diligence before purchase. The second one expresses that the seller is bears responsibility for protecting the customer/buyer (for any problems the service or product has).
+* `Semper fidelis` translates to "always faithful".
+* `Semper paratus` translates to "always prepared".
+* `Mea culpa` translates to "through my fault". It comes from a prayer of confession in the Catholic Church. It's an exclamation of apology or remorse. It express acknowledgement of a faulty action and is equivelant to "It was my fault" or "I apologize".
+> this reminds me of the [The Responsibility/Fault Fallacy](https://markmanson.net/responsibility-fault-fallacy). The bottom line is "often in life something is not your fault but you still have the responsibility to solve it".
 
 It's worth mentioning the Latin numerical system: [Latin Numerals](https://en.wikipedia.org/wiki/Latin_numerals).
 
