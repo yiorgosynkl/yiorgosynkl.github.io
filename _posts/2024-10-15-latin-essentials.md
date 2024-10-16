@@ -60,7 +60,10 @@ Sayings:
 * Non ducor, duco. - I am not led, I lead.
 * Astra inclinant, sed non obligant. - The stars incline us, they do not bind us. It's essentially an one-line refutation of fatalism (the belief that all events are predetermined and therefore inevitable). The phrase means that while fate — whether determined by the stars, the gods or something else entirely — might nudge us in a certain direction, we are never forced in it. Free will exists, and the decision of what to do in any circumstance is ultimately our own.
 * ἢ τὰν ἢ ἐπὶ τᾶς - Aut cum scuto aut in scuto. - Either with shield or on shield. Essentially it means to not surrender, never give up.
-* Gladiator in arena consilium capit. - The gladiator is formulating his plan in the arena. - This one comes to us from the philosopher, statesman and dramatist Seneca the Younger. Put simply, if you wait to formulate your plan until you're about to enter battle, you are too late. (letter 22)
+* Gladiator in arena consilium capit. - The gladiator is formulating his plan in the arena. - This one comes to us from the philosopher, statesman and dramatist Seneca the Younger in Letter 22. Put simply, there are situtations
+* Vita sine litteris mors - 'Life without learning [is] death' - from Seneca's Letter 82 (originally Otium sine litteris mors, 'Leisure without learning [is] death')
+* Ducunt volentem fata, nolentem trahunt - 'The fates lead the willing and drag the unwilling' - from Seneca's Letter 117, attributed to the Greek Stoic philosopher Cleanthes (also and boxer and successor to Zeno of Citium as the second head of the Stoic school in Athens)
+* non scholae sed vitae (discimus) - "We do not learn for school, but for life". - originally in Seneca's Letter 106
 * Sine qua non - "without which not". It refers to a key critical component or aspect of a larger whole. Without this piece, the whole is nothing. Example sentance: "Patience is sine qua non for this role".
   * A necessary condition is a condition that must be present for an event to occur.
   * A sufficient condition is a condition or set of conditions that will produce the event.
