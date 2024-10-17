@@ -2,7 +2,7 @@
 layout: post
 title: Talk about web 
 cover-img: ["assets/img/posts/code-wide.png"]
-tags: [coding]
+tags: [💻code]
 ---
 
 <!-- # Talk about web -->

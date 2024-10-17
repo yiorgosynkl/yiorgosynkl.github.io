@@ -2,7 +2,7 @@
 layout: post
 title: Surf the Web | October 2024 Edition
 cover-img: ["assets/img/posts/Beach-Set.jpg"]
-tags: [surf_the_web_log]
+tags: [🌊surf_the_web_log📒]
 ---
 
 * My favourite online mentor, Tim Ferriss, with once again a [great video](https://www.youtube.com/watch?v=oZDzd8jpGWc&ab_channel=TimFerriss). I'll watch this every afternoon, to remember the lessons, but some key takeaways:

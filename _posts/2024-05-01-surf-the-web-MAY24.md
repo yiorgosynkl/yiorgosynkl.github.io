@@ -2,7 +2,7 @@
 layout: post
 title: Surf the Web | May 2024 Edition
 cover-img: ["assets/img/posts/Beach-Set.jpg"]
-tags: [surf_the_web_log]
+tags: [🌊surf_the_web_log📒]
 ---
 
 Some of my favourite resources of the month:

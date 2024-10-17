@@ -2,7 +2,7 @@
 layout: post
 title: Guide to finance
 cover-img: ["assets/img/posts/Beach-Set.jpg"]
-tags: [finance]
+tags: [💵money]
 ---
 
 Here are resources for basic concepts about finance. 

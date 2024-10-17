@@ -2,7 +2,7 @@
 layout: post
 title: System Design
 cover-img: ["assets/img/posts/Beach-Set.jpg"]
-tags: [code, wip🚧]
+tags: [💻code, 🚧wip]
 ---
 
 A good overall guide is the [system design primer](https://github.com/donnemartin/system-design-primer/?tab=readme-ov-file) repo. (tinyurl, ...)

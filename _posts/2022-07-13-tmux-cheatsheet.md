@@ -2,6 +2,7 @@
 layout: post
 title: Tmux cheatsheet
 cover-img: ["assets/img/posts/code-wide.png"]
+tags: [💻code]
 ---
 
 <!-- # Tmux Cheatsheet -->

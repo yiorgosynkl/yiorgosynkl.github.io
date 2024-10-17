@@ -2,7 +2,7 @@
 layout: post
 title: knowledge sharing
 cover-img: ["assets/img/posts/Beach-Set.jpg"]
-tags: [coding, c++]
+tags: [💻code, c++]
 ---
 
 <!-- # knowledge sharing -->

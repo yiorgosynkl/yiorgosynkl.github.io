@@ -2,7 +2,7 @@
 layout: post
 title: Learn C++ | Overview
 cover-img: ["assets/img/posts/Beach-Set.jpg"]
-tags: [coding, c++]
+tags: [💻code, c++]
 ---
 
 Here are resources for basic concepts about c++. 

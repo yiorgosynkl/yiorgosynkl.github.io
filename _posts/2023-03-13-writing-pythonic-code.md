@@ -2,6 +2,7 @@
 layout: post
 title: Writing Pythonic Code
 cover-img: ["assets/img/posts/code-wide.png"]
+tags: [💻code, python]
 ---
 
 <!-- # Writing Pythonic Code -->
