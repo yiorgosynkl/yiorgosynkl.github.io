@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Ancient Greek Schools of Philosophies
-cover-img: ["assets/img/posts/Beach-Set.jpg"]
-tags: []
+cover-img: ["assets/img/posts/raphael-school-of-athens.jpg"]
+tags: [🚧wip, 📜philosophy]
 ---
 
 There where many schools of thoughts that existed around similar times in history.
@@ -15,4 +15,6 @@ There where many schools of thoughts that existed around similar times in histor
 * Skeptics:
 * Neoplatonsists:
 
+## More ideas
 
+* The differences between [Epicureanism and Stoicism](https://dailystoic.com/epicureanism-stoicism/). It's worth mentioning that the Stoics, especially Seneca, borrowed from the opposing and rival philosophical school. ("I’ll never be ashamed to quote a bad writer with a good saying." - Seneca).

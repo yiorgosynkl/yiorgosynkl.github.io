@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Latin Essentials | Learning Famous Latin Phrases
-cover-img: ["assets/img/posts/Beach-Set.jpg"]
-tags: []
+cover-img: ["assets/img/posts/landscape-roman-stadium.jpg"]
+tags: [🚧wip, 📜philosophy]
 ---
 
 Some famous Latin phrases explained:
