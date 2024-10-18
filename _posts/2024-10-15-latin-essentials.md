@@ -87,6 +87,7 @@ Sayings:
 * `Semper fidelis` translates to "always faithful".
 * `Semper paratus` translates to "always prepared".
 * `Perfer et obdura; dolor hic tibi proderit olim`  translates to "Be patient and tough; some day this pain will be useful to you." (From Ovid, Amores, Book III, Elegy XI)
+* `Nulius in verba` translates to "take nobody's word for it". It encourages to withstand the domination of authority and to verify all statements by an appeal to facts determined by experiment The phrase comes from Horace's Epistle to his benefactor Maecenas. It's the motto of the Royal Society of London for Improving Natural Knowledge.
 * `Mea culpa` translates to "through my fault". It comes from a prayer of confession in the Catholic Church. It's an exclamation of apology or remorse. It express acknowledgement of a faulty action and is equivelant to "It was my fault" or "I apologize".
 > this reminds me of the [The Responsibility/Fault Fallacy](https://markmanson.net/responsibility-fault-fallacy). The bottom line is "often in life something is not your fault but you still have the responsibility to solve it".
 
