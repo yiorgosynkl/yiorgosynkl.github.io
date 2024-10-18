@@ -86,6 +86,7 @@ Sayings:
 * `caveat emptor` and `caveat venditor` are two opposite concepts that translate to "buyer beware" and "seller beware". The first one expresses a buyer's responsibility for due diligence before purchase. It is a short form of "Caveat emptor, quia ignorare non debuit quod jus alienum emit" which translates to "Let a purchaser beware, for he ought not to be ignorant of the nature of the property which he is buying from another party", i.e. the buyer should assure himself that the product is good and that the seller had the right to sell it, as opposed to receiving stolen property. The second one expresses that the seller bears responsibility for protecting the customer/buyer (for any problems the service or product has).
 * `Semper fidelis` translates to "always faithful".
 * `Semper paratus` translates to "always prepared".
+* `Perfer et obdura; dolor hic tibi proderit olim`  translates to "Be patient and tough; some day this pain will be useful to you." (From Ovid, Amores, Book III, Elegy XI)
 * `Mea culpa` translates to "through my fault". It comes from a prayer of confession in the Catholic Church. It's an exclamation of apology or remorse. It express acknowledgement of a faulty action and is equivelant to "It was my fault" or "I apologize".
 > this reminds me of the [The Responsibility/Fault Fallacy](https://markmanson.net/responsibility-fault-fallacy). The bottom line is "often in life something is not your fault but you still have the responsibility to solve it".
 
@@ -97,3 +98,4 @@ More:
 
 Links:
 * [Quotes](https://superprof.co.uk/blog/inspirational-latin-quotes/)
+* [List of Latin phrases](https://en.wikipedia.org/wiki/List_of_Latin_phrases)
