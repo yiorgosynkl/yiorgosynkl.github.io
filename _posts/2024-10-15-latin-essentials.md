@@ -92,6 +92,7 @@ Sayings:
 > this reminds me of the [The Responsibility/Fault Fallacy](https://markmanson.net/responsibility-fault-fallacy). The bottom line is "often in life something is not your fault but you still have the responsibility to solve it".
 * `Excusatio non petita, accusatio manifesta` translates to "He who excuses himself, accuses himself" or "Unsolicited (volurnatry, given without being asked for) excuse, manifest accusation". The meaning of this phrase is: if one has nothing to justify themselves for, they should not apologize at all. Struggling to justify one's own actions without being solicited can be considered as an indication that one has something to hide, even if the person is in fact innocent.
 * `inter alia` translates to "among other things".
+* `Solvitur ambulando` translates to "it is solved by walking" referring to an anecdotal, practical solution to the seemingly complex philosophical problem of Achilles Paradox. 
 
 It's worth mentioning the Latin numerical system: [Latin Numerals](https://en.wikipedia.org/wiki/Latin_numerals).
 
