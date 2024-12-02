@@ -9,3 +9,4 @@ tags: [🌊surf_the_web_log📒]
 * [Convex Optimisation](https://youtu.be/kV1ru-Inzl4) is so powerful and lately intersting to me, this Stanford lecture is practical and amazing.
 * To the point suggestions on [how to be a beast in your 20s and 30s](https://youtu.be/zz_p3nQ7M40) in Modern Wisdom. 
 * I am into RL (Reinforcement Learning) lately. Resources to check are [this video](https://youtu.be/JgvyzIkgxF0) and [Andrej Karpathy blog on Pong](https://karpathy.github.io/2016/05/31/rl/).
+* Best [sample breakdowns](https://youtu.be/FpaoCUEhZJM) of the last years (from TrackLib).
