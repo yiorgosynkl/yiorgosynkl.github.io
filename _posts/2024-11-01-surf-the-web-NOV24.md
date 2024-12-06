@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Surf the Web | November 2024 Edition
+title: Surf the Web | November And December 2024 Edition
 cover-img: ["assets/img/posts/Beach-Set.jpg"]
 tags: [🌊surf_the_web_log📒]
 ---
@@ -10,3 +10,43 @@ tags: [🌊surf_the_web_log📒]
 * To the point suggestions on [how to be a beast in your 20s and 30s](https://youtu.be/zz_p3nQ7M40) in Modern Wisdom. 
 * I am into RL (Reinforcement Learning) lately. Resources to check are [this video](https://youtu.be/JgvyzIkgxF0) and [Andrej Karpathy blog on Pong](https://karpathy.github.io/2016/05/31/rl/).
 * Best [sample breakdowns](https://youtu.be/FpaoCUEhZJM) of the last years (from TrackLib).
+* Random video of [lawyer on how to defend people that are guilty](https://youtu.be/A4Ncs9gXBAI). It's a good story to sell, the bottom line is "you never know", but he delivers it in a manner more elaborate.
+* [VSauce on Your Red vs My Red](https://youtu.be/evQsOFQju08?) and Qualia (the information that cannot be transfered with words, the pure feelings of seeing, feeling cold etc).
+
+## papers in AI and computer vision
+
+Recently I was interested in papers and academia, more specifically about the cutting edge journals and greates papers of all time, that I should read. Specifically for AI and computer vision, I have made the following list that I will gradually read. It all started with this amazing visualisations for [AlexNet](https://www.youtube.com/watch?v=UZDiGooFs54).
+
+* [ ] ["A Logical Calculus of the Ideas Immanent in Nervous Activity"](https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf) by Warren McCulloch and Walter Pitts (1943) - This paper introduced the concept of a "neural network" as a computational model for the workings of the brain.
+* [ ] ["Computing Machinery and Intelligence"](https://www.cs.ox.ac.uk/activities/ieg/e-library/sources/t_article.pdf) by Alan Turing (1950) - This paper introduced the Turing test, a benchmark for determining whether a machine can exhibit intelligent behavior.
+* [ ] ["Perceptrons"]() by Frank Rosenblatt (1958) - This paper introduced the concept of the perceptron, a simple mathematical model of a neural network.
+* [ ] ["Learning representations by back-propagating errors"]() (1986) - Introduced Multilayer Perceptron (MLP) Backpropagation
+* [ ] [demo of CNNs](https://www.youtube.com/watch?v=FwFduRA_L6Q) by Yann LeCun
+* [ ] ["Artificial Intelligence: A New Synthesis"]() by Nils Nilsson (1998) - This book provided a comprehensive overview of the state of the art in AI research at the time.
+* [ ] ["The Logic Theorist"]() by Allen Newell, J. C. Shaw, and Herbert Simon (1956) - This paper described a program called the Logic Theorist, which was able to prove mathematical theorems using artificial intelligence techniques.
+* [ ] ["Grammar Induction and Parsing with a Recursive Neural Network"]() by Stephen Clark and James R. Curran (2007) - This paper introduced the use of recursive neural networks for natural language processing tasks.
+* [ ] ["Temporal Difference Learning and TD-Gammon"](https://www.csd.uwo.ca/~xling/cs346a/extra/tdgammon.pdf) by Gerald Tesauro (1995): ...
+* [ ] ["A Survey of the Monte Carlo Method"]() by Alan Gelfand and Adrian Smith (1990) - This paper provided an overview of the Monte Carlo method, a computational technique that has been widely used in AI.
+* [ ] ["The Elements of a Scientific Theory of Intelligence"]() by Judea Pearl (2000) - This paper introduced the concept of causality, which has become a key focus of AI research.
+* [ ] ["Hierarchical Temporal Memory"]() by Jeff Hawkins, Dileep George, and D. S. Modha (2004) - This paper introduced the concept of hierarchical temporal memory, a computational model for the workings of the brain.
+* [ ] ["Human-Level Control through Deep Reinforcement Learning"]() by Volodymyr Mnih, et al. (2015) - This paper introduced the use of deep reinforcement learning for achieving human-level performance in a range of challenging tasks.
+* [ ] ["Gradient-based Learning Applied to Document Recognition"](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf) by Yann LeCun (1998): Introduced a convolutional neural network (CNN) for handwritten digit recognition, achieving state-of-the-art performance on the MNIST dataset (Classic Computer Vision Papers)
+* [ ] ["Distinctive Image Features from Scale-Invariant Keypoints"](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf) by David G. Lowe (2004): Proposed SIFT (Scale-Invariant Feature Transform), a method for detecting and describing local image features robust to scale, rotation, and illumination changes (Classic Computer Vision Papers)
+* [ ] ["Histograms of Oriented Gradients for Human Detection"](https://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf) by Navneet Dalal and Bill Triggs (2005): Presented HOG features, a method for detecting humans in images based on gradient orientation histograms (Classic Computer Vision Papers)
+* [ ] ["SURF: Speeded Up Robust Features"](https://people.ee.ethz.ch/~surf/eccv06.pdf) by Herbert Bay (2006): Introduced SURF, a computationally efficient alternative to SIFT for feature detection and matching in images (Classic Computer Vision Papers)
+* [ ] ["ImageNet Classification with Deep Convolutional Neural Networks"](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) by Alex Krizhevsky, Ilya Sutskever and Geoffrey E. Hinton (2012): Demonstrated that deep CNNs trained on large-scale data significantly improve image classification accuracy, starting the deep learning revolution  (deep learning models on computer vision)
+* [ ] ["Playing Atari with Deep Reinforcement Learning"](https://arxiv.org/pdf/1312.5602) by Mnih et al (2013): Paper from Deepmind 
+* [ ] ["Very Deep Convolutional Networks for Large-Scale Image Recognition"](https://arxiv.org/pdf/1409.1556) by Karen Simonyan & Andrew Zisserman (2014): Introduced VGGNet, showing that deeper networks with small convolutional filters improve performance. (deep learning models on computer vision)
+* [ ] ["GoogLeNet – Going Deeper with Convolutions"](https://arxiv.org/pdf/1409.4842) by Christian Szegedy et al. (2014): Proposed the Inception architecture, which optimizes computation through sparse convolutions and multi-scale feature extraction. (deep learning models on computer vision)
+* [ ] ["ResNet – Deep Residual Learning for Image Recognition"](https://arxiv.org/pdf/1512.03385) by Kaiming He et al (2015): Introduced residual connections, enabling very deep networks by addressing vanishing gradient problems. (deep learning models on computer vision)
+* [ ] ["Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks"](https://arxiv.org/pdf/1506.01497) by Shaoqing Ren (2015): Developed an end-to-end object detection model integrating region proposal networks directly into CNNs. (deep learning models on computer vision)
+* [ ] ["YOLO: You Only Look Once: Unified, Real-Time Object Detection"]() by Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi (2016): Unified object detection into a single neural network, enabling real-time performance. (deep learning models on computer vision)
+* [ ] ["Mask R-CNN"](https://arxiv.org/pdf/1703.06870) by Kaiming He, Georgia Gkioxari, Piotr Dollar, Ross Girshick (2017): Extended Faster R-CNN to perform instance segmentation by predicting object masks in addition to bounding boxes. (deep learning models on computer vision)
+* [ ] ["Attention is all you need"](https://arxiv.org/pdf/1706.03762) by Vaswani et al (2017): It introduces the concept of transformers and essnetially opened the door for the creation of LLMs that could scale
+* [ ] ["Mastering the Game of Go without Human Knowledge"](https://www.nature.com/articles/nature24270) by Silver, Schrittwieser & Simonyan et al (2017): another milestone paper by Deepmind, reccomend to watch the relevant documentary.
+* [ ] ["BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"](https://arxiv.org/pdf/1810.04805) by Devlin et al: paper by google that introduced a simple yet powerful AI model
+* [ ] ["EfficientNet – Rethinking Model Scaling for Convolutional Neural Networks"](https://arxiv.org/pdf/1905.11946) by Mingxing Tan, Quoc V. Le (2019): Proposed a systematic approach to scale CNNs efficiently, balancing depth, width, and resolution for improved performance. (deep learning models on computer vision)
+* [ ] ["CLIP - Learning Transferable Visual Models From Natural Language Supervision"](https://arxiv.org/pdf/2103.00020)
+* [ ] GPT papers by openAI: [Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf) (2018), ["Language Models are Unsupervised Multitask Learners"](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) (2019), ["Language Models are Few-Shot Learners"](https://arxiv.org/pdf/2005.14165) (2020), ["GPT-4 Technical Report"](https://cdn.openai.com/papers/gpt-4.pdf) (2023)
+
+Other AI historic breakthrough concepts include Bayes Rule, Maximum Likelihood Estimation (this is a whole field, not a single paper), Expectation Maximization, Perceptron, Minsky's "XOR is unsolvable" (i.e., the end of the first "Neural Network" era), Neocognitron, Backprop, TD-Gammon, Vanishing Gradients (i.e., the end of the 2nd NN era), LSTMs, SVM, RBMs (i.e., the start of Deep Learning and the 3nd NN era), GPT-1/2/3, CLIP
