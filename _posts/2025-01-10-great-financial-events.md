@@ -66,10 +66,11 @@ The Knight Capital Group was an American global financial services firm engaging
 * [Wikipedia - 2011 UBS rogue trader scandal](https://en.wikipedia.org/wiki/2011_UBS_rogue_trader_scandal)
 * [Wikipedia - Kweku Adoboli](https://en.wikipedia.org/wiki/Kweku_Adoboli)
 
-#### 2011 August 8 | Credit Ceiling Debacle
+#### 2011 August 8 | Debt Ceiling Crisis and Black Monday
 
 In finance and investing, Black Monday 2011 refers to August 8, 2011, when US and global stock markets following the Friday night credit rating downgrade by Standard and Poor's of the United States sovereign debt from AAA, or "risk free", to AA+. U.S. President Barack Obama attempted to calm the markets during trading in a speech from the White House, but the DOW lost 200 more points within 20 minutes of it concluding.
 
+* [2011 United States debt-ceiling crisis](https://en.wikipedia.org/wiki/2011_United_States_debt-ceiling_crisis)
 * [Black Monday (2011)](https://en.wikipedia.org/wiki/Black_Monday_(2011))
 
 #### 2010 May 6 | Flash Crash
