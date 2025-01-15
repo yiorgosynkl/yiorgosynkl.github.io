@@ -105,6 +105,12 @@ Black Monday (also known as Black Tuesday in some parts of the world due to time
 * [Wikepedia - Black Monday](https://en.wikipedia.org/wiki/Black_Monday_(1987))
 * [Investopedia - What Caused Black Monday, the 1987 Stock Market Crash?](https://www.investopedia.com/ask/answers/042115/what-caused-black-monday-stock-market-crash-1987.asp)
 
+### 1974 June 26 | Herstatt Bank Bankrupcy
+
+Herstatt's failure specifically highlighted the importance of settlement risk in foreign-exchange markets.
+
+* [Wikipedia - Herstatt Bank](https://en.wikipedia.org/wiki/Herstatt_Bank)
+
 ### 1973-74 | The OPEC Oil Price Shock (Bear Market)
 
 The result was an economic phenomenon that still puzzles researchers, namely stagflation: the combination of high inflation (reaching 12%) and economic stagnation. 
