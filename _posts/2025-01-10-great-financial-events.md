@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Great Financial Disasters 
+title: Great Financial Events 
 cover-img: ["assets/img/posts/code-wide.png"]
 tags: []
 ---
 
-This post is dedicated to big financial crisis (events with duration between one day to one week) where things went wrong quickly. "Black swans" happen infrequently in the economy, but the impact is tremendous and when people are prepared, they can make huge profits. The events are listed in chronological order. This list includes seminal events, worst investor moves (people that also went to jail) and crisis that lasted and affected millions of lives.
+This post is dedicated to big financial crisis and events where things went wrong quickly. "Black swans" happen infrequently in the economy, but the impact is tremendous and when people are prepared, they can make huge profits. The events are listed in chronological order. This list includes seminal events, worst investor moves (people that also went to jail) and crisis that lasted and affected millions of lives.
 
 ### 2022 November | FTX Collapse
 
@@ -142,6 +142,7 @@ TODO
 * [Investopedia - Timeline of U.S. Stock Market Crashes](https://www.investopedia.com/timeline-of-stock-market-crashes-5217820)
 * [Motley Fool - Crashes](https://www.fool.com/investing/stock-market/basics/crashes/)
 * [Wikipedia - List of trading losses](https://en.wikipedia.org/wiki/List_of_trading_losses)
+* [Investopedia - Legendary Investors](https://www.investopedia.com/world-s-11-greatest-investors-4773356)
 
 To check: 
 * [Libor scandal - Tom Hayes](https://en.wikipedia.org/wiki/Libor_scandal)
