@@ -9,6 +9,20 @@ This post is dedicated to big financial crisis and events where things went wron
 
 ## Financial Events Timeline 
 
+
+#### early 2023 | United States Banking Crisis 
+
+Over the course of five days in March 2023, three small-to-mid size U.S. banks failed. Silicon Valley Bank (SVB) failed when a bank run was triggered after it sold its Treasury bond portfolio at a large loss, causing depositor concerns about the bank's liquidity. The biggest two banks that failed during that time were Silicon Valley Bank (SVB) and First Republic Bank. 
+
+* [2023 United States banking crisis](https://en.wikipedia.org/wiki/2023_United_States_banking_crisis)
+* [Wikipedia - Silicon Valley Bank (SVB)](https://en.wikipedia.org/wiki/Silicon_Valley_Bank)
+* [Wikipedia - First Republic Bank](https://en.wikipedia.org/wiki/First_Republic_Bank)
+
+#### 2023 March | Credit Suisse Collapse
+
+* [Investopedia - What Happened at Credit Suisse, and Why Did It Collapse?](https://www.investopedia.com/what-happened-at-credit-suisse-and-why-did-it-collapse-7369825)
+
+
 #### 2022 November | FTX Collapse
 
 * [Wikipedia - Bankruptcy of FTX](https://en.wikipedia.org/wiki/Bankruptcy_of_FTX)
@@ -38,7 +52,12 @@ TODO
 
 The market volatility initially began in China as investors were sold shares globally amid a slew of tumultuous economic circumstances, including the end of quantitative easing in the U.S., a fall in petroleum prices, the Greek debt default, and the Brexit vote.
 
-### 2012 April and May | JPMorgan Chase trading loss (Bruno Iksil - London Whale)
+
+#### 2012 August | Knight Capital Group Losses and Acquisition
+
+The Knight Capital Group was an American global financial services firm engaging in market making, electronic execution, and institutional sales and trading. With its high-frequency trading algorithms Knight was the largest trader in U.S. equities, with a market share of 17.3% on NYSE and 16.9% on NASDAQ. The company agreed to be acquired by Getco LLC in December 2012 after an August 2012 trading error lost $460 million. The merger was completed in July 2013, forming KCG Holdings. 
+
+#### 2012 April and May | JPMorgan Chase trading loss (Bruno Iksil - London Whale)
 
 * [JPMorgan Chase trading loss](https://en.wikipedia.org/wiki/2012_JPMorgan_Chase_trading_loss)
 
@@ -65,6 +84,8 @@ Also known as the crash of 2:45 which started at 2:32 p.m. EDT and lasted for ap
 
 * [Guardian - Timeline of how the worl economy plunged into recession](https://www.theguardian.com/business/2012/aug/07/credit-crunch-boom-bust-timeline)
 * [2000s housing bubble](https://en.wikipedia.org/wiki/2000s_United_States_housing_bubble)
+* [Washington Mutual (WaMu) Bankrupcy in September 25, 2008](https://en.wikipedia.org/wiki/Washington_Mutual)
+* [Wikipedia - Lehman Brothers](https://en.wikipedia.org/wiki/Lehman_Brothers)
 
 #### 2000 March | Dotcom bubble
 
@@ -106,6 +127,21 @@ Black Monday (also known as Black Tuesday in some parts of the world due to time
 
 * [Wikepedia - Black Monday](https://en.wikipedia.org/wiki/Black_Monday_(1987))
 * [Investopedia - What Caused Black Monday, the 1987 Stock Market Crash?](https://www.investopedia.com/ask/answers/042115/what-caused-black-monday-stock-market-crash-1987.asp)
+
+#### 1980 March 27 | Siver Thursday (Hunt Brothers)
+
+Silver Thursday was an event that occurred in the United States silver commodity markets, following the attempt by brothers Nelson Bunker Hunt, William Herbert Hunt and Lamar Hunt (collectively known as the Hunt Brothers) to corner the silver market. A subsequent steep fall in silver prices led to panic on commodity and futures exchanges.
+
+* [Wikipedia - Silver Thursday](https://en.wikipedia.org/wiki/Silver_Thursday)
+
+
+#### 1974 October 8 | Franklin National Bank Collapse (Michele Sindona)
+
+It collapsed in obscure circumstances involving Michele Sindona, who was a renowned Mafia-banker and member of the irregular freemasonic lodge Propaganda Due. 
+
+* [Wikipedia - Franklin National Bank](https://en.wikipedia.org/wiki/Franklin_National_Bank)
+* [Wikipedia - Michele Sindona](https://en.wikipedia.org/wiki/Michele_Sindona)
+
 
 #### 1974 June 26 | Herstatt Bank Bankrupcy
 
@@ -151,6 +187,7 @@ TODO
 * [Motley Fool - Crashes](https://www.fool.com/investing/stock-market/basics/crashes/)
 * [Wikipedia - List of trading losses](https://en.wikipedia.org/wiki/List_of_trading_losses)
 * [Investopedia - Legendary Investors](https://www.investopedia.com/world-s-11-greatest-investors-4773356)
+* [Wikipedia - List of largest bank failures in the United States](https://en.wikipedia.org/wiki/List_of_largest_bank_failures_in_the_United_States)
 
 To check: 
 * [Libor scandal - Tom Hayes](https://en.wikipedia.org/wiki/Libor_scandal)
