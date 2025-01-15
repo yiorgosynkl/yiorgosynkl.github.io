@@ -61,9 +61,12 @@ The Knight Capital Group was an American global financial services firm engaging
 
 * [JPMorgan Chase trading loss](https://en.wikipedia.org/wiki/2012_JPMorgan_Chase_trading_loss)
 
+#### September 2011 | UBS rogue trader scandal (Kweku Adoboli - Rogue Trader)
+
+* [Wikipedia - 2011 UBS rogue trader scandal](https://en.wikipedia.org/wiki/2011_UBS_rogue_trader_scandal)
+* [Wikipedia - Kweku Adoboli](https://en.wikipedia.org/wiki/Kweku_Adoboli)
 
 #### 2011 August 8 | Credit Ceiling Debacle
-
 
 In finance and investing, Black Monday 2011 refers to August 8, 2011, when US and global stock markets following the Friday night credit rating downgrade by Standard and Poor's of the United States sovereign debt from AAA, or "risk free", to AA+. U.S. President Barack Obama attempted to calm the markets during trading in a speech from the White House, but the DOW lost 200 more points within 20 minutes of it concluding.
 
@@ -76,7 +79,7 @@ Also known as the crash of 2:45 which started at 2:32 p.m. EDT and lasted for ap
 * [Guardian - Timeline of the flash crush](https://www.theguardian.com/business/2015/apr/22/2010-flash-crash-new-york-stock-exchange-unfolded)
 * Book about HFT (High Frequency Trading) : [Flash Boys: A Wall Street Revolt](https://en.wikipedia.org/wiki/Flash_Boys)
 
-#### 2008 | Société Générale trading loss (Jérôme Kerviel)
+#### 2008 | Société Générale trading loss (Jérôme Kerviel - Rogue Trader)
 
 * [Jérôme Kerviel](https://en.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Kerviel)
 
@@ -108,8 +111,13 @@ Mostly popular for his scam because of the Martin Scorsese film.
 * [Wikipedia - 1997 Asian financial crisis](https://en.wikipedia.org/wiki/1997_Asian_financial_crisis)
 * [IMF - The Asian Crisis: Causes and Cures](https://www.imf.org/external/pubs/ft/fandd/1998/06/imfstaff.htm)
 
+#### 1996 June 13 | Sumitomo copper affair (Yasuo Hamanaka - Rogue Trader)
 
-#### 1995 January 16 | Barrings Bank Collapse (Nick Leeson)
+The Sumitomo copper affair refers to a metal trading scandal in 1996 involving Yasuo Hamanaka, the chief copper trader of the Japanese trading house Sumitomo Corporation (Sumitomo). The scandal involves unauthorized trading over a 10-year period by Hamanaka, which led Sumitomo to announce US$1.8 billion in related losses in 1996 when Hamanaka's trading was discovered, and more related losses subsequently. On June 13, 1996, Sumitomo Corporation reported a loss of US$1.8 billion in unauthorized copper trading by Hamanaka on the London Metal Exchange. His culpability as to whether this responsibility was authorized is in doubt.
+
+* [Wikipedia - Sumitomo copper affair](https://en.wikipedia.org/wiki/Sumitomo_copper_affair)
+
+#### 1995 January 16 | Barrings Bank Collapse (Nick Leeson - Rogue Trader)
 
 Nicholas William Leeson is an English former derivatives trader whose fraudulent, unauthorised and speculative trades resulted in the 1995 collapse of Barings Bank, the United Kingdom's second oldest merchant bank. He was convicted of financial crime in a Singapore court and served over four years in Changi Prison.
 
@@ -186,6 +194,7 @@ TODO
 * [Investopedia - Timeline of U.S. Stock Market Crashes](https://www.investopedia.com/timeline-of-stock-market-crashes-5217820)
 * [Motley Fool - Crashes](https://www.fool.com/investing/stock-market/basics/crashes/)
 * [Wikipedia - List of trading losses](https://en.wikipedia.org/wiki/List_of_trading_losses)
+* [Wikipedia - Rogue Traders](https://en.wikipedia.org/wiki/Rogue_trader)
 * [Investopedia - Legendary Investors](https://www.investopedia.com/world-s-11-greatest-investors-4773356)
 * [Wikipedia - List of largest bank failures in the United States](https://en.wikipedia.org/wiki/List_of_largest_bank_failures_in_the_United_States)
 
