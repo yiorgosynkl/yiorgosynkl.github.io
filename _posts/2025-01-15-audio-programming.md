@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Audio Programming 
-cover-img: ["assets/img/posts/speaker.png"]
+cover-img: ["assets/img/posts/speaker.jpg"]
 tags: [🎵music, 💻code]
 ---
 
