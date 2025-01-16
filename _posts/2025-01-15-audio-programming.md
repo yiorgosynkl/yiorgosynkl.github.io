@@ -51,7 +51,6 @@ struct Gain : Effect {
 using namespace klang::optimised;
 
 struct Pan : Stereo::Effect {
-
 	Pan() { 
 		controls = { 
 			Dial("Pan") 
@@ -67,7 +66,12 @@ struct Pan : Stereo::Effect {
 
 };
 
-// SawWithFilter.klang
+// there is an issue with 0.5 pan having half the amplitude as the initial signal (volume drop)
+// "Equal power panning law": is when panning doesn't lose it's volume.
+// There is also -3dB, -4.5dB -6dB, depending on the volume lost.
+// https://en.wikipedia.org/wiki/Panning_law
+
+// MyEffect.klang : saw with filter
 
 #include <klang.h>
 using namespace klang::optimised;
@@ -91,35 +95,64 @@ struct MyEffect : Effect {
 };
 
 // Tremolo.klang
-// make an oscillator that goes really slowly and handles the gain
-
-// make it so at 0 the line is at 1
-// and at full tremolo, it is between 0 and 1
+// an oscillator is essentially a signal (saw, sine, ...)
+// a lfo is low frequency oscillator (signal with f = 1 - 10Hz)
+// tremolo is a signal where the amplitude is modulated by an LFO 
+// (essentially an oscillator that slowly increases/decreases the gain)
 
 #include <klang.h>
 using namespace klang::optimised;
-	
+
 struct Tremolo : Effect {
 	Sine lfo;
 
+	// Initialise plugin (called once at startup)
 	Tremolo() {
 		controls = { 
-			Dial("Depth", 0, 0.5, 0),
-			Dial("Rate", 1, 10, 6),
+			Dial("Mod Rate", 1.0, 10.0, 6.0),
+			Dial("Mod Depth", 0.0, 0.5, 0.5),
 		};
 	}
 
+	// Prepare for processing (called once per buffer)
+	void prepare() {
+		
+	}
+
+	// Apply processing (called once per sample)
 	void process() {
- 		param rate = controls[1]; // Hz (cycles per second)
-		// signal mod = lfo(rate); // 1 to 10 Hz (cycle per second) (ring modulation) (Dr. Who voice effect) (gives one extra frequency)
-		// signal mod = lfo(rate) * 0.5 + 0.5; // to make sine of of lfo between 0 and 1 (two mirror bands in frequency space)
-		signal mod = lfo(rate) * 0.5 + 0.5; // Use the depth 
+		param rate = controls[0];
+		param depth = controls[1];
+		
+		// different types of modulation
+		// signal mod = lfo(rate); // lfo osc between [-1, 1]
+		// signal mod = lfo(rate) * depth; // lfo osc between [-depth, +depth] ( [-0.5, 0.5] for depth = 0.5 )
+		// signal mod = lfo(rate) * depth + 0.5; // lfo osc between [0.5-depth, 0.5+depth] ( [0, 1] for depth = 0.5, [0.5,0.5] for depth = 0.5 )
+		signal mod = lfo(rate) * depth + (1-depth); // lfo osc between [1-2*depth, 1] ( [0, 1] for depth = 0.5, [1,1] for depth = 1 )
+		mod >> debug;
 		in * mod >> out;
 	}
 };
-
-// TODO: make it so at 0 the line is at 1
-// and at full tremolo, it is between 0 and 1
-
-// ring 
 ```
+
+In the professional community, the industry standard framework for developing plugins is [Juce](https://juce.com/). Juce is used by Traction, maxMSP, FocusRight, etc. Every year during November there is a [ADC (audio developer conference)](https://audio.dev/), and it's the number 1 networking opportunity. In 2025 it takes place in Bristol. 
+
+
+Why is 44.1kHz (44,100 Hz) the standard sampling frequency? Explanation in [wiki](https://en.wikipedia.org/wiki/44,100_Hz). In brief, the Nyquist–Shannon sampling theorem says the sampling frequency must be greater than twice the maximum frequency one wishes to reproduce. To capture the human hearing range of roughly 20 Hz to 20,000 Hz, the sampling rate had to be greater than 40 kHz. Furthermore, the ideal filter is practically impossible to implement, so in practice a transition band is necessary, where frequencies are partly attenuated (reduced in force). The wider this transition band is, the easier and more economical. The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.
+
+## Lesson 02 | Distortion
+
+Ring modulation and distortion. 
+
+## Lesson 03 | EQ
+
+## Lesson 04 | Delay
+## Lesson 05 | Flanger
+## Lesson 06 | Additive
+## Lesson 07 | Subtractive
+## Lesson 08 | FM
+## Lesson 09 | Physical 
+## Lesson 10 | Plugin Project
+
+
+
