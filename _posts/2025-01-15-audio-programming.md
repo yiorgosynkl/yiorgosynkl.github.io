@@ -22,3 +22,104 @@ A basic workflow of how sound gets captured, saved, manipulated and reproduced i
 
 It's valuable as a musician to understand what the fundamental effects (like filtering, tremolo) do numerically and create an intuition of how different sounds are created.
 
+
+```cpp
+// Gain.klang
+
+#include <klang.h>
+using namespace klang::optimised;
+
+struct Gain : Effect {
+
+	Gain() { 
+		controls = { 
+			Dial("Gain") 
+		};
+	}
+
+	void process() { 
+		param gain = controls[0];
+		gain >> debug;
+		in * gain >> out;
+	}
+
+};
+
+
+// Pan.klang
+#include <klang.h>
+using namespace klang::optimised;
+
+struct Pan : Stereo::Effect {
+
+	Pan() { 
+		controls = { 
+			Dial("Pan") 
+		};
+	}
+
+	void process() { 
+		param pan = controls[0];
+		signal mono = 0.5 * (in.l + in.r);
+		(1 - pan) * mono >> out.l;
+		pan * mono >> out.r;
+	}
+
+};
+
+// SawWithFilter.klang
+
+#include <klang.h>
+using namespace klang::optimised;
+
+struct MyEffect : Effect {
+	Saw osc;    // (sawtooth oscillator)
+	LPF filter; // (low-pass filter)
+
+	MyEffect() { 
+		controls = { 
+			Dial("Cutoff", 100, 1000, 440) // min, max, start
+		};
+		osc.set(440); // set to 440Hz
+	}
+
+	void process() {
+		param f = controls[0];
+		filter.set(f);
+		osc >> filter >> out;
+	}
+};
+
+// Tremolo.klang
+// make an oscillator that goes really slowly and handles the gain
+
+// make it so at 0 the line is at 1
+// and at full tremolo, it is between 0 and 1
+
+#include <klang.h>
+using namespace klang::optimised;
+	
+struct Tremolo : Effect {
+	Sine lfo;
+
+	Tremolo() {
+		controls = { 
+			Dial("Depth", 0, 0.5, 0),
+			Dial("Rate", 1, 10, 6),
+		};
+	}
+
+	void process() {
+ 		param rate = controls[1]; // Hz (cycles per second)
+		// signal mod = lfo(rate); // 1 to 10 Hz (cycle per second) (ring modulation) (Dr. Who voice effect) (gives one extra frequency)
+		// signal mod = lfo(rate) * 0.5 + 0.5; // to make sine of of lfo between 0 and 1 (two mirror bands in frequency space)
+		signal mod = lfo(rate) * 0.5 + 0.5; // Use the depth 
+		in * mod >> out;
+	}
+};
+
+// TODO: make it so at 0 the line is at 1
+// and at full tremolo, it is between 0 and 1
+
+// ring 
+```
