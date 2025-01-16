@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Great Financial Events 
-cover-img: ["assets/img/posts/code-wide.png"]
+cover-img: ["assets/img/posts/stock-numbers.jpg"]
 tags: []
 ---
 
