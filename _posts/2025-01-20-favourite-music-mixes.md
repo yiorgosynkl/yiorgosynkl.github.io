@@ -26,11 +26,11 @@ Boiler room:
 
 
 BBC Radio 1 essentials:
-* [ ] [](https://youtu.be/knZymWvaMSc)
-* [ ] [](https://youtu.be/ddeu_vF9p1s)
-* [ ] [](https://youtu.be/b0SrmA01Qpk)
-* [ ] [](https://youtu.be/ew07xLyMbgM)
-* [ ] [](https://youtu.be/qhmdED0Nq4c)
+* [ ] [Swedish House Mafia](https://youtu.be/knZymWvaMSc)
+* [ ] [Disclosure](https://youtu.be/ddeu_vF9p1s)
+* [ ] [Daft Punk](https://youtu.be/b0SrmA01Qpk)
+* [ ] [Avicii](https://youtu.be/ew07xLyMbgM)
+* [ ] [Massive Attack](https://youtu.be/qhmdED0Nq4c)
 * [ ] ...
 
 
