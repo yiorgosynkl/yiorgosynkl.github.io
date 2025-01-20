@@ -1,9 +1,91 @@
 ---
 layout: post
-title: Code Log | Programming concepts learned in Autumn 2024
+title: Code Log | Programming concepts | Vol 1
 cover-img: ["assets/img/posts/Beach-Set.jpg"]
 tags: [learn, 💻code]
 ---
+
+
+## Variadic Templates (used in a cache example)
+
+The following code makes a key (identifier for a cache). The interesting thing is that the function can take any number of parameters (vectors of any type or plain types) and will use delimeters `.` and `-` to split the vectors and different arguments. To use any number of parameters in C++, we use variadic templates. 
+
+```cpp
+#include <string>
+#include <vector>
+#include <iostream>
+#include <sstream>
+
+// ========> generic_cache.h <======== 
+
+/// Helper function to emit a value to a stream
+template<typename T>
+void toKey(std::ostringstream& os, const T& item)
+{
+    os << item;
+}
+
+/// Helper function to emit dot-separated vector of values to a stream
+template<typename T>
+void toKey(std::ostringstream& os, const std::vector<T>& itemVec)
+{
+    if (itemVec.size() == 1)
+    {
+        toKey(os, itemVec.front());
+    }
+    else
+    {
+        auto it = itemVec.begin(), end = itemVec.end(), last = end;
+        --last;
+        for (; it != end; ++it)
+        {
+            toKey(os, *it);
+            if (it != last)
+                os << ".";
+        }
+    }
+}
+
+/// Helper function to emit arguments from variadic pack - termination case
+inline void emitProviderArg(std::ostringstream&)
+{
+}
+
+/// Helper function to emit arguments from variadic pack.
+template<typename ProviderArg, typename... Tail>
+void emitProviderArg(std::ostringstream& os, ProviderArg arg, Tail... tail)
+{
+    // Get head
+    toKey(os, arg);
+    // argument delimiter
+    os << "_";
+    // Call recursively with the tail of pack
+    emitProviderArg(os, tail...);
+}
+
+/**
+ * Compose cache identifier from a generic variadic pack `ProviderArgs`.
+ * Each variadic pack item could be a C++ scalar or vector (delimited by dots).
+ * Pack args are delimited by `_`
+ * Example:
+ *    makeCacheIdentifier(std::vector<int>{42}, "foobar") -> "42_foobar_"
+ */
+template<typename... ProviderArgs>
+std::string makeCacheIdentifier(ProviderArgs... providerArgs)
+{
+    std::ostringstream oss;
+    emitProviderArg(oss, providerArgs...);
+
+    std::string identifier{std::move(oss).str()};
+    return identifier;
+}
+
+int main() {
+    std::vector<int> vec = {2,3,4};
+    std::cout << makeCacheIdentifier(std::vector({2,3,4}), "foo", std::vector({6,5})) << std::endl;
+    return 0;
+}
+```
 
 ## Encoding / Decoding Essential Knowledge
 
