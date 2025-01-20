@@ -5,6 +5,29 @@ cover-img: ["assets/img/posts/Beach-Set.jpg"]
 tags: [learn, 💻code]
 ---
 
+## Compiler Explorer (godbolt), Compiler Flags, Libraries, etc
+
+[Godbolt](https://godbolt.org/) is an insanely useful site to write snippets, run them and generally get an intuition of how the compiler works and transforms your code to assembely. The creator has two videos ([here](https://youtu.be/4_HL3PH4wDg) and [here](https://youtu.be/1u_ku_OJPDg)) to get you started. 
+
+It's a good idea to start from scratch (press the button `More -> Reset code and UI`). 
+
+The open a compiler and output box (you drag and drop them around and scale the letters). Then essential compiler flags `-Wall -Wextra` that should include all the other important flags. The use `-O1`/`-O2`/`-O3` to get the compiler optimise your code (a bit, mediocre or aggresively). You can also use `-std=c++14`/`-std=c++17`/`-std=c++20` to define specific version of the language.
+
+You can also use `Catch2` library (use the libraries section in godbolt) and the `#include <catch2/catch_test_macros.hpp>` to write a funciton and quick tests for that function. Example follows:
+
+```cpp
+// select `Catch2 3.0.0` from Libraries section (upper right corner)
+#include <catch2/catch_test_macros.hpp>
+
+// Type your code here, or load an example.
+int square(int num) {
+    return num * num;
+}
+
+TEST_CASE("", "") {  
+    REQUIRE(square(3) == 9);  
+}
+```
 
 ## Variadic Templates (used in a cache example)
 
