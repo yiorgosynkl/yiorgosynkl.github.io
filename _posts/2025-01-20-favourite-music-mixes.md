@@ -35,7 +35,7 @@ BBC Radio 1 essentials:
 
 
 More: 
-* Electronic music sets are The Lab by Mixmag, Cercle, HOR Berlin,
+* Electronic music sets are The Lab by Mixmag, Cercle, HOR Berlin, MayanWarrior
 * For concerts there are Tiny Desk, COLORS, KEXP, Audiotree
 * [ ] [BARRY CAN'T SWIM feel good house set in The Lab LDN](https://youtu.be/Q_ghNGB7YpQ)
 
