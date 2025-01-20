@@ -17,6 +17,7 @@ You can also use `Catch2` library (use the libraries section in godbolt) and the
 
 ```cpp
 // select `Catch2 3.0.0` from Libraries section (upper right corner)
+// also open an executor with compiler `x86-64x 14.0.0` and flags `-lCatch2Main -lCatch2`
 #include <catch2/catch_test_macros.hpp>
 
 // Type your code here, or load an example.
