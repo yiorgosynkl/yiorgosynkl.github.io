@@ -16,19 +16,18 @@ The open a compiler and output box (you drag and drop them around and scale the 
 You can also use `Catch2` library (use the libraries section in godbolt) and the `#include <catch2/catch_test_macros.hpp>` to write a funciton and quick tests for that function. Example follows:
 
 ```cpp
-// select `Catch2 3.0.0` from Libraries section (upper right corner)
-// also open an executor with compiler `x86-64x 14.0.0` and flags `-lCatch2Main -lCatch2`
+// select `Catch2 3.0.0-preview2` from Libraries section (upper right corner)
+// select compiler `x86-64 clang 14.0.0`
+// add compiler options `-Wall -Wextra -lCatch2Main -lCatch2`
 #include <catch2/catch_test_macros.hpp>
 
 // Type your code here, or load an example.
-int square(int num) {
-    return num * num;
-}
+int square(int num) { return num * num; }
 
-TEST_CASE("", "") {  
-    REQUIRE(square(3) == 9);  
-}
+TEST_CASE("square root of 3", "[interger]") { REQUIRE(square(3) == 9); }
 ```
+
+You can create permanent links for the code like [this](https://godbolt.org/#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:1,endLineNumber:10,positionColumn:1,positionLineNumber:10,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:'//+select+%60Catch2+3.0.0-preview2%60+from+Libraries+section+(upper+right+corner)%0A//+select+compiler+%60x86-64+clang+14.0.0%60%0A//+add+compiler+options+%60-Wall+-Wextra+-lCatch2Main+-lCatch2%60%0A%23include+%3Ccatch2/catch_test_macros.hpp%3E%0A%0A//+Type+your+code+here,+or+load+an+example.%0Aint+square(int+num)+%7B+return+num+*+num%3B+%7D%0A%0ATEST_CASE(%22square+root+of+3%22,+%22%5Binterger%5D%22)+%7B+REQUIRE(square(3)+%3D%3D+9)%3B+%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((g:!((h:compiler,i:(compiler:clang1400,filters:(b:'0',binary:'1',binaryObject:'1',commentOnly:'0',debugCalls:'1',demangle:'0',directives:'0',execute:'0',intel:'0',libraryCode:'0',trim:'1',verboseDemangling:'0'),flagsViewOpen:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!((name:catch2,ver:'300-preview2')),options:'-Wall+-Wextra+-lCatch2Main+-lCatch2',overrides:!(),selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1),l:'5',n:'0',o:'+x86-64+clang+14.0.0+(Editor+%231)',t:'0')),k:50,l:'4',m:50,n:'0',o:'',s:0,t:'0'),(g:!((h:output,i:(compilerName:'x86-64+clang+14.0.0',editorid:1,fontScale:14,fontUsePx:'0',j:1,wrap:'1'),l:'5',n:'0',o:'Output+of+x86-64+clang+14.0.0+(Compiler+%231)',t:'0')),header:(),l:'4',m:50,n:'0',o:'',s:0,t:'0')),k:50,l:'3',n:'0',o:'',t:'0')),l:'2',n:'0',o:'',t:'0')),version:4).
 
 ## Variadic Templates (used in a cache example)
 
