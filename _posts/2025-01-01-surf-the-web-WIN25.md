@@ -9,3 +9,4 @@ Music, programming, learning math and deep software engineeting and building app
 
 * [How I Code Profitable Apps SOLO (no wasted time / beginner friendly / with AI)](https://youtu.be/CNsvts6pVzo); good ideas about doing stuff fast and some resources like [roadmap](https://roadmap.sh/).
 * [Rory Sutherland on property prices](https://youtu.be/TnJeXTC3nkU).
+* [Primeagen - Meth to Netflix](https://youtu.be/JjHFubUPLV0), great video that he discusses his addictions openly
