@@ -23,6 +23,7 @@ Boiler room:
 * [ ] [Skrillex in Shanghai](https://youtu.be/PRlLNfKYm8U)
 * [ ] [Disclosure in Shanghai](https://youtu.be/BVW0OgxeH6I)
 * [ ] [Fatboy Slim in Brighton](https://youtu.be/ShB_HI6F1f4)
+* [ ] [Yousuke Yukimatsu in Tokio](https://youtu.be/T1tcUfUhR5U)
 
 
 BBC Radio 1 essentials:
@@ -39,6 +40,7 @@ More:
 * For concerts there are Tiny Desk, COLORS, KEXP, Audiotree
 * Soundcloud is the OG resource
 * [ ] [BARRY CAN'T SWIM feel good house set in The Lab LDN](https://youtu.be/Q_ghNGB7YpQ)
+* [ ] [Yousuke Yukimatsu HOR](https://www.youtube.com/live/WvyvwlowHWM)
 
 
 Dj related resources: 
