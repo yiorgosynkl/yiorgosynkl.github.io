@@ -11,4 +11,5 @@ Music, programming, learning math and deep software engineeting and building app
 * [Rory Sutherland on property prices](https://youtu.be/TnJeXTC3nkU).
 * [Primeagen - Meth to Netflix](https://youtu.be/JjHFubUPLV0), great video that he discusses his addictions openly
 * [How to Make a Small Room Look Bigger](https://youtu.be/0d6Rme8XAFI): lighting, furtniture close to the floor, smaller tables in contrast to big library or windows (that go close to ceiling), rugs to conceptually define room borders.
-* [Trump's Inaguration](https://youtu.be/95ypYghOgOI). Drill oil, block immigrants, stop diversity. Biden pardoning his family and friends in advance. [Donald Trump inauguration](https://youtu.be/Qb4JWRBF80A), he wants panama canal back, free speech, build army but not enter wars and stop wars, go to Mars, 
+* [Trump's Inaguration](https://youtu.be/95ypYghOgOI). Drill oil, block immigrants, stop diversity. Biden pardoning his family and friends in advance. [Donald Trump inauguration](https://youtu.be/Qb4JWRBF80A), he wants panama canal back, free speech, build army but not enter wars and stop wars, go to Mars,
+* [Solving mazes - veritasium](https://youtu.be/ZMQbHMgK2rw), [Jetpack Joyride creation - YT video](https://youtu.be/mxHkXADm3gU)
