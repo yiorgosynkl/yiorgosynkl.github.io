@@ -6,7 +6,7 @@ tags: [💻code, 🚧wip]
 ---
 
 A good overall guide is the [system design primer](https://github.com/donnemartin/system-design-primer/?tab=readme-ov-file) repo. (tinyurl, ...)
-Also [gaurav sev]() has great videos like [horizontal vs vertical scaling](https://www.youtube.com/watch?v=xpDnVSmNFX0&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX), sharding, ...
+Also [gaurav sev](https://www.youtube.com/@gkcs) has great videos like [horizontal vs vertical scaling](https://youtu.be/xpDnVSmNFX0) (and sharding, ...)
 
 ## Main concepts
 
@@ -15,19 +15,36 @@ System design contains ideas to solve answer questions. Usually there are differ
 > Essentially what we do in programming all the time is transfering data in a nice manner. And to make things for efficient, we use caching and batching. And to make things resusable we try to make nice/smart APIs (but in practice your manager rarely things of that).
 > We always think of what happens if a particular piece fails or takes too much time (timeouts, ...).
 
-* "what type of database will I use when storing data?" Relational database (SQL databases)? or store database (NoSQL)? or niche databases (graph, timeseries)?
-* "in distributed systems, how do I update replicas?" Availability vs consistency and CAP theorem. Weak/Eventual/Strong consistency.
-* "how can I serve more clients as the traffic for my application gets bigger?" Horizontal vs Vertical Scaling
-* "how is the network structured?" 7 layers, TCP/IP, UDP, CDN, packages and abstractions
-* "how do individual programs (A and B) communicate (e.g. in microservices)? should A wait for B? should A continue? what if B stopped running? what if the network is down (and A cannot send a message)?" APIs, timeouts, clones, Push/Pull, Subscribe, HTTP (Rest APIs), WebSocket, clients and servers 
-
-* Microservices vs Monoliths, network calls vs function calls
-* Ways for services to communicate
+A list of questions and related important topics to know:
+* "what type of database will I use when storing data?" 
+    * Relational database (SQL databases)? or store database (NoSQL)? or niche databases (graph, timeseries, vector)?
+    * ACID principles
+* "what happens if a particular part of the system crashes?" and "what happens when the system goes back up? what data were lost?"
+    * Difference between database (disk) and memory (RAM)
+    * Persistency of data, losing in memory, picking up from last checkpoint
+* "what are common tradeoffs to consider for system design?", "how do I choose between tradeoffs depending on my project?"
+    * Performance vs scalability <details><summary><i>(Explanation)</i></summary>If you have a performance problem, your system is slow for a single user. If you have a scalability problem, your system is fast for a single user but slow under heavy load.</details>
+    * Latency vs throughput, Availability vs consistency (CAP theorem)
+* "in distributed systems, how do I update replicas?"
+    * Availability vs consistency (CAP theorem). Weak vs Eventual vs Strong consistency
+* "how can I serve more clients as the traffic for my application gets bigger?" 
+    * Horizontal vs Vertical Scaling
+* "How can I increase performance for an existing system?"
+    * Cache (Client / CDN / Web Server / Database / Application caching)
+    * types of caching (write through / Cache-aside / Write-behind (write-back) / Refresh-ahead )
+* "how is the network structured?" 
+    * OSI model (7 layers), TCP/IP, UDP, CDN, packages and abstractions
+* "how do individual programs (A and B) communicate (e.g. in microservices)? should A wait for B? should A continue? what if B stopped running? what if the network is down (and A cannot send a message)?" 
+    * Asynchrous vs Synchronous systems (Message/Task Queues, publish/subscribe)
+    * Popular Message Queues (Apache Kafka, RabbitMQ, Redis (not persistant))
+    * APIs, clients and servers, timeouts, Push/Pull, Publish/Subscribe, HTTP (Restful APIs), WebSocket, 
+    * Microservices vs Monoliths (network calls vs function calls)
+* "how do I estimate requirements fast to decide between tradeoffs?"
+    * e.g. "amount of users", "request per day", ...
+    * Back-of-the-envelope calculations
 
 And then you have all of these in practice:
-* "how can I design a particular app? what individual pieces? how would they communicate? and why do I make these choices?"
-* usually I assume some requirements (how many users?)
-* "what kind of API would I provide to people?"
+* "how can I design the system for an app idea? what are individual pieces and how would they communicate? what are the assumptions about users/data/requests/...? what functionalities to a provide to solve the users problem? what will the API/interface be and how does it affect the system design?"
 
 ## More resources
 
