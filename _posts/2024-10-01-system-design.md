@@ -6,7 +6,8 @@ tags: [💻code, 🚧wip]
 ---
 
 A good overall guide is the [system design primer](https://github.com/donnemartin/system-design-primer/?tab=readme-ov-file) repo. (tinyurl, ...)
-Also [gaurav sev](https://www.youtube.com/@gkcs) has great videos like [horizontal vs vertical scaling](https://youtu.be/xpDnVSmNFX0) (and sharding, ...)
+Also [gaurav sev](https://www.youtube.com/@gkcs) has great videos like [horizontal vs vertical scaling](https://youtu.be/xpDnVSmNFX0) (and sharding, ...). This article contains [18 fundamental concepts for system design](https://www.designgurus.io/blog/system-design-interview-fundamentals). The OG book about to go deeper is [DDIA](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/).
+
 
 ## Main concepts
 
@@ -19,6 +20,8 @@ A list of questions and related important topics to know:
 * "what type of database will I use when storing data?" 
     * Relational database (SQL databases)? or store database (NoSQL)? or niche databases (graph, timeseries, vector)?
     * ACID principles
+    * Data Partitioning (sharding) (horizontal vs vertical)
+    * Database Index
 * "what happens if a particular part of the system crashes?" and "what happens when the system goes back up? what data were lost?"
     * Difference between database (disk) and memory (RAM)
     * Persistency of data, losing in memory, picking up from last checkpoint
@@ -26,9 +29,11 @@ A list of questions and related important topics to know:
     * Performance vs scalability <details><summary><i>(Explanation)</i></summary>If you have a performance problem, your system is slow for a single user. If you have a scalability problem, your system is fast for a single user but slow under heavy load.</details>
     * Latency vs throughput, Availability vs consistency (CAP theorem)
 * "in distributed systems, how do I update replicas?"
+    * Database Replication for enhancing reliability
     * Availability vs consistency (CAP theorem). Weak vs Eventual vs Strong consistency
 * "how can I serve more clients as the traffic for my application gets bigger?" 
     * Horizontal vs Vertical Scaling
+    * Load Balancers (Round Robin, Least Connections, IP Hash)
 * "How can I increase performance for an existing system?"
     * Cache (Client / CDN / Web Server / Database / Application caching)
     * types of caching (write through / Cache-aside / Write-behind (write-back) / Refresh-ahead )

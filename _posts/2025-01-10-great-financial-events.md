@@ -48,6 +48,12 @@ In a matter of hours on April 20, the May 2020 contract futures price for West T
 
 TODO
 
+
+#### 2017 | CumEx Scandal
+
+This is a relatively unknown scandal that had massive impact in European tax reserves. Essentially it's a fraud scheme that effectively "robbed 55$ billion tax money from European citizens".  
+The [CumEx-Files](https://en.wikipedia.org/wiki/CumEx-Files) is an investigation by a number of European news media outlets into a tax fraud scheme discovered by them in 2017.[1] A network of banks, stock traders, and lawyers had obtained billions from European treasuries through suspected fraud and speculation involving dividend taxes. The five hardest hit countries may have lost at least $62.9 billion. A great bloomberg video about [CumEx](https://youtu.be/JHfL6_f-Se8).
+
 #### 2015 - 2016 | Stock Market Selloff
 
 The market volatility initially began in China as investors were sold shares globally amid a slew of tumultuous economic circumstances, including the end of quantitative easing in the U.S., a fall in petroleum prices, the Greek debt default, and the Brexit vote.
