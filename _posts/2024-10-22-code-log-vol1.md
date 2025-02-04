@@ -5,6 +5,62 @@ cover-img: ["assets/img/posts/Beach-Set.jpg"]
 tags: [learn, 💻code]
 ---
 
+## Segmentation faults
+
+When a program tries to access a memory location outside its allowed segment, the operating system blocks it, causing a segmentation fault.
+More specifically, the operating system manages memory using a hardware component inside CPU known as MMU (Memory Management Unit). It uses it to control access to memory and enforce memory protection. Each program runs in its own virtual address space and MMU, using what is known as page tables, translates virtual addresss (used by programs) into physical addresses (actual loactions in RAM). When a program access an illegal memroy address, the MMU and OS work together to detect the error and stop the program. 
+
+1. The program issues a memory access request (e.g process 102 tries to write to address 0xDEADBEEF, which is outside of its' allowed segment).
+2. The MMU checks the memory access. (it compares the requested address with the page tables and if it isn't allowed or is a protected area, it raises a page fault).
+3. The CPU triggers an exception (MMU tells CPU that illegal memory access happened and CPU generates an exception, also known as trap. specifically it raises a segmentation fault exception, also known as SIGSEGV signal in Unix/Linux).
+4. The OS receives the exception (the OS kernel gets the signal and checks if the memory access was valid and if the program has special permission to handle it)
+5. The OS terminates the program (if the memory access is illegal, the OS sends the SIGSEGV signal to the program. if the program does not have signal handler, than the OS forcefully stops (kills) the process).
+
+The process/program is therefore forcefully stopped ("crashes") therefore relevant data are lost and requests are not handled properly. It's important to make sure that seg faults don't happen, so that a program doesn't crash and instead returns error messages for incorrect requests, etc.
+Usually the OS creates a core dump (core file), which is a snapshot of the program's memory that the developer can investigate to understand the crash.
+
+Here is an example of a [SIGSEGV handler in C](https://gist.github.com/fairlight1337/55978671ace2c75020eddbfbdd670221).
+
+It assigns each process its own memory space, it prevents a program from 
+Segmentation fault will unfortunetely crash the whole process 
+
+Common causes of segmentation faults.
+```cpp
+#include <cstdlib>
+
+// dereferencing NULL or uninitialized pointer
+void common_segfault_1() {
+    int* num_ptr = nullptr;
+    *num_ptr = 5;
+}
+
+// accessing array beyond bounds
+void common_segfault_2() {
+    int nums[4];
+    nums[15] = 5;  // accessing 
+}
+
+// using memory after freeing it
+void common_segfault_3() {
+    int* ptr = (int*) malloc(sizeof(int));
+    free(ptr);
+    *ptr = 10;
+}
+
+// writing read-only memory
+void common_segfault_4() {
+    char *str = "hello world";
+    str[0] = 'H';
+}
+
+int main(){
+    common_segfault_1();
+    common_segfault_2();
+    common_segfault_3();
+    common_segfault_4();
+    return 0;
+}
+```
 ## Awesome header-only C++ libraries
 
 This [awesome-hpp repo](https://github.com/p-ranav/awesome-hpp) contains the most popular header-only libraries. 
