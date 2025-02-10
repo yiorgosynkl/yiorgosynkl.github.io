@@ -17,6 +17,11 @@ Over the course of five days in March 2023, three small-to-mid size U.S. banks f
 * [2023 United States banking crisis](https://en.wikipedia.org/wiki/2023_United_States_banking_crisis)
 * [Wikipedia - Silicon Valley Bank (SVB)](https://en.wikipedia.org/wiki/Silicon_Valley_Bank)
 * [Wikipedia - First Republic Bank](https://en.wikipedia.org/wiki/First_Republic_Bank)
+* [YT - Johhny Harris on SVB bank collapse](https://youtu.be/E_VKZ6dzauo)
+  * Reserve ration: banks only have to keep x0.1 (10%) of account holders money, the rest they can use again. Therefore, we have 10x (1/0.1) more money added to the system. Aka if you add the balances of what all people see in their banking apps (and they assume they own and can withdraw), it's actually 10x of the money banks actually have. Similary, if everybody goes and withdraws his money from the bank at the same time, there won't be enough of it.
+  * When people freak out and they run to withdraw money, we say that "there is a run in the bank". This leads to bankruptcy of the bank and account holders lose their money. To prevent this, the government intervines and gives money to "bail out the bank (sometimes using taxpayers money!!).
+  * Banks essentially can take huge risks and they know that governments will bail them out. But there is an inequlity of how gains profits when things goes well vs how pays the losses when things fail. “If taxpayer money bails out a bank, the bank should become publicly owned. You can’t privatize the profits, but socialize the losses.”
+  * Similar situation with banks happened in the great depression of 1930 and the 2008 financial crisis. US bailed out many of them to save the system. There are also counterexamples like Iceland, which left the banks pay in 2008. 
 
 #### 2023 March | Credit Suisse Collapse
 
