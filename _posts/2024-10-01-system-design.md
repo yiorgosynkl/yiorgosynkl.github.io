@@ -55,6 +55,16 @@ And then you have all of these in practice:
 
 ## More resources
 
+This [video of 1 hour system design](https://youtu.be/iYIjJ7utdDI) explains the main patterns asked in interviews: 
+* Contending updates (many writes for the same key, locking the db will make it slow). Optimise with multiple write leaders. Or stream processing and batching writes (therefore less writes and congestion).
+* Derived data (keeping datasets in sync).
+* Fan out (e.g. sending push notificaiton or news feed updates). Asynchronously doing work instead of sending requests to thousand of destinations. Essentially sink all messages to a log-based message broker (e.g. Kafka) and consumer logic will handle finding the appropriate parties to send. Caveat the "popular message" or "hotkey". Use popular message cache were users poll for these (instead of push notifications going to everybody).
+* Proximity Search (find close items in db, e.g Uber, Lyft). Indexing on latitude and longtitude is the naive solution. Better to use geospatial indexing (and sharding because of huge amount of data).
+* Job Scheduling: run a series of job (e.g. build a scheduler or youtube saving video in different encodings/resolutions). We don't care where the tasks run, we use in memory message broker and round robin to workers. No time dependency in messages (aka requirement to process messages in order) therefore we do not need a log-based message broker (if a partition worker is slow, the rest of the workers in the partition have to wait for the slow worker, which is inefficient).
+* Aggregation: distributed messages need to be aggregated by some key/time (e.g metrics). Naive solution to store in database and run jobs afterwards. The faster solution is stream processing (with log-based message broker) and partitioning based on the aforementioned key (therefore the proper process will be handling all the key data).
+* Idempotence: you don't want to see the result more than once (e.g. amazon confirmation emails in orders). Naive solution is Two-phase commit in dbs. The smart solution is using idempotency key, storing a unique ID for each job (e.g save them in DB) (if we see again the same ID, that means we already processed and send the relevant message). If this happens on the consumer (instead of the producer of messages), it's called "fencing".
+* Durable data: data that absolutely cannot be lost once written (e.g. financial applications). Synchronous replication is the first solution (guaranteed to propagate writes to all dbs, but if one replica goes down, no writes can be made, so no fault tolerance). Therefore, the practical solution is a distributed consensus algorithm (and using a log that we know persists).  
+
 So many online resources:
 * [codekarle](https://www.youtube.com/@codeKarle/videos) has great videos like [buidling airbnb](https://www.youtube.com/watch?v=YyOXt2MEkv4), [tinyURL](https://www.youtube.com/watch?v=AVztRY77xxA&ab_channel=codeKarle&sttick=0), [uber](https://www.youtube.com/watch?v=Tp8kpMe-ZKw&ab_channel=codeKarle&sttick=0), [preparation series](https://www.youtube.com/watch?v=3loACSxowRU&list=PLhgw50vUymycJPN6ZbGTpVKAJ0cL4OEH3), [choosing sql vs nosql vs other dbs](https://www.youtube.com/watch?v=cODCpXtPHbQ&list=PLhgw50vUymycJPN6ZbGTpVKAJ0cL4OEH3&index=10&ab_channel=codeKarle). 
 
