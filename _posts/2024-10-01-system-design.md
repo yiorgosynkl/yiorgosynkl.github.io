@@ -53,6 +53,69 @@ A list of questions and related important topics to know:
 And then you have all of these in practice:
 * "how can I design the system for an app idea? what are individual pieces and how would they communicate? what are the assumptions about users/data/requests/...? what functionalities to a provide to solve the users problem? what will the API/interface be and how does it affect the system design?"
 
+
+## important distinction
+
+In broad there are 3 types of systems:
+* online systems (services): it's the most popular in the web and uses the request/response paradigm. the client makes a request, the server gives a response and the communication is synchronous. The client also sets a timeout (the maximum time the client will wait for a response, if no response arrives by the timeout time). The primary measure of performance is response time (be fast) and availability (answer always and don't time out).
+* offline systems (batch-processing): a batch processing system takes a large amount of input data, runs a job to process and produces a result. usually there is no user waiting for a response during that time. the primary measure of performance is throughput (process a lot very fast, that's why you aggregated the whole batch).
+* near-real-time systems (stream-processing): it's something between online and offline. A stream processor consumes inputs and produces outputs, like batch-processor, but does shortly after a request was made, like a service. The important metrics are both latency and throughtput.
+
+
+## Stream processing / Message brokers
+
+In batch processing, we get all the data first (the input is bounded), then execute a job for them. In reality, a lot of data are gradually available over time (e.g. the users execute new actions every day). We don't want to wait a whole day or even hour to process something. 
+
+Stream refers to data that are incrementally available over time. The concept appears also in Unix terminals (stdin/stdout), TCP connections, delivering audio/video, filesystems and programming languages (lazy lists, etc).
+
+Event streams.
+
+
+Message Brokers is a general concept in software system design. They're systems that handle passing messages between different parts of your system. 
+Some popular solutions are Kafka, Apache Flink, RabbitMQ, Redis (with multiple possible configurations and different pros/cons).
+
+The two main properties we are concerned with are **persistence** (also known as durability) and **ordering**. 
+
+Persistence spectrum ("if the machine crashes, will I lose data?"):
+* Purely in-memory (lost on restart)
+* In-memory with periodic snapshots
+* In-memory with WAL (write-ahead logging)
+* Fully persistent with immediate disk writes
+* Replicated persistence across multiple nodes
+
+Snapshots write the entire queue state (take a "photo") in disk periodically (e.g., every 5 minutes). If the system crashes, you lose all messages since the last snapshot.
+It's faster than WAL since disk writes are batched and take more disk space per write since you're writing the full state. Recovery after crash is simple: just load the last snapshot
+
+Write-Ahead Logs record every operation (enqueue/dequeue) before performing it and write continuously as messages arrive. If system crashes, you lose at most a few milliseconds of operations, but it's slower than snapshots during due to frequent disk writes.
+More space-efficient since you only write the changes but recovery takes longer: must replay all operations since start.
+
+> A log can be thought simply as an append-only sequence of records on disk. 
+
+Most queues have a hybrid 
+Most systems use a hybrid approach of snapshots and WAL. They use WAL for recent operations and take periodic snapshots, after which they can truncate the WAL before the snapshot. On recovery, load the last snapshot then replay WAL from that point.
+
+> Remember that disk writes are slow and want to avoid them (but they are also necessary because the provide persistence).
+
+Ordering spectrum ("are the messages processed in the order that they are being published?"):
+* No ordering guarantees
+* Partial ordering (e.g., within a partition/shard only)
+* Total ordering within a queue
+* Global ordering across all queues in the system
+
+> The key trade-off is between strict ordering and throughput. 
+
+If we have total ordering in a queue, we have to make sure we process the first message before we process the next one (which prohibits us from having multiple consumers on that queue). In reality, we usually use partial ordering, aka we split our data in multiple ordered partitions and have one consumer per partition. And we make sure to route ordered dependent data in the same queue (e.g. the transactions of a specific user go always in the same queue).
+
+A problem arises when a consumer crashes while processing a message from a queue. From the queues perspective, it sees a consumer crashing but is uncertain as to wether it crashed before or after completing the processing of the message (<details>The consumer may crashed before completing processing and no results were propagated to other services. Or the consumer may completed processing and propagated results to other services but crashed before letting the message broker know.</details>). Here, we have the concept of delivery gurantees:
+* at-least-once (most popular usecase) delivery guarantee: if the consumer crashes during processing, we consider the message unprocessed and replay processing. 
+* at-most-once (also known as "best-effort") delivery guarantee: if the consumer crashes during processing, we consider the message unprocessed and replay processing.
+* exactly-once: using an (idempotency) key associated with each message. When consumer completes processing of message, it saves the key to disk (persistant storage) and propagates results to other services (in an atomic operation, either all or none happen). therefore, we can always check the db to ensure if we processed the message or not. the drawbacks are extra latency (because of writing in disk, which is slow) and extra space for storing keys.
+
+Other keywords:
+* fan-out: one message from one producer is delivered to multiple consumers (e.g publishing a post in twitter)
+* fan-in "sink": multiple messages from producers is delivered to one consumer ()
+* these two can work together, e.g. when uploading one video in YT, we have to do multiple jobs (fan out to multiple consumer, like encode in 720 resolution, 1080 resolution, save thumbnail, ) and then we want to know about completion to notify user (fan in to one consumer all the jobs are done).
+
 ## More resources
 
 This [video of 1 hour system design](https://youtu.be/iYIjJ7utdDI) explains the main patterns asked in interviews: 
