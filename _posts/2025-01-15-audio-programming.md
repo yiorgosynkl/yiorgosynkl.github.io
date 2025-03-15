@@ -13,6 +13,9 @@ I would like more resources to check (during the lesson, code and plugins).
 I would like to use JUCE for my plugin at the end. I have to find my level. 
 book a studio.
 
+
+DONT FORGET: you don't learn music in unis. You learn it playing, on the street, breaking rules and enjoying it as much as possible. It's a hobby, not a work.
+
 ### Most important books / resources
 
 The two most important ones:
@@ -29,6 +32,1626 @@ Some other good resources from the lessons:
 * Psychoacoustic: auditory analysis
 
 
+### around the internet
+
+After I have gotten a grasp of the basic concepts (like reverb, amplitutde, filtering, tremolos, ...), I can go more deep into how people create sounds (and manipulate timbre).
+
+Max/MSP/Jitter is a visual programming language for music and multimedia. People put layers and create controls and the parameters they can change. It's the product of company "Cycling 74".
+Similar products are Reaktor, Kontakt programming, Synthmaker (Flowstone). Reaktor and Pigments are more easy and good out of the box. Gradually though to become a pro you have to switch to MaxMSP. Pure Data is a good FOSS alternative too.
+
+Now it's integrated with the Ableton ecosystem. It's called "Max For Life" and you can create any kind of device/instrument/effect.
+
+
+### GPT resources - books and websites
+
+🎼 1. Music & Synthesis Books
+"The Computer Music Tutorial" – Curtis Roads
+📖 Covers detailed harmonic breakdowns of many instrument families.
+"Musimathics: The Mathematical Foundations of Music" – Gareth Loy
+📖 Explores the physics of musical tones and harmonic relationships.
+"Sound Synthesis and Sampling" – Martin Russ
+📖 Discusses different synthesis techniques, including additive.
+🔬 2. Scientific Databases & Research Papers
+ICASSP (IEEE International Conference on Acoustics, Speech, and Signal Processing)
+https://ieeexplore.ieee.org/Xplore/home.jsp
+Papers on spectral analysis of musical instruments.
+Journal of the Acoustical Society of America (JASA)
+https://asa.scitation.org/journal/jas
+Research on instrument timbres and harmonic structures.
+🎛️ 3. Online Additive Synthesis Resources
+McGill University – Musical Instrument Samples & Spectral Data
+http://www.music.mcgill.ca/resources/mumt/
+Includes spectral breakdowns of real instruments.
+Ircam (Institute for Research and Coordination in Acoustics/Music)
+https://www.ircam.fr/
+Has additive synthesis studies and spectral data.
+🎹 4. Open-Source & Online Tools
+University of Iowa Musical Instrument Samples (Spectral Analysis Data)
+https://theremin.music.uiowa.edu/MIS.html
+Contains high-quality harmonic breakdowns of real instruments.
+Smartelectronix Harmonic Tables
+http://www.smartelectronix.com/
+A collection of harmonic content for various synth patches.
+Online Spectrum Analyzers
+Tools like Sonic Visualiser (https://www.sonicvisualiser.org/) allow you to analyze harmonics in recordings.
+🎚️ 5. Synth Patches & Sound Design Forums
+KVR Audio Forum – https://www.kvraudio.com/forum/
+Huge community discussing additive synthesis & sound recipes.
+Synth Secrets (Sound on Sound Magazine) – https://www.soundonsound.com/series/synth-secrets
+Explains how to construct various sounds using synthesis.
+Patch Storage – https://patchstorage.com/
+Community-driven patch repository for additive synths.
+🎵 6. Spectral Analysis of Real Instruments
+If you want to analyze real instrument recordings, you can use:
+
+Audacity (with Spectrum Analyzer Plugin)
+Sonic Visualiser
+Max/MSP or Pure Data (PD)
+These tools let you extract harmonics from recordings and recreate them in your synth!
+
+
+### Best synths of all time
+
+[Link](https://www.desertislandcloud.com/2024/10/top-ten-synths-of-all-time/), [best synths of all time](https://youtu.be/pY-UiRNQCdE), [top 20 synths - sonicstate](https://youtu.be/fwCqVCeY5yI)
+
+The ones that are quoted the most:
+* Minimoog, Roland Jupiter-8, Yamaha DX-7, ARP 2600, Korg M1, Yamaha CS-80, Oberheim OB-8, Roland D-50, Sequential Circuits Prophet 5, Roland TB-303, Roland Juno 106
+
+The list includes these icons:   
+* Fairlight CMI, ARP Odyssey, Korg MS20, Roland JV-1080, Access Virus, Juno 60, Mellotron, The Proteus, Nord Lead, EMS VCS3, Roland SH-101, Solina, Roland TB-303 (acid house for the first time), Moog Subsequent 37, PPG Wave 2.2/3, Korg Wavestation
+
+
+GPT answer (with categories and chronological ordering)
+
+Analog Synths:
+* Minimoog Model D (1970) – The first portable synthesizer, used by artists like Kraftwerk, Parliament-Funkadelic, and Rick Wakeman.
+* Roland Juno-106 (1984) – A staple in electronic, synth-pop, and house music, loved for its lush pads and chorus effect.
+* Roland Jupiter-8 (1981) – A classic for rich, warm polyphonic sounds, used by artists like Duran Duran and Prince.
+* ARP 2600 (1971) – A semi-modular beast known for its punchy sounds, famously used by R2-D2 in Star Wars.
+* Sequential Circuits Prophet-5 (1978) – One of the first programmable polyphonic synths, heard in countless ‘80s hits.
+* Korg MS-20 (1978) – A semi-modular synth known for its raw, aggressive sound and incredible filter.
+Digital Synths:
+* Yamaha DX7 (1983) – Defined the sound of the ‘80s with its bright FM synthesis, used in hits by Whitney Houston and A-ha.
+* Roland D-50 (1987) – Introduced “Linear Arithmetic” synthesis, featured in hits by Jean-Michel Jarre and Enya.
+* Korg M1 (1988) – One of the best-selling synths ever, responsible for the iconic “house piano” sound.
+Modern & Hybrid Synths:
+* Nord Lead series (1995–present) – A pioneer of virtual analog synthesis, favored for its crisp leads and pads.
+* Access Virus (1997–present) – A favorite in electronic and trance music for its powerful, lush sound.
+* Moog Sub 37 (2014) – A modern take on classic Moog designs, with deep modulation capabilities.
+* Sequential Prophet-6 (2015) – A modern reboot of the legendary Prophet-5 with updated features.
+Software Synths (VSTs):
+* Serum (Xfer Records) – A go-to wavetable synth for modern electronic music.
+* Massive (Native Instruments) – Defined dubstep and bass music in the 2010s.
+* Omnisphere (Spectrasonics) – Known for its deep sound library and cinematic textures.
+
+
+## Deepseek answer for most popular synths (also with categories)
+
+The most popular synthesizers of all time are iconic for their sound, design, and influence on music. Here’s a list of some of the most legendary synths:
+
+### **Analog Synths (Classic Era)**
+1. **Moog Minimoog (1970)**  
+   - The first portable synthesizer, defining the sound of analog synths.  
+   - Used in prog rock, funk, and early electronic music.  
+   - Famous users: Kraftwerk, Stevie Wonder, Pink Floyd.
+
+2. **Roland TB-303 (1981)**  
+   - Originally designed for basslines, it became the cornerstone of acid house and techno.  
+   - Known for its squelchy, resonant sound.
+
+3. **Roland TR-808 (1980)**  
+   - A drum machine, but its iconic analog drum sounds (kick, snare, hi-hats) shaped hip-hop, electronic, and pop music.  
+   - Famous in tracks by Marvin Gaye, Afrika Bambaataa, and modern producers.
+
+4. **ARP 2600 (1971)**  
+   - A semi-modular synth used in film scores (e.g., *Star Wars*) and by artists like Jean-Michel Jarre and Edgar Winter.
+
+5. **Yamaha CS-80 (1976)**  
+   - Known for its lush, expressive pads and leads.  
+   - Used by Vangelis (*Blade Runner* soundtrack) and Stevie Wonder.
+
+6. **Sequential Circuits Prophet-5 (1978)**  
+   - The first fully programmable polyphonic synth.  
+   - Used by Michael Jackson, Madonna, and Tangerine Dream.
+
+---
+
+### **Digital Synths (1980s and Beyond)**
+1. **Yamaha DX7 (1983)**  
+   - The best-selling synth of all time, thanks to its FM synthesis.  
+   - Iconic for its electric piano, bass, and bell sounds.  
+   - Used in 80s pop, rock, and R&B.
+
+2. **Roland D-50 (1987)**  
+   - A staple of late 80s and 90s music, known for its lush pads and digital textures.  
+   - Used by Enya, Jean-Michel Jarre, and film composers.
+
+3. **Korg M1 (1988)**  
+   - The best-selling workstation synth, featuring iconic presets like the "Universe" pad and "Organ 2" (used in *Gonna Make You Sweat* by C+C Music Factory).
+
+4. **Roland Juno-106 (1984)**  
+   - A polyphonic analog synth with a warm, chorus-heavy sound.  
+   - Popular in synth-pop, house, and indie music.
+
+---
+
+### **Modern Synths (2000s and Beyond)**
+1. **Moog Subsequent 37 (2015)**  
+   - A modern take on the Minimoog, loved for its versatility and rich analog sound.
+
+2. **Korg Minilogue (2016)**  
+   - An affordable analog polyphonic synth, popular with beginners and pros alike.
+
+3. **Dave Smith Instruments Prophet-6 (2015)**  
+   - A modern reimagining of the Prophet-5, combining vintage and modern features.
+
+4. **Roland JD-XA (2015)**  
+   - A hybrid synth combining analog and digital synthesis.
+
+5. **Arturia MicroFreak (2019)**  
+   - A unique digital/analog hybrid synth with a cult following for its experimental capabilities.
+
+---
+
+### **Modular Synths**
+1. **Eurorack Modular System**  
+   - A modular synth format that has become a standard for experimental and custom setups.  
+   - Popularized by artists like Aphex Twin and Deadmau5.
+
+2. **Moog Modular Systems (1960s-1970s)**  
+   - The original modular synths used by Wendy Carlos (*Switched-On Bach*) and Keith Emerson.
+
+---
+
+### **Honorable Mentions**
+- **Oberheim OB-Xa** (used by Van Halen, Prince)  
+- **Korg MS-20** (a gritty semi-modular synth)  
+- **Waldorf Wave** (a rare and powerful digital synth)  
+- **Nord Lead** (a staple of live performances)  
+
+---
+
+These synths have shaped the sound of music across genres, from rock and pop to electronic and hip-hop. Their legacy continues to inspire musicians and producers today.
+
+Regarding software synths:
+
+Software synthesizers (soft synths) have become incredibly popular due to their affordability, flexibility, and ability to emulate classic hardware synths. Here are some of the most popular and influential soft synths of all time:
+
+---
+
+### **Classic Emulations**
+1. **Arturia V Collection**  
+   - A suite of software emulations of iconic synths like the Minimoog, Prophet-5, Jupiter-8, and DX7.  
+   - Known for its accuracy and versatility.
+
+2. **Native Instruments Monark**  
+   - A faithful emulation of the Moog Minimoog, praised for its warm analog sound.
+
+3. **Korg Legacy Collection**  
+   - Includes software versions of the MS-20, Polysix, and Wavestation.
+
+4. **Roland Cloud**  
+   - Offers software versions of classic Roland synths like the Jupiter-8, Juno-106, and TB-303.
+
+---
+
+### **Modern Soft Synths**
+1. **Serum by Xfer Records**  
+   - A wavetable synth that has become a staple in EDM, dubstep, and modern production.  
+   - Known for its intuitive interface and powerful sound design capabilities.
+
+2. **Massive by Native Instruments**  
+   - A wavetable synth that defined the sound of modern bass music and EDM.  
+   - Used by Skrillex, Deadmau5, and many others.
+
+3. **Omnisphere by Spectrasonics**  
+   - A powerhouse synth with a vast library of sounds, combining synthesis and sample-based elements.  
+   - Popular in film scoring, pop, and electronic music.
+
+4. **Sylenth1 by LennarDigital**  
+   - A virtual analog synth known for its warm sound and efficiency.  
+   - Widely used in trance, house, and pop music.
+
+5. **Spire by Reveal Sound**  
+   - A versatile synth with a modern interface, popular in EDM and dance music.
+
+6. **Pigments by Arturia**  
+   - A visually stunning synth combining wavetable, virtual analog, and granular synthesis.  
+   - Known for its flexibility and ease of use.
+
+---
+
+### **Experimental and Unique Synths**
+1. **Absynth by Native Instruments**  
+   - A semi-modular synth known for its atmospheric and evolving sounds.  
+   - Popular in ambient and experimental music.
+
+2. **Reaktor by Native Instruments**  
+   - A modular environment for building custom synths and effects.  
+   - Used by advanced sound designers and experimental artists.
+
+3. **Granulator II (Max for Live)**  
+   - A granular synthesis tool for Ableton Live, popular for creating textured, evolving sounds.
+
+4. **Vital by Matt Tytel**  
+   - A free wavetable synth with a Serum-like interface, gaining popularity for its power and accessibility.
+
+---
+
+### **Free and Budget-Friendly Synths**
+1. **Surge XT**  
+   - An open-source wavetable synth with a rich feature set.
+
+2. **TyrellN6 by u-he**  
+   - A free virtual analog synth with a classic sound.
+
+3. **Dexed**  
+   - A free FM synth based on the Yamaha DX7.
+
+4. **TAL-NoiseMaker**  
+   - A free virtual analog synth with a simple interface and great sound.
+
+---
+
+### **Hybrid and Sampler-Based Synths**
+1. **Kontakt by Native Instruments**  
+   - A sampler-based platform used for creating and playing realistic instruments and experimental sounds.
+
+2. **Alchemy (in Logic Pro)**  
+   - A powerful synth combining additive, spectral, granular, and sample-based synthesis.
+
+3. **Falcon by UVI**  
+   - A hybrid synth and sampler with deep sound design capabilities.
+
+---
+
+### **Honorable Mentions**
+- **Diva by u-he** (analog modeling synth)  
+- **Phase Plant by Kilohearts** (modular-style soft synth)  
+- **Zebra by u-he** (hybrid synth for film scoring and sound design)  
+- **ANA 2 by Sonic Academy** (versatile synth for modern genres)  
+
+---
+
+These soft synths have become essential tools for producers, offering everything from classic analog emulations to cutting-edge sound design capabilities. Many are used across genres, from pop and hip-hop to experimental and cinematic music.
+
+## Best free synths to use
+
+There are a lot of great free software synths available, whether you’re looking for analog emulations, wavetable synthesis, or experimental sound design tools. Here are some of the best free synth plugins you can use:
+
+### **Best Free Analog-Style Synths**  
+1. **Vital (Matt Tytel)** – Often called the “free Serum,” this powerful wavetable synth has an intuitive interface and deep modulation options.  
+2. **Surge XT** – A versatile, open-source hybrid synth with subtractive, FM, and wavetable synthesis.  
+3. **Tyrell N6 (u-he)** – A classic analog-modeled synth inspired by the Roland Juno series.  
+4. **OB-Xd (DiscoDSP)** – A fantastic emulation of the classic Oberheim OB-X synth, great for lush pads and leads.  
+
+### **Best Free FM Synths**  
+5. **Dexed (Digital Suburban)** – A faithful recreation of the Yamaha DX7, perfect for classic FM sounds.  
+6. **TAL-Noisemaker (Togu Audio Line)** – A simple but powerful synth with built-in effects and flexible modulation.  
+
+### **Best Free Modular & Experimental Synths**  
+7. **VCV Rack (Free Version)** – A virtual modular synth environment similar to Eurorack hardware.  
+8. **Helm (Matt Tytel)** – A cross-platform synth with a fun, visual modulation system.  
+9. **Zebralette (u-he)** – A single-oscillator version of the powerful Zebra synth, great for learning wavetable synthesis.  
+
+### **Best Free ROMplers & Sample-Based Synths**  
+10. **LABS (Spitfire Audio)** – A free collection of beautifully sampled instruments, great for cinematic sounds.  
+11. **Piano One (Sound Magic)** – A high-quality sampled grand piano.  
+
+### **Best Free Synthwave & Lo-Fi Synths**  
+12. **TAL-U-No-62 (Togu Audio Line)** – A Juno-60 emulation with lush chorus effects.  
+13. **PG-8X** – An emulation of the Roland JX-8P, perfect for 80s synthwave vibes.  
+
+There are many high-quality free software synths available that rival paid options in terms of sound and functionality. Here’s a list of some of the best free soft synths you can use:
+
+---
+
+### **Analog Emulations**
+1. **Vital**  
+   - A powerful wavetable synth with a Serum-like interface.  
+   - Features include wavetable editing, FM synthesis, and a flexible modulation system.  
+   - Free version available with a wide range of features.
+
+2. **Surge XT**  
+   - An open-source wavetable synth with a rich feature set.  
+   - Includes three oscillators, multiple filter types, and extensive modulation options.
+
+3. **TyrellN6 by u-he**  
+   - A virtual analog synth with a classic sound.  
+   - Great for bass, leads, and pads.
+
+4. **TAL-NoiseMaker**  
+   - A simple yet powerful virtual analog synth.  
+   - Known for its warm sound and intuitive interface.
+
+---
+
+### **FM Synthesis**
+1. **Dexed**  
+   - A free FM synth based on the Yamaha DX7.  
+   - Comes with thousands of presets and allows you to load DX7 sysex files.
+
+2. **VOPM**  
+   - Another FM synth emulating the Yamaha YM2612 chip (used in the Sega Genesis).  
+   - Great for retro video game sounds.
+
+---
+
+### **Modular and Experimental**
+1. **VCV Rack**  
+   - A free modular synth environment with a vast library of modules.  
+   - Perfect for creating experimental and complex sounds.
+
+2. **Crystal by Green Oak**  
+   - A hybrid synth combining subtractive, FM, and granular synthesis.  
+   - Great for atmospheric and evolving textures.
+
+3. **Pendulate (Max for Live)**  
+   - A free granular synth for Ableton Live users.  
+   - Ideal for creating unique, textured sounds.
+
+---
+
+### **Sampler-Based**
+1. **Grace by One Small Clue**  
+   - A simple and lightweight sampler with synthesis capabilities.  
+   - Great for creative sound design.
+
+2. **Sforzando**  
+   - A free sampler that plays SFZ files.  
+   - Comes with a library of high-quality sampled instruments.
+
+---
+
+### **Other Notable Free Synths**
+1. **OB-Xd**  
+   - A free emulation of the Oberheim OB-X synthesizer.  
+   - Known for its warm, vintage sound.
+
+2. **Synth1**  
+   - A legendary free synth based on the Nord Lead 2.  
+   - Comes with thousands of user-created presets.
+
+3. **Helm**  
+   - A polyphonic synth with a clean interface and powerful features.  
+   - Includes a built-in EQ and compressor.
+
+4. **PG-8X**  
+   - A free emulation of the Roland JX-8P.  
+   - Great for lush pads and retro sounds.
+
+5. **Dragonfly Reverb + Triple Cheese**  
+   - While primarily a reverb plugin, Triple Cheese is a quirky granular synth included in the bundle.  
+   - Perfect for experimental sound design.
+
+---
+
+### **Free Synth Plugins for Specific DAWs**
+1. **Ableton Live (Suite)**  
+   - **Operator**: A built-in FM synth.  
+   - **Wavetable**: A wavetable synth included in Live 10 and later.  
+   - **Analog**: A virtual analog synth.
+
+2. **Logic Pro**  
+   - **Alchemy**: A powerful hybrid synth included in Logic Pro.  
+   - **Retro Synth**: A versatile synth with analog, FM, wavetable, and sync modes.
+
+3. **FL Studio**  
+   - **Sytrus**: A powerful FM synth included in FL Studio.  
+   - **Flex**: A free synth with a large library of presets.
+
+---
+
+### **Where to Find Free Synths**
+- **Plugin Boutique**: Offers free synths and plugins regularly.  
+- **Bedroom Producers Blog**: A great resource for finding free plugins.  
+- **KVRAudio**: A database of free and paid plugins.
+
+---
+
+These free soft synths are perfect for beginners and professionals alike, offering a wide range of sounds and capabilities without breaking the bank. Whether you’re into analog emulations, FM synthesis, or experimental sound design, there’s something here for everyone!
+
+### Google Gemini response
+
+It's fantastic that there are so many high-quality free software synthesizers available! Here's a breakdown of some of the best, categorized to help you find what you're looking for:
+
+Top Recommendations:
+
+Vital:
+This is a powerful wavetable synth that rivals paid options. Its sound quality and feature set are exceptional. It's considered by many to be one of the very best free synths available.   
+Surge XT:
+An open-source, versatile synth with a robust wavetable engine. It offers a wide range of sonic possibilities and is constantly being updated.   
+TyrellN6 (u-he):
+Inspired by classic Roland synths, this is a fantastic virtual analog synth with a warm and rich sound.   
+OB-Xd:
+An excellent free emulation of the Oberheim OB-Xa, known for its lush and powerful sound.
+PG8X:
+A great software emulation of the Roland JX-8P.
+Zebralette (u-he):
+A single oscillator synth that is a smaller version of u-he's Zebra 3. High quality sound.
+Other Notable Free Synths:
+
+TAL Noisemaker:
+A free synth inspired by the Roland Juno series.
+Odin 2 (TheWaveWarden):
+A powerful semi-modular synth with a wide range of features.   
+Cherry Audio Voltage Modular Nucleus:
+A free version of a modular synthesizer platform.
+Full Bucket Music Synths:
+This developer offers a collection of high-quality free synths that emulate classic Korg instruments.   
+Key Considerations:
+
+Type of Synthesis:
+Consider what kind of sounds you want to create. Wavetable synths (like Vital and Surge XT) are great for modern sounds, while virtual analog synths (like TyrellN6 and OB-Xd) excel at classic analog tones.
+Ease of Use:
+Some synths have steeper learning curves than others. If you're a beginner, you might want to start with a simpler synth.
+System Requirements:
+Make sure the synth is compatible with your operating system and that your computer meets the minimum system requirements.
+I hope this information helps you find the perfect free software synths for your music production needs!
+
+
+## Lesson 08 - AM and FM
+
+Wavetables is a type of oscillator. 
+You get samples of maximum 1 second (more than one second is called sample based synthesis). And you repeat them.
+
+* A usual problem is aliasing. If you record low frequency sample, this will have many overtones. When you transpose it to higher octaves (pitch), the overtones go above the 20KHz hearing range (and that means above nyquist limit, the notes get mirrored and we get "aliasing").
+
+
+Envlope and sound problem discussion (that I did not understand).
+
+We are making tremolo and vibrato, but using AM (amplitude modulation) and FM (frequency modulation).
+
+### the gist
+
+Modulation synthesis uses one signal (the modulator) to modulate the amplitude, frequency, or phase of another (the carrier) to create more complex signals
+
+* FM specifically had crazy impact in music.
+
+### AM 
+
+It adds sidebands (you can visually see that it changes the frequencies).
+
+AM creates two (left and right). If they lineup.
+
+If one sideband goes to 0 frequency, it shifts upwards the wave (because of 0 Hz component, also called "DC component"). We usually use DC filter to remove just 0 Hz.
+
+If freqM > freqC, the harmonics get mirrored and the phase gets inverted (goes do negative).
+
+Carier is black signal, M is the modulation signal.
+
+The heights are controlled by depth and offeset. 
+
+if we add 3 components for our modulator, 
+
+> Radio refers to the same processes. In AM, the M is the actual voices of the radio commentator, and each radio station is using a different carrier (they don't overlap).
+
+
+They use dynamic eq to have a loud signal. It makes people think they have the clearest radio signal. 
+
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+struct MyAMSynth : Synth {
+	struct AMNote : public Note {
+		Sine carrier;
+		Sine modulator;
+
+		event on(Pitch pitch, Amplitude velocity) {
+			param f = pitch -> Frequency;
+			carrier.set(f, 0);
+		}
+
+		void process() {
+			param rate = controls[0]; 
+			// make it a proportion to get same timbre across the keyboard
+			// if it's whole number, it's harmonic
+			// 
+			param depth = controls[1];
+			param offset = controls[2];
+
+			signal mod = depth * modulator(rate) + offset ;
+			// setting the modulator frequency through the control
+			// than change gain and offset and assign to mod
+			carrier * mod >> out; // apply mod on the amplitude (multiplication)
+		}
+	};
+
+	MyAMSynth () {
+		controls = { Dial("Rate", 0, 800, 6),
+		             Dial("Depth"), 
+		             Dial("Offset") };
+		notes.add<AMNote>(32);
+	}
+};
+
+// check the spectrum (choose good resolution of FFT by right clicking)
+```
+
+* John Chowning: the guy that invented FM. He was an engineer and musician. He also wrote a book, which is really complicated for musicains. DX-7 synth was really popular and used FM.
+* Yamaha and Stanford, where this guy worked, patented that and made loads of money.
+* Guglielmo Marconi: invented the radio 
+
+
+* bells cannot be harmonic because of their shape.
+* Bristol for UK and Stanford for US are famous places music innovation hubs.
+
+
+### FM
+
+He adapted the FM radio to synthesis.
+
+The modulation happens around the frequency of the note.
+Now we don't get two sidebands but possibly infinite. 
+
+Same as before, we get a modulator (oscillator/signal), use depth and offset.
+But this time we manipulate the frequency/pitch of the note.
+
+* with modest components we could now make many harmonics and sounds. we can make it cheaper, smaller and save presets. Yamaha made DX7 and it created 32 very different sounds (built in presets/patches).
+
+* They had hardware sequencers to play really fast.
+
+* Quincy Jones used it a lot.
+
+Dexed FM modulation, better than DX7. you can download presets.
+There is an emulator written in Klang.
+
+> So many songs and sounds (Top Gun).
+
+```cpp
+
+#include <klang.h>
+using namespace klang::optimised;
+
+struct MyFMSynth : Synth {
+
+	struct FMNote : public Note {
+		Sine carrier;
+		Sine modulator;
+		ADSR adsr;
+		param fc;
+
+		event on(Pitch pitch, Amplitude velocity) {
+			fc = pitch -> Frequency;
+			carrier.reset();
+			modulator.reset();
+			adsr(0.001, 0, 1, 0.25);
+		}
+
+		event off(Amplitude velocity) {
+			adsr.release();
+		}
+
+		void process() {
+			param rate = controls[0] * fc; // set the fd (frequency of modulator) in relation to fc (frequency of the carrier)
+			param depth = controls[1] * rate; // set depth in relation to fd 
+			signal mod = modulator(rate) * depth + fc; // mod signal
+			carrier(mod) * adsr >> out;
+			if (adsr.finished())
+				stop();
+		}
+	};
+
+	MyFMSynth() {
+		controls = {
+			Dial("Rate", 0.01, 10, 6),
+			Dial("Depth", 0, 10, 0.5)
+		}; 
+		notes.add<FMNote>(32);
+	}
+};
+
+// beautiful to see in sonogram and spectrum
+```
+
+Now we are using the first ADSR to manipulate the carrier.
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+struct MyFMSynth : Synth {
+
+	struct FMNote : public Note {
+		Sine carrier;
+		Sine modulator;
+		ADSR adsr;
+		param fc;
+
+		event on(Pitch pitch, Amplitude velocity) {
+			fc = pitch -> Frequency;
+			carrier.reset();
+			modulator.reset();
+			param adsr_attack = controls[2];
+			adsr(adsr_attack, 0, 1, 0.25);
+		}
+
+		event off(Amplitude velocity) {
+			adsr.release();
+		}
+
+		void process() {
+			param rate = controls[0] * fc; // set the fd (frequency of modulator) in relation to fc (frequency of the carrier)
+			param depth = controls[1] * rate; // set depth in relation to fd 
+			signal mod = modulator(rate) * depth + fc; // mod signal
+			carrier(mod) * adsr >> out;
+			if (adsr.finished())
+				stop();
+		}
+	};
+
+	MyFMSynth() {
+		controls = {
+			Dial("Rate", 0.01, 10, 6),
+			Dial("Depth", 0, 10, 0.5),
+			Dial("Attack", 0, 1, 0.01)
+		}; 
+		notes.add<FMNote>(32);
+	}
+};
+```
+
+And now we add an envelope to affect the depth of the modulation.
+Can create a good base sound.
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+struct MyFMSynth : Synth {
+
+	struct FMNote : public Note {
+		Sine carrier;
+		Sine modulator;
+		ADSR adsr;
+		param fc;
+		Envelope env;
+
+		event on(Pitch pitch, Amplitude velocity) {
+			fc = pitch -> Frequency;
+			carrier.reset();
+			modulator.reset();
+			param adsr_attack = controls[2];
+			adsr(adsr_attack, 0, 1, 0.25);
+			env = { { 0, 1}, { 0.5, 0 } }; // fall 1 to 0 in 0.5 secs
+		}
+
+		event off(Amplitude velocity) {
+			adsr.release();
+		}
+
+		void process() {
+			param rate = controls[0] * fc; 
+			param depth = controls[1] * rate * env; // use env for depth
+			signal mod = modulator(rate) * depth + fc; 
+			carrier(mod) * adsr >> out;
+			if (adsr.finished())
+				stop();
+		}
+	};
+
+	MyFMSynth() {
+		controls = {
+			Dial("Rate", 0.01, 10, 6),
+			Dial("Depth", 0, 10, 0.5),
+			Dial("Attack", 0, 1, 0.01)
+		}; 
+		notes.add<FMNote>(32);
+	}
+};
+
+```
+
+An operator = an oscillator followed by an envelope (and we have some knobs/controls outside).
+FM synthesis is connecting two operators serially (one input of the other, creates interesting).
+
+You can connect them in many ways, you can actually calculate some stuff.
+
+The operator has two main parameters
+* ratio: the signal that goes in
+* depth: 
+* it also has the envelopes parameters
+
+FM8 is a Native Instruments similar synth.
+
+* TX81z lately bass
+* Manipulated Living (Donnie Darko, FM synthesis)
+
+> TODO: create sequences of basses, match them. Also systemitise chords (dokareni).
+
+
+> The envelopes in DX7, the enveloper were not ADSR.
+
+The DX-7 free emulator is called Dexed (free plugin).
+
+The patches are saved in `.syx` files. Sysex is just a way of transmitting synth specific data (usually patches, but sometimes firmware updates) over MIDI.
+
+TODO: check Enya (boadicea), book of days, 
+
+* [DX-7](https://yamahablackboxes.com/collection/yamaha-dx7-synthesizer/patches/)
+some other 
+* [Patches from drive](https://www.reddit.com/r/synthesizers/comments/e4jkt7/my_curated_dexeddx7_patches_3_banks/)
+
+* [Awesome masterclass in sound design](https://youtu.be/jWorjBDcty4)
+* [Awesome masterclass in music theory](https://youtu.be/_VvKeiwddPI)
+
+* [Eurorack]()
+	* amplitude modulation (ring modulation is the same, the original disappears and change the higher frequencies)
+	* frequency
+
+
+* style transfer is a common AI techniques
+* wavetable
+
+
+* good youtubers are doctor mix and matt johnson jamiroquai. eurorack.
+* Mutable Instruments was a company with great euroracks that open sourced their models (emilie). here is the [archive](https://pichenettes.github.io/mutable-instruments-documentation/). They were making chips with software inside and knobs. They were flexible to communicate with each other and make sounds. Essentially a plugin can be a whole instrument. [github pages](https://pichenettes.github.io/mutable-instruments-documentation/modules/grids/open_source/).
+
+
+
+
+## Lesson 07 - Subtractive synthesis
+
+Adding a 3rd dimension. 
+
+* We have seen plots: (amplitude and time), (frequency and amplitude), 
+
+Short attack, exponential decay, no sustain.
+
+Struck vs pluck.
+The amplitude envelope is the shape of the sample.
+
+Violin has attack, sustain (vibrato like) and release.
+
+> vibrato: waver the pitch (rock the left hand with a violin)
+> tremolo: waver the amplitude (move the right hand with a violin)
+
+In synthesis, a popular envelope is ADSR. It provides three time controls (how long Attack, Decay, Release last?) and one level control (how loud sustain is?).
+
+> The envelope can be used to control anything. You can control amplitude. But also the cutoff of a filter (we will do this later), and any other parameter.
+
+if sustain = 0, we get a percusive sound.
+
+The envolope is a signal generator (and we use it to control gain on the frequency oscilator).
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+struct ADSRSynth : Synth {
+
+	struct ADSRSynthNote : public Note {
+		Sine osc;
+		ADSR adsr;
+
+		event on(Pitch pitch, Amplitude velocity) {
+			const param f = pitch -> Frequency;
+			osc(f, 0);
+			adsr(controls[0], controls[1], controls[2], controls[3]);
+		}
+
+		event off(Amplitude velocity) {
+			adsr.release();
+		}
+
+		void process() {
+			osc* adsr++ >> out;
+			if (adsr.finished())
+				stop();
+		}
+	};
+
+	// Initialise plugin (called once at startup)
+	ADSRSynth() {
+		controls = {
+			Dial("A"), Dial("D"), Dial("S"), Dial("R")	
+		};
+
+		notes.add<ADSRSynthNote>(32);
+	}
+};
+
+```
+
+There are 
+
+Popular ADSR setpus:
+* "The Swan" by Saint-Saen
+* "Popcorn" (arpegiated) (better with Sawwave)
+* "Jesu Joy of Man's Desiring" by Bach
+
+Clara
+
+Hotbutter popcorn.
+
+Poeple who made synthesis popular in 60s,70s: 
+* Isao Tomita, 
+* Wendy carlos (bach music on new synthesizers)
+* Vangelis (VLE, bladerunner 2049 was even better)
+* until 60s, all sounds were acoustic
+* jean michel jarre (no lyrics, he gave concerts in Russia and China during cold war) (7.5 M people in Moscow)
+
+* synthpop in the 80s (Tangarine Dream e.g. Risky Business Tom Cruise film, Depeche Mode)
+* stevie wonder was traditional musician (all jazz greats have some )
+* BBOP by miles davies, Chamileon by Herbie Hancock
+
+
+We can create any kind of envelope. We define the points of our graph.
+
+```cpp
+	struct MySynthNote : public Note {
+		Sine osc;
+		Envelope adsr;
+
+		event on(Pitch pitch, Amplitude velocity) {
+			osc(pitch -> Frequency, 0);
+			adsr = { 
+				{ 0.0,  0.0 },  
+				// attack for 0.25s, to up to 1 (max amlitude)
+				{ 0.25, 1.0 },
+				// decay for 0.25s more, go to 0.5 of max amplitude
+				{ 0.5,  0.5 } 
+			};
+			adsr.setLoop(2, 2);
+		}
+
+		event off(Amplitude velocity) {
+			adsr.release(0.5);
+		}
+
+		void process() {
+			osc * adsr >> out;
+			if(adsr.finished())
+				stop();
+		}
+	};
+```
+
+The sonogram shows time and frequency togehter (and amplituede is created with shadows).
+
+
+Aphex Twin (british composer) has made a sonogram of his fame and released the song.
+
+In the frequency spectrum, I was watching a bell.
+But there is no bell actually. It's the spectrum plotting that lack precision, it's just "artifcats" from FFT.
+You can either have good time resolution or good frequency resolution.
+
+
+Let's make additive synthesis more powerful and add an ADSR envelope in each oscilator.
+We are gonna make a guitar (plucky) sound.
+In a guitar, the higher frequencies are attenudated (dampened) faster. ("dampen" means making wet/soggy)
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+#define N 8 // number of harmonics
+// #define N 32 // number of harmonics
+
+struct MyHarmonicOscillator : Oscillator {
+	Sine osc[N];
+	Envelope env[N];
+	
+	void set(param f){ // runs one time when we press the note
+		for (int i = 0; i < N; i++){
+			osc[i].set(f * (i+1));
+			env[i] = {	// just setting decay
+				{ 0, 1.f / N }, // start at full strength (divide by number of harmonics)
+				{ 1.f / (i+1), 0 } // end at 0, the higher frequencies dampened (exponentially) faster
+				// { 1.f - i * 1.f / N, 0 } // end at 0, the higher frequencies dampened (linearly) faster
+			};
+		}
+	}
+
+	void process(){
+		signal mix = 0;
+		for (int i = 0; i < N; i++){
+			if (osc[i].frequency < fs.nyquist){
+				mix += osc[i] * env[i];  // attenuate using the envelope!!
+			}
+		}
+		mix >> out;
+	}
+};
+
+//struct MyFirstSynth : Synth {
+//
+//	struct SimpleNote : public Note {
+//		MyHarmonicOscillator osc;
+//		param gain;
+//
+//		// velocity is how fast we hit the note (it's the dotted arrows in the diagram)
+//		event on(Pitch pitch, Amplitude velocity) {
+//			param frequency = pitch -> Frequency;
+//  	   		osc.set(frequency);
+//			gain = velocity * velocity * velocity;
+//			debug.print("%f at %f\n", pitch.value, velocity.value);
+//		}
+//
+//		void process() {
+//			osc*gain >> out;
+//		}
+//	};
+//
+//	MyFirstSynth() {
+//		notes.add<SimpleNote>(32);
+//	}
+//};
+
+
+
+
+struct MySynth2 : Synth {
+
+	struct MySynth2Note : public Note {
+		MyHarmonicOscillator osc;
+		ADSR adsr;
+
+		event on(Pitch pitch, Amplitude velocity) {
+			const param f = pitch -> Frequency;
+			osc(f, 0);
+			adsr(0.001, 0, 1, 0.25);
+		}
+
+		event off(Amplitude velocity) {
+			adsr.release();
+		}
+
+		void process() {
+			osc* adsr++ >> out;
+			if (adsr.finished())
+				stop();
+		}
+	};
+
+	// Initialise plugin (called once at startup)
+	MySynth2() {
+		controls = {
+			// UI controls and parameters
+		};
+
+		notes.add<MySynth2Note>(32);
+	}
+};
+```
+
+> If a surface reflects light, it reflects sound as well. If we want to dampen the sound, we use rough sufaces, cover corners, etc. 
+
+The trigger is binary, when we use the key.
+The velocity is how fast we hit the key.
+
+
+Subtractive synthesis. 
+Rather than using a complex sound, we use recording. Sample subtractive synthesis
+
+> Now the most important thing is the filtering. We can have one oscilator (not sine, because it's not interesting) and filter harmonics to create interesting sounds.
+
+TODO: what if we make a new wave (not sine, triangle, saw and square)?
+
+* Moog (grandmother), Buhler are popular analogue synths (if a company has a name in synthesis is because you have a good filter)
+* Semimodular (some modes are already hard connected for you)
+* We can add more oscillators
+
+ASK: 10 analogue synths you have to know about!!
+ASK: what makes a good filter? what are the parameters?
+
+Previously we used envelopes to dampen the higher harmonics faster. 
+Now we are doing it with filtering.
+
+```cpp
+
+
+```
+
+An LFO is an infinete periodic table.
+
+The incredible thing about semi-modular analogue synths is they cost 2000/3000 GBP and they all do almost the same thing.
+* The sounds with semi-modular has been  
+
+Modular synthesis is a form of subtractive synthesis. 
+* semi-modular have some preconnections
+* Moog (terrible businessman)
+* german company (Behringer): ripping of the designs (model 15 is suspiciously similar to mother-32)
+
+
+TODO: non-linearly going down the frequency spectrum (as we perceive this)
+TODO: familiarise with log vs linear (mapping things, etc)
+TODO: familiarise with sounds (reverb, filters, lfos, sine/square/saw, ...)
+TODO: investigate more synths that it has (detune saws, create super cool animations, check the supersaw that is heavily used in trance music) (check the[:w
+])
+
+
+mixing two saw waves are not really interesting.
+
+
+We can do the project now.
+
+```cpp
+```
+
+* synth: TB303, "Everybody Needs a 303" (sequencer) (TD-3-AM) 
+* they were trying to recreate the bass sound, horribly failed
+* they fucked up the filter design and later on lead to the creation of ACID house
+
+## Lesson 06 - Additive synthesis
+
+Enjoy and find a synthesis technique. 
+You can use any of the effects we discussed. 
+"What kind of instrument do I have in mind?", envelopes etc
+
+> End project: develop your own synthesiser plugin with built-in effects processing.
+	
+* you are not used to listening instruments in empty space, there is always some reverb in what we hear as humans
+* reverb is important in every synthesizer
+
+
+Synthesis is the creation of sound, the generation of a signal.
+Synthesis means "to create".
+We hit a key on a keyboard, which is tied to a pitch.
+
+The effects were always processing. 
+Synthesizers, the are in time. We will get.
+Velocity : (that is hit at) how hard/fast a key is pressed.
+* MIDI is a keyboard centric system. Velocity doesn't make sense in all instruments.
+* Harder velocity (value between 0.0 and 1.0)
+* The note on effect
+
+A violin can play anything (infinite pitches). Piano is more discrete.
+
+* you can do hammer sound of piano (when you press/note on and release/note off)
+
+* next time: release stage, generate some audio after
+
+* we will be making polyphonic synthesizers
+* we can have up to 32 notes (add them up)
+* then we can add effects on top of that
+
+* `on` function is called when pressing a note
+* `Pitch` is an integer (between 0 to and 127, middle C is 60)
+
+* it gives an ADSR envelope
+* 
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+struct Simple : Synth {
+
+	struct SimpleNote : public Note {
+		Sine osc; // also Saw, ...
+
+		event on(Pitch pitch, Amplitude velocity) {
+			param frequency = pitch -> Frequency;
+			osc.set(frequency, 0);
+		}
+
+		void process() {
+			osc >> out;
+		}
+	};
+
+	Simple() {
+		notes.add<SimpleNote>(32);
+	}
+};
+```
+
+The velocity value we don't use in the previous snippet. We can store it.
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+struct MyFirstSynth : Synth {
+
+	struct SimpleNote : public Note {
+		Sine osc; // also Saw, ...
+		param gain; // to store velocity, will be used as gain
+
+		event on(Pitch pitch, Amplitude velocity) {
+			param frequency = pitch -> Frequency; // this creates a mapping (from pitch to frequency) (you could even define just intoned mapping, or something else)
+			osc.set(frequency, 0);
+			// gain = velocity;	// we can do better
+			gain = velocity * velocity * velocity; // our hearing is logarithmic, cubing is a good approximation
+			debug.print("%f at %f\n", pitch.value, velocity.value);
+		}
+
+		void process() {
+			osc*gain >> out;
+		}
+	};
+
+	MyFirstSynth() {
+		notes.add<SimpleNote>(32);
+	}
+};
+```
+
+Our perception is logarithmic.
+If you half the amplitude, it wouldn't be havling the 
+6 decibels is equivelant to doubling the sound.
+
+
+Bach came up with the mathematical tuning we use today (in western music). He was a musical and mathematical genious.
+
+* A4 = 880 
+* A4 = 440Hz (called "concert pitch")
+* A3 = 220Hz
+
+"Concert pitch": it's the note to set, then tune the rest based on that. In orchestras, all of them test tuning in "concert pitch".
+
+violin, viola, ...
+
+Back in Bachs day, it was actually 432 Hz (which means we hear Bachs songs a bit sharper than they used to be).
+
+An octrave is power of two.
+`f * 2^n` to go up n octaves.
+
+In western music, we split the octave in 12, therefore put `n = 1/12`:
+`f* 2^(1/12) ~ f* 1.059` to move a semitone up. 
+
+The "music of the spheres", divine.
+Pythagorian tuning is just intoned.
+
+5ths, 4ths and 3rds are close to "just intonations"
+Somebody with perfect pitch could probably notice these slight differences.
+
+Equal temperament is perfect for music that modulates in key.
+
+
+It doesn't make sense to plot linearly, so we plot logarithmically.
+
+The same story is with decibels and levels.
+
+
+The viola, violin, trumpet can play the same note (base frequency). But they sound different (the overtones / harmonics are different for them). We say the have different **timbre** ("tam-brah").
+
+The sinewave is the only sound that has only one frequency.
+
+
+Even if you remove the fundamental, your brain will understand that it's missing.
+Our brains are pattern recognition machines.
+
+A violin string (producing sound from friction) has more noise/harmonics than a guitar string (which is just picking a string).
+
+Bells are not really harmonic because they are designed to be resonant (which makes them loud).
+
+No consonance or disconance will lead to noise.
+
+
+Additive synthesis is a simple but powerful way to create sounds. You essentially use sinewaves to create the fundamentals of the notes.
+
+[YT - How Additive Synthesis Works](https://youtu.be/wGkdb6YlLgg)
+
+> additive synthesis has been around for ages. AI can make it work. eventually, everything will be additive synthesis according to this guy.
+> essentially, if you change pitch, usually the pattern stays the same (he uses adobe audition program).
+
+* the FFT takes the sound and finds the frequencies
+
+<!-- -6db comes from equalty  -->
+
+Let's make a sawwave with additive synthesis.
+We are going to create our own oscillator. Specifically, I'm going to create a saw oscilator by using the sine oscilators to reproduce the relevant harmonics that would exist in the saw harmonic spectrum.
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+#define N 8 // number of harmonics
+
+struct MySawOscillator : Oscillator {
+	Sine osc[N];
+	
+	void set(param f){ // runs one time when we press the note
+		for (int i = 0; i < N; i++){
+			osc[i].set(f * (i+1));
+		}
+	}
+
+	void process(){
+		signal mix = 0;
+		for (int i = 0; i < N; i++){
+			if (osc[i].frequency < fs.nyquist){ // the sample rate limits the maximum frequency we can produce
+				mix += osc[i] /(i+1);  // attenuate the amplitudes of the frequencies
+			}
+		}
+		mix >> out;
+	}
+};
+
+struct MySquareOscillator : Oscillator {
+	Sine osc[N];
+	
+	void set(param f){ // runs one time when we press the note
+		for (int i = 0; i < N; i++){
+			osc[i].set(f * (2*i+1));
+		}
+	}
+
+	void process(){
+		signal mix = 0;
+		for (int i = 0; i < N; i++){
+			if (osc[i].frequency < fs.nyquist){ // the sample rate limits the maximum frequency we can produce
+				mix += osc[i] /(2*i+1);  // attenuate the amplitudes of the frequencies
+			}
+		}
+		mix >> out;
+	}
+};
+
+struct MyFirstSynth : Synth {
+
+	struct SimpleNote : public Note {
+		MySawOscillator osc;
+		// MySquareOscillator osc; 
+		param gain; // to store velocity, will be used as gain
+
+		event on(Pitch pitch, Amplitude velocity) {
+			param frequency = pitch -> Frequency; // this creates a mapping (from pitch to frequency) (you could even define just intoned mapping, or something else)
+  	   		osc.set(frequency);
+			gain = velocity * velocity * velocity; // our hearing is logarithmic, cubing is a good approximation
+			debug.print("%f at %f\n", pitch.value, velocity.value);
+		}
+
+		void process() {
+			osc*gain >> out;
+		}
+	};
+
+	MyFirstSynth() {
+		notes.add<SimpleNote>(32);
+	}
+};
+```
+
+Aliasing happens when we produce frequencies above the Nyquist limit (it's relevant')
+A collection of orchestral sounds, here: [Sounds from University of Iowa](https://theremin.music.uiowa.edu/index.html).
+
+Pianos just their timbre from lower to higher notes (hammering on three strings in bottom notes vs hammering on two strings on the top notes).
+
+### Resynthesis: Korg M1 Organ sample (at C2)
+
+Resynthesis is creating again a sound digitally from scratch.
+The Audacity is a popular open-source free software for audio analysis.
+
+> This was one of the most stunning moments of the whole class personally. With only a few frequencies, selected in the correct frequencies, we can create a magnificent electronic sound that I would love to hear in a real electronic track (and is actually featured in many electronic tracks). With only 6 frequencies, you can make M1 Korg sound, and it's already pretty neat.
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+// Measurements from Korg M1 Organ sample (at C2):
+// ====================================================
+//    65Hz,   131Hz,   196Hz,   263Hz,   327Hz,   393Hz
+// -14.5dB, -14.2dB, -14.3dB, -50.0dB, -47.2dB, -24.5dB
+
+#define N 6 // number of harmonics
+const float FREQ[N] = { 65/65.f, 131/65.f, 195/65.f, 263/65.f, 327/65.f, 393/65.f }; // (normalised to f0)
+const dB GAIN[N] = 	{ -14.5+12, -14.2+12, -14.3+12, -50.0+12, -47.2+12, -24.5+12 }; // (in dB)	
+
+struct MyKorgM1Organ : Oscillator {
+	Sine osc[N];
+	
+	void set(param f){ // runs one time when we press the note
+		for (int i = 0; i < N; i++){
+			osc[i].set(f * FREQ[i]);
+		}
+	}
+
+	void process(){
+		signal mix = 0;
+		for (int i = 0; i < N; i++){
+			if (osc[i].frequency < fs.nyquist){ // the sample rate limits the maximum frequency we can produce
+				mix += osc[i] * (GAIN[i] -> Amplitude);  // attenuate the amplitudes of the frequencies
+			}
+		}
+		mix >> out;
+	}
+};
+
+struct MyFirstSynth : Synth {
+	struct SimpleNote : public Note {
+		MyKorgM1Organ osc;
+		param gain; // to store velocity, will be used as gain
+
+		event on(Pitch pitch, Amplitude velocity) {
+			param frequency = pitch -> Frequency; // this creates a mapping (from pitch to frequency) (you could even define just intoned mapping, or something else)
+  	   		osc.set(frequency);
+			gain = velocity * velocity * velocity; 
+			debug.print("%f at %f\n", pitch.value, velocity.value);
+		}
+
+		void process() {
+			osc*gain >> out;
+		}
+	};
+
+	MyFirstSynth() {
+		notes.add<SimpleNote>(32);
+	}
+};
+```
+
+I will be rewriting the above code using a vector of pairs of frequency and dB (no normalisation, first harmonic is the fundamental), in order to make the oscillator super modular.
+
+```cpp
+#include <vector>
+#include <klang.h>
+using namespace klang::optimised;
+
+struct Harmonic {
+	int freq; // frequency (Hz)
+	dB gain; // amplitude/gain (dB) 
+	Harmonic(int in_freq, dB in_gain)
+	: freq(in_freq), gain(in_gain)	
+	{}
+};
+
+struct MyModularOscillator : Oscillator {
+	std::vector<Sine> osc;
+	std::vector<Harmonic> hs; // harmonics
+	
+	MyModularOscillator(){
+		// Measurements from Korg M1 Organ sample (at C2):
+		// ====================================================
+		//    65Hz,   131Hz,   196Hz,   263Hz,   327Hz,   393Hz
+		// -14.5dB, -14.2dB, -14.3dB, -50.0dB, -47.2dB, -24.5dB
+		hs = { 
+			Harmonic{65, -14.5+12},
+			Harmonic{131, -14.2+12}, 
+			Harmonic{195, -14.3+12}, 
+			Harmonic{263, -50.0+12}, 
+			Harmonic{327, -47.2+12}, 
+			Harmonic{393, -24.5+12}, 
+		};
+		osc = std::vector<Sine>(hs.size(), Sine());
+	}
+
+	void set(param f){ // runs one time when we press the note
+		const float base_freq = hs[0].freq; // convert to float to create float division
+		for (int i = 0; i < hs.size(); i++){
+			osc[i].set(f * (hs[i].freq / base_freq)); // normalising
+		}
+	}
+
+	void process(){
+		signal mix = 0;
+		for (int i = 0; i < hs.size(); i++){
+			if (osc[i].frequency < fs.nyquist){ // the sample rate limits the maximum frequency we can produce
+				mix += osc[i] * (hs[i].gain -> Amplitude);  // attenuate the amplitudes of the frequencies
+			}
+		}
+		mix >> out;
+	}
+};
+
+struct MyFirstSynth : Synth {
+	struct SimpleNote : public Note {
+		MyModularOscillator osc;
+		param gain; // to store velocity, will be used as gain
+
+		event on(Pitch pitch, Amplitude velocity) {
+			param frequency = pitch -> Frequency;
+  	   		osc.set(frequency);
+			gain = velocity * velocity * velocity; 
+		}
+
+		void process() {
+			osc*gain >> out;
+		}
+	};
+
+	MyFirstSynth() {
+		notes.add<SimpleNote>(32);
+	}
+};
+```
+
+### recreating any sound
+
+A collection of orchestral sounds, here: [Sounds from University of Iowa](https://theremin.music.uiowa.edu/index.html). Specifically for the following, I am using this [brass trumpet sound (C4)](https://theremin.music.uiowa.edu/MISBbtrumpet.html).
+Using the [Audacity]() software, i can crop the note I want and analyze it by ploting the spectogram.
+Then, I can manually create a table of pairs (frequency and dB) of harmonics I want to use to reproduce the sound (I am using the peaks I visually see).
+
+Using the same code as before, but having pairs:
+```cpp
+#include <utility>
+#include <vector>
+#include <klang.h>
+using namespace klang::optimised;
+
+using HMap = std::vector<std::pair<float, dB>>; // harmonic pairs (Hz / dB) (first pair is the fundamental)
+struct MyModularOscillator : Oscillator {
+	std::vector<Sine> osc;
+	HMap hs; // harmonics
+	int enhance_dBs; // enhance dBs
+	
+	static const HMap getDefaultHs(){
+		static const HMap d_hs = { 
+			{65, -14.5},
+			{131, -14.2}, 
+			{195, -14.3}, 
+			{263, -50.0}, 
+			{327, -47.2}, 
+			{393, -24.5}, 
+		};
+		return d_hs;
+	}
+
+	MyModularOscillator(HMap in_hs = getDefaultHs()){
+		hs = in_hs.size() > 0 ? in_hs : getDefaultHs(); // we need at least one harmonic
+		osc = std::vector<Sine>(hs.size(), Sine());
+	}
+
+
+	void set(param f){ // runs one time when we press the note
+		const float base_freq = hs[0].first;
+		for (int i = 0; i < hs.size(); i++){
+			const auto& [freq, gain] = hs[i];
+			osc[i].set(f * (freq / base_freq)); // normalising
+		}
+	}
+
+	void process(){
+		signal mix = 0;
+		for (int i = 0; i < hs.size(); i++){
+			const auto& [freq, gain] = hs[i];
+			if (freq < fs.nyquist){ // the sample rate limits the maximum frequency we can produce
+				mix += osc[i] * (gain -> Amplitude);  // attenuate the amplitudes of the frequencies
+			}
+		}
+		mix >> out;
+	}
+};
+
+// -------- visually investigate frequency spectrum with Audacity --------
+const HMap trumpet_hs = {
+	{268, -41.5}, {528, -30.5}, {788, -28.4}, {1048, -24.1}, {1309, -21.4}, 
+	{1570, -26.2}, {1829, -30.9}, {2090, -40.5}, {2349, -48.6}, {26.11, -53.1}
+};
+
+const HMap sopsax_hs = {
+	{270, -23.6}, {532, -28.2}, {795, -26.5}, {1057, -38.6}, 
+	{1320, -56.0}, {1590, -50.1}, {1860, -56.8}, {2121, -53.9}
+};
+
+const HMap flute_hs = {
+	{325, -19.5}, {658, -31.3}, {982, -36.8},
+	{1310, -47.8}, {1636, -47.2}, {1960, -42.7}
+};
+
+const HMap xylophone_hs = {
+	{416, -23.4}, {586, -54.0}, {673, -58.5}, {1046, -45.7}, {1260, -14.4}, 
+	{1582, -58.5}, {1763, -60.8}, {2565, -26.1}, {2736, -16.6}, {3454, -54.4}, 
+	{4332, -48.6}, {4837, -45.3}, {5419, -42.1}, {6100, -39.5}, {6666, -52.3}, {7428, -55.4}
+};
+
+// -------- i also asked ChatGPT to produce some sounds --------
+// Organ (Smooth, Hollow Sound)
+// A pipe organ-like sound is created using strong odd and even harmonics with a smooth falloff.
+const HMap gpt_organ_hs = {{1, 0},{2, -6},{3, -12},{4, -18},{5, -24},{6, -30}};
+
+// Clarinet (Warm, Hollow, Woody)
+// Clarinet timbre is mainly composed of odd harmonics.
+const HMap gpt_clarinet_hs = {{1, 0},{3, -8},{5, -15},{7, -22},{9, -28}};
+
+// Electric Guitar (Plucky, Bright, Metallic) 
+// A bright, twangy sound with strong odd and even harmonics, slightly detuned higher harmonics
+const HMap gpt_electric_guitar_hs = {{1, 0},{2, -5},{3, -9},{4, -12},{5, -15},{6, -18},{7, -20}};
+// Trumpet (Brassy, Bright, Sharp)
+// A brassy sound has strong odd harmonics with slow amplitude decay.
+const HMap gpt_trumpet_hs = {{1,0.0},{2,-4.0},{3,-8.0},{4,-12.0},{5,-14.0},{6,-17.0},{7,-20.0}};
+// Synth Pad (Soft, Airy, Dreamy)
+// A soft pad sound with gentle harmonic content.
+const HMap gpt_synth_hs = {{1,0.0}, {2,-10.0}, {3,-15.0}, {4,-20.0}, {5,-25.0}, {6,-30.0}, {7,-35.0}};
+
+
+struct MyFirstSynth : Synth {
+	struct SimpleNote : public Note {
+		MyModularOscillator osc;
+		param gain; // to store velocity, will be used as gain
+
+		SimpleNote()
+		// : osc()
+		// : osc(trumpet_hs) // use name of preset here
+		// : osc(flute_hs)
+		: osc(gpt_synth_hs)
+		{}
+
+		event on(Pitch pitch, Amplitude velocity) {
+			param frequency = pitch -> Frequency;
+  	   		osc.set(frequency);
+			gain = velocity * velocity * velocity; 
+		}
+
+		void process() {
+			osc*gain >> out;
+		}
+	};
+
+	MyFirstSynth() {
+		notes.add<SimpleNote>(32);
+	}
+};
+```
+
+
+### more interesting links
+
+* [sound synthesis in another language](https://flossmanual.csound.com/sound-synthesis/additive-synthesis)
+* [types of synthesis](https://www.youtube.com/watch?v=gJkxGvhOS-M&ab_channel=matrixsynth)
+
+### chat gpt explaining decibels
+
+Our perception of loudness follows a **logarithmic** scale, meaning that a **halving of perceived loudness** corresponds to a specific reduction in sound intensity.
+
+In decibels (dB), loudness is measured as:
+
+\[
+L = 10 \log_{10} \left(\frac{I}{I_0}\right)
+\]
+
+where \( I \) is the intensity of the sound.
+
+A **halving of perceived loudness** corresponds to a decrease of about **-10 dB**. Since intensity is proportional to the **square** of the wave amplitude (\( I \propto A^2 \)), we can derive the required amplitude reduction:
+
+\[
+-10 = 20 \log_{10} \left(\frac{A_{\text{new}}}{A_{\text{old}}}\right)
+\]
+
+Solving for \( A_{\text{new}} \):
+
+\[
+\frac{A_{\text{new}}}{A_{\text{old}}} = 10^{\frac{-10}{20}} = 10^{-0.5} \approx 0.316
+\]
+
+Thus, to make a sound appear **half as loud**, you should **reduce the amplitude of the wave to approximately 31.6% of its original value**.
+
+
+More about.
+
+You're looking for a function that maps a **perceived loudness fraction** \( g \) (where \( g = 0.5 \) means half the perceived loudness) to a **gain factor** that should be applied to the amplitude of the wave.  
+
+We already established that loudness perception follows a **logarithmic** scale, and the relationship between **perceived loudness** \( g \) and **amplitude** \( A \) is:
+
+\[
+A \propto g^{\log_{10}(0.5)/\log_{10}(10^{-0.5})}
+\]
+
+which simplifies to:
+
+\[
+A = g^{0.301}
+\]
+
+A good practical approximation of this function is:
+
+\[
+A = g^{1/3}
+\]
+
+### Why \( g^{1/3} \)?
+- \( g^{1/3} \) is a **computationally simple approximation** of \( g^{0.301} \) and works well for practical use.
+- It maintains the key property: when \( g = 0.5 \), it gives \( A \approx 0.316 \), matching the correct amplitude scaling.
+
+### Example Values:
+| Perceived Loudness \( g \) | Computed Amplitude Gain \( g^{1/3} \) |
+|-----------------|-----------------------|
+| 1.0 (100%)     | 1.0                   |
+| 0.5 (50%)      | ~0.316                 |
+| 0.25 (25%)     | ~0.177                 |
+| 0.1 (10%)      | ~0.10                  |
+
+So, you can use:
+
+\[
+A = g^{1/3}
+\]
+
+as a simple function to adjust amplitude based on desired perceived loudness.
 
 ## Lesson 05 - Modulation
 
@@ -306,6 +1929,7 @@ The manual by Edelweiss: a psynical way of how to make hit songs
 * The computer music tutorial by Curtis Road (goes academically, refernces)
 * will pirkle books (specific things)
 
+* [Berkley](https://youtu.be/c3udLCvoCC0) explaining simple concepts
 
 TODO idea: Use AI to optimise parameters of many models. And then start producing plugins.
 
@@ -1114,20 +2738,22 @@ In summary:
 Symmetrical transfer functions (odd functions): Produce only odd harmonics.
 Asymmetric transfer functions (even + odd terms): Produce both even and odd harmonics."
 
-## Lesson 01 - Basics
+## Lesson 01 - DSP Basics
 
 Sound in a digital form is just a sequence of numbers (that express the amplitutde at a given point in time).
 
 A basic workflow of how sound gets captured, saved, manipulated and reproduced is as follows:
 * the microphone is a device that captures sound (changes in the air) and turns them into voltage changes.
-* the ADC (analog to digital converter) will transform voltages to digital numbers (anaolog to digital signal).
-* using DAWs and other computer programs, we can manipulate the digital signals and do all sorts of stuff.
-* the DAC (digital to analog converter) transform the numbers to voltages essentially. The sound card we connect to our laptop acts as an ADC and DAC.
-* lastly, the amplifier increases the power of a signal and the speaker projects the enhanced sound. Sometimes a speaker can act as both.
+* the ADC (analog to digital converter) transforms voltages to digital numbers.
+* using DAWs and other computer programs (e.g. plugings), we can manipulate the digital signals and do all sorts of stuff.
+* the DAC (digital to analog converter) transforms digital numbers to voltages. The sound card we connect to our laptop acts essentially as an ADC and DAC.
+* lastly, the amplifier increases the power of an analogue signal and the speaker projects the enhanced sound. 
 
 [Klang](https://github.com/nashaudio/klang) is a C++ library that makes it easy to create plugins using C++. Audio programming needs to be low latency, hence C++ is great for that. Klang offers predefined objects (like Filters, Oscillators) and syntactic sugar (`signal`, `>>` and `<<` operators) that make readable code. Using the [Klang Studio](https://nash.audio/klang/studio/) as a plugin, you can write code inside the DAW and test it. Amazing stuff!
 
 It's valuable as a musician to understand what the fundamental effects (like filtering, tremolo) do numerically and create an intuition of how different sounds are created.
+
+
 
 
 ```cpp
@@ -1151,6 +2777,31 @@ struct Gain : Effect {
 	}
 
 };
+```
+
+Some terminology on gain:
+* Gain is essentially scaling the level/amplitude of all the samples. 
+* It's equivelant to mulitplication (*).
+* Scaling by gain=0.0 **mutes** the signal. Scaling by gain=1.0 leaves it **unchanged**.
+* Scaling by 0.0 < gain < 1.0 **attenuates** the signal (moves it towards/closer to the x-axis).
+* Scaling by gain > 1.0 **amplifies** the signal (moves it away from the x-axis).
+
+A standard way to represent audio processes are block diagrams. Getting familiar with them is crucial. 
+
+Some terminology on mixing:
+* Mixing is essentially combining the amplitudes/levels of the corresponding samples of two or more singals.
+* It's equivelant to addition (+). 
+* Because the amplitudes can be positive or negative, they may **constructively or destructively interfere** with each other
+* The addition of these two simple signals creates a more complex wave. How sound waves interfere depends on their frequencies and amplitudes.
+* When two signals have the same frequency, we say they are **in-phase** when they go up/down on the same times and interfere constructively. E.g. mixing identical, in-phase signals yields double the amplitude.
+* When two signals have the same frequency, we say they are **out-of-phase** when they go up/down on the opposite times and interfere destructively. E.g. mixing identical, out-of-phase singals yields a mute signal (they cancel each other out).
+
+The mono sigal is made out of only one signal, whereas the stereo signal consists of two signals that are played simulateanously, one for the left speaker and one for the right speaker (it is reacher in sound and we can create effects like pan).
+
+To mix a stereo signal down to a mono mix, we add the left and right signals (`(in.l + in.r)*0.5 >> out`).
+
+
+```cpp
 
 
 // Pan.klang
@@ -1200,6 +2851,11 @@ struct MyEffect : Effect {
 		osc >> filter >> out;
 	}
 };
+```
+
+Tremolo is the effect of rapid modulation (using an LFO) of the gain of signal.
+
+```cpp
 
 // Tremolo.klang
 // an oscillator is essentially a signal (saw, sine, ...)
@@ -1244,22 +2900,18 @@ struct Tremolo : Effect {
 
 In the professional community, the industry standard framework for developing plugins is [Juce](https://juce.com/). Juce is used by Traction, maxMSP, FocusRight, etc. Every year during November there is a [ADC (audio developer conference)](https://audio.dev/), and it's the number 1 networking opportunity. In 2025 it takes place in Bristol. 
 
-
 Why is 44.1kHz (44,100 Hz) the standard sampling frequency? Explanation in [wiki](https://en.wikipedia.org/wiki/44,100_Hz). In brief, the Nyquist–Shannon sampling theorem says the sampling frequency must be greater than twice the maximum frequency one wishes to reproduce. To capture the human hearing range of roughly 20 Hz to 20,000 Hz, the sampling rate had to be greater than 40 kHz. Furthermore, the ideal filter is practically impossible to implement, so in practice a transition band is necessary, where frequencies are partly attenuated (reduced in force). The wider this transition band is, the easier and more economical. The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.
 
-## Lesson 02 | Distortion
+## Lessons overview
 
-Ring modulation and distortion. 
-
-## Lesson 03 | EQ
-
-## Lesson 04 | Delay
-## Lesson 05 | Flanger
-## Lesson 06 | Additive
-## Lesson 07 | Subtractive
-## Lesson 08 | FM
-## Lesson 09 | Physical 
-## Lesson 10 | Plugin Project
-
-
+* Lesson 01: Intro - DSP Basics
+* Lesson 02: Effects - Distortion
+* Lesson 03: Effects - EQ
+* Lesson 04: Effects - Delay
+* Lesson 05: Effects - Flanger
+* Lesson 06: Synthesis - Additive
+* Lesson 07: Synthesis - Subtractive
+* Lesson 08: Synthesis - AM & FM
+* Lesson 09: Synthesis - Physical Modeling
+* Lesson 10: Outro - Plugin Project
 
