@@ -2574,20 +2574,21 @@ dynamic level compressors
 * The pitch (effectively the frequency and wavelenght) do not change.
 * Gain is a linear effect, meaning it doesn't change the shape of the wave — only its scale.
 
+As long as gain is constant or slow changing (as with tremolo - pictured), the wave shape
+(and tonal quality, or timbre) doesn't change — it simply becomes louder or quieter. However, abrupt or more rapid changes alter — or distort — the wave shape; changing its timbre with amplitude and ring modulation. Such non-linear processes add harmonically related spectral content to the original signal, called harmonic distortion.
+
+
 FM : important in synthesis
-AAnalogue systems are inherently non-linear (amps, mics, pick-ups, speakers, analog synths). Every copy/transmition you make is distorted. But it might be perceived as "warmth" or "has character". 
-We can create distortions. 
+Analogue systems are inherently non-linear (amps, mics, pick-ups, speakers, analog synths). Every copy/transmition you make is distorted. But it might be perceived as "warmth" or "has character". 
 
-Everybody likes mp3 and stream which are worse than CDs. Mp3 is compressed (it throws away all the content we cannot hear).
+Distortion can also be used as a creative effect intentionally — commonly used in guitar pedals (fuzz, overdrive), synths (bitcrushing - below), and production (exciters, saturation aka adding harmonics). 
+In DSP, we can model distortions and non-linear processes using functions to manipulate amplitude.
 
-Everybody likes a bit of compression.
+Everybody uses mpeg (mp3) and stream which are worse than CDs. Mp3 is compressed (it throws away all the content we cannot hear).
 
-mpeg compressed and mono effectively. it's heartbreaking, we 
-it's encoded to be scratch resistent.
+> `.wav` or `.aif` are CD quality like. When you are at the studio, always use these and at the end convert to `.mp3` (mpeg is compressed and mono, information is lost essentially).
 
-`.wav` or `.aif` are CD quality like. When you are at the studio, always use these and at the end convert to `.mp3`.
-
-bitcrushing - daft punk used it a lot.
+* [saturation explained](https://youtu.be/YuojAtE8YCY). people use other words for saturation that fall under this umbrella term: saturation, drive, overdrive, fuzz, warmth, grit.
 
 clipping : gain with limit at (-1, 1). if you apply a lot of it, effectively you create a squarewave. (the basic waves are sinewave, squarewave, sawwave). Clipping is a classic type of distortion. it creaets edges in the sinewave.
 
@@ -2615,7 +2616,7 @@ struct Clipping : Effect {
 
 We can represent distortions as a transfer function that maps input amplitude (x-axis) to output (y-axis). `y = x`, known as the identity (no change). `y = 0.5x` would give gain by half. `y= 2x` would make the amplitude go away.
 
-In order to push the audio signal outside of bounds in order to be clipped, we have to put gain (amplitude). in the clipping scenario, it's called `overdrive` (beacause it makes signal go over the boundries).
+In order to push the audio signal outside of bounds in order to be clipped, we have to put gain (amplitude). in the clipping scenario, gain is called `overdrive` (beacause it makes signal go over the boundries).
 
 `clipping` is great with drums.
 
@@ -2653,42 +2654,146 @@ struct Clipping : Effect {
 };
 ```
 
-squarewave is richer in terms of harmonics. (todo: listen to the difference between square and sine).
+> Even if a violin and a piano play the same note, it sounds different (although similar pitch). it's a different vibe. in music we say different 'timbre'.
+
+squarewave is richer in terms of harmonics. (TODO: listen to the difference between square and sine).
+
 What are harmonics? frequencies that are related to each other (multiples of the base). this is how we perceive music and pitch.
 
-sinewave = has the fundamental (1)
-sawwave = has decreasing harmonics (1,2,3,4,5,6, ...) or (2,4,6,8,10, ...)
-squarewave = has only the odd harmonics (1,3,5, ...) or (2, 6, 10, ...)
+sinewave = contain only the first harmonic aka the fundamental, e.g. (1)
+sawwave = contains the first harmonic and all multipes of it (with decreasing amplitudes), e.g. (1,2,3,4,5,6, ...) or (2,4,6,8,10, ...)
+squarewave = contains the first harmonic and all the odd multiple of it (with decreasing amplitudes), (1,3,5, ...) or (2, 6, 10, ...)
 
-
+* A sinewave with crazy overdrive becomes a squarewave essentially.
 * if you double the fundamental, that is an octave higher.
-* To produce even harmonics, our transfer function needs to be asymmetric.
 
-* Even if a violin and a piano play the same note, it sounds different (although similar pitch). it's a different vibe. in music we say different 'timbre'.
+In order to produce even harmonics, the transfer function needs to be assymetric (clipping positive values at one threshold and negative values at another threshold).
 
-soft clipping to create different sounds. 
-(saturation, ).
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
 
-we can stretch vertically and horizontally (by mulitplication)
-and moving around a function (by adding).
+signal assymetric_clip(signal x){
+	signal out;
+	if (x > 1)
+		out = 1;
+	else if (x < -0.5)
+		out = -0.5;
+	else
+		out = x;
+	return out;
+}
+	
+struct Clipping : Effect {
+	Clipping() {
+		controls = { 
+			Dial("Overdrive", 1, 11, 1),  // controls how much of input goes `over` the threshold
+			Dial("Output Gain", 0, 1, 1) // it's really loud, maybe you want to make it quieter
+		};
+	}
 
-[desmos](https://www.desmos.com/calculator) is great to visualise all of these.
+	void process() {
+		signal in_gain = controls[0];
+		signal out_gain = controls[1];
+		
+		out_gain * assymetric_clip(in*in_gain) >> out; // this produces even harmonics
+        // it also produces a DC offset,
+		
+		clip >> graph(-2,2);
+	}
+};
+
+```
 
 
-MaxMSP and RNBO are some classic software. `param` means controller vs `signal` which refers to audio.
+Hard clipping is a harsh effect, most similar to "fuzz" style guitar distortion pedals.
+In soft clipping, we smooth the transition into clipping, more like "overdrive" pedals.
+Soft clipping affects all amplitudes; it is a curve, so entirely non-linear, therefore will distort the sound with or without overdrive.
 
 
-in analogue, how does this happen?
+we can stretch vertically and horizontally (by mulitplication) and moving around a function (by adding). [desmos](https://www.desmos.com/calculator) is a great online tool to visualise all of these. using mathematical functions to manipulate the amplitudes of the signal is called shaping.
 
 
-you can have multiple distortions. instead of switch, you can use cross-fade between two signals (linear combination between two singals).
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+signal softclip1(signal x, param c){
+    if (x >= 0){
+        return (1+c) * x / (1 + c*x)
+    }
+    return (1+c) * x / (1 - c*x)
+}
+
+signal softclip2(signal x, param c){
+    // sigmoid: behaves similarly to a soft compressor, smoothly limiting the peaks.
+    return x / sqrt(1 + x*x);
+}
 
 
-other distortions: foldback, bitcrusing (quantizing with steps).
+struct Shaping : Effect {
+	Shaping() {
+		controls = { 
+			Dial("c", 0, 9)
+		};
+	}
+
+	void process() {
+		param c = controls[0];
+		softclip1(in, c) >> out;
+	}
+};
+```
+
+In Klang, `param` means controller vs `signal` which refers to audio.
+MaxMSP and RNBO are some classic software applications for manipulating sounds.
+
+you can have multiple distortions. instead of switch, you can use cross-fade between two signals (linear combination between two distorted singals).
 
 
-threshold for pain: 120dB
-it can actually happen
+other distortions: foldback, bitcrushing (quantizing/rounding in discrete levels/steps, daft punk used it a lot)
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+signal bitcrush(signal x, param c){ 
+    int levels = int(c); // quantization levels (if really big, it's indistinguishable from original signal) 
+    param level_inc = 1.0 / (2*levels); // increment per level 
+    // [0, level_inc], [1*level_inc, 3*level_inc], [3*level_inc, 5*level_inc], ..., [1-3*level_inc, 1-level_inc] [1-level_inc, 1]
+    // essentially rounding each x to the closest level
+    int group = 0;
+    if (x > 0){
+    	group = (int(x / level_inc) + 1) / 2;
+    }
+    else {
+    	group = (int(x / level_inc) - 1) / 2;
+    }
+    return group * 2 * level_inc;
+}
+
+signal bitcrush5(signal x){
+	return bitcrush(x, 5.0);
+}
+
+struct MyEffect : Effect {
+	MyEffect() {
+		controls = { 
+			Dial("c", 1, 10, 5)
+		};
+	}
+
+	void process() {
+		param c = controls[0];
+		bitcrush5 >> graph(-1.05,1.05);
+		bitcrush(in, c) >> out;
+	}
+};
+
+```
+
+
+threshold for pain for human ears: 120dB (you can actually hear these frequencies in shitty festibvals)
 
 vertical resolution: (amount of horizontal lines, amplitudes that we can have):
 * the standard now is 16-bit
@@ -2697,17 +2802,9 @@ vertical resolution: (amount of horizontal lines, amplitudes that we can have):
 * 14-bit was a thing
 * 16-bit became a standard 1 year after CDs were invented 
 
+doubling the dynamic range is equivelant to 6 decibels increase.
 
-
-
-double dynamic range is 6 decibels. 
-gives 96 
-
-
-* Place theory
-* There are a lot we don't know.
-
-book:
+some books:
 * Psychoacoustic: auditory analysis
 * David Chris: audio processes book
 
@@ -2715,7 +2812,6 @@ TODO: hunt some transfer functions
 
 
 ### symmetry and harmonics
-
 
 Symmetry vs. Harmonics
 Hi George,
@@ -2856,7 +2952,6 @@ struct MyEffect : Effect {
 Tremolo is the effect of rapid modulation (using an LFO) of the gain of signal.
 
 ```cpp
-
 // Tremolo.klang
 // an oscillator is essentially a signal (saw, sine, ...)
 // a lfo is low frequency oscillator (signal with f = 1 - 10Hz)
@@ -2897,6 +2992,9 @@ struct Tremolo : Effect {
 	}
 };
 ```
+
+The ring mod effect is similar to tremolo, famously used for the Dalek voice in Doctor
+Who ([example video](https://youtu.be/qUL0xwEbkJs)). It often creates metallic or bell-like sounds (a bit inharmonic). Essentially two signals (not necessarily LFO and original signal) are mutliplied together to create a more complex signal. To adapt our tremolo / AM effect to be a ring mod, simply remove the scaling and offset factors in the mod signal.
 
 In the professional community, the industry standard framework for developing plugins is [Juce](https://juce.com/). Juce is used by Traction, maxMSP, FocusRight, etc. Every year during November there is a [ADC (audio developer conference)](https://audio.dev/), and it's the number 1 networking opportunity. In 2025 it takes place in Bristol. 
 
