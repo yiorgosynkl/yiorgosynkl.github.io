@@ -12,6 +12,7 @@ more todos:
 * use envelopes (ADSR)
 
 * search better base samples
+* add tremolo
 * add bitcrash (and other types of distortions)
 * add filter (low, mid, high) and master gain
 
@@ -73,6 +74,32 @@ const HMap gpt_synth = {{1,0.0}, {2,-10.0}, {3,-15.0}, {4,-20.0}, {5,-25.0}, {6,
 
 }
 
+namespace dsg { // distortions group
+
+signal bitcrush(signal x, param c){ 
+    int levels = int(c); // quantization levels (if really big, it's indistinguishable from original signal) 
+    param level_inc = 1.0 / (2*levels); // increment per level 
+    // [0, level_inc], [1*level_inc, 3*level_inc], [3*level_inc, 5*level_inc], ..., [1-3*level_inc, 1-level_inc] [1-level_inc, 1]
+    // essentially rounding each x to the closest level
+    int group = 0;
+    if (x > 0){
+    	group = (int(x / level_inc) + 1) / 2;
+    }
+    else {
+    	group = (int(x / level_inc) - 1) / 2;
+    }
+    return group * 2 * level_inc;
+}
+
+signal softclip(signal x, param c){
+    if (x >= 0){
+        return (1+c) * x / (1 + c*x);
+    }
+    return (1+c) * x / (1 - c*x);
+}
+
+}
+
 struct MyModularOscillator : Oscillator {
 	std::vector<Sine> osc;
 	HMap hs; // harmonics
@@ -120,9 +147,12 @@ struct MySynth : Synth {
 		// ---- delay fx ----
 		Delay<192000> delay;
 		Sine delay_lfo;
+		
+		// ---- distortion fx ----
+		Sine dis_lfo;
 
 		SimpleNote()
-		: oscs{MyModularOscillator{hsg::gpt_synth}, MyModularOscillator{hsg::trumpet}, MyModularOscillator{hsg::xylophone}}
+		: oscs{MyModularOscillator{hsg::gpt_synth}, MyModularOscillator{hsg::sopsax}, MyModularOscillator{hsg::xylophone}}
 		{
 			osc = nullptr;
 		}
@@ -190,14 +220,36 @@ struct MySynth : Synth {
 			return out_sig;
 		}
 		
-		signal dis_fx(signal in_sig){ // TODO
-			return in_sig;
+		signal dis_fx(signal in_sig){
+			param dis_switch = controls[12];
+			bool is_dis_off = (dis_switch == 0);
+			if (is_dis_off){
+				return in_sig;
+			}
+			
+			param rate = controls[13]; // range: 1 to 10 Hz
+			param depth = controls[14]; // 0 to 1
+			
+			if (dis_switch == 1) { // Tremolo
+				signal mod = dis_lfo(rate) * depth + (1-depth); // lfo osc between [1-2*depth, 1] ( [0, 1] for depth = 0.5, [1,1] for depth = 1 )
+				return in_sig * mod;
+			}
+			else if (dis_switch == 2) { // Softclip
+				signal mod = depth * 10; // range: 0 to 10
+				return dsg::softclip(in_sig, mod);
+			}
+			else {	// Bitcrush (dis_switch == 3)
+				param min_level = 5.0;
+				param max_level = min_level + 50.0 * (1-depth);
+				signal mod = (dis_lfo(rate) + 1) / 2 * max_level + min_level; // range: 5 to 25 levels
+				return dsg::bitcrush(in_sig, mod);
+			}
 		}
 			
 		void process() {
 			signal osc_sig = (*osc)*osc_gain;
 			signal env_sig = osc_sig * adsr;
-			signal dis_out = dis_fx(env_sig); // TODO: distortion functions (softclipping, bitcrush)
+			signal dis_out = dis_fx(env_sig);
 			signal wah_out = wah_fx(dis_out);
 			signal delay_out = delay_fx(wah_out);
 			delay_out >> out;
@@ -231,13 +283,33 @@ struct MySynth : Synth {
             Slider("D", 0, 1, 0.25, { 35, 130, 10, 40 } ), // time (0.0 to 1.0 sec)
             Slider("S", 0, 1, 0.9, { 50, 130, 10, 40 } ), // amplitude (none to max dB)
             Slider("R", 0, 1, 0.5, { 65, 130, 10, 40 } ), // time (0.0 to 1.0 sec)
-          }   
+          }, 
+          {	
+	        "Amp Fx",
+	        Menu("Switch", { 110, 220, 40, 20 }, "Off", "Tremolo", "Softclip", "Bitcrush"), // controls[12]
+	        Dial("Rate", 1.0, 10, 3, { 170, 220, 40, 40 }), // range: 1 to 10 Hz
+	        Dial("Depth", 0.0, 1.0, 0.5, { 220, 220, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
+          }
 	    };
 	    
+	    presets = {
+	    	{ "Sensitive Organ", { 0, 1, 1.000, 741.798, 1437.639, 2, 4.771, 0.500, 0.603, 0.581, 0.747, 0.647 } },
+	    	{ "Vanilla Organ", { 0, 0, 1.000, 10.000, 10.000, 0, 1.000, 0.000, 0.000, 0.000, 1.000, 0.000 } },
+	    };
+		notes.add<SimpleNote>(32);
+	}
+};
+```
+
+
+```
 //	    presets = {
 //	    	{ "Sensitive Organ", { 0, 1, 1.000, 741.798, 1437.639, 2, 4.771, 0.500, 0.603, 0.581, 0.747, 0.647 } },
 //          { "Copied Preset", { 0, 0, 3.000, 100.000, 400.000, 0, 4.189, 0.020, 0.000, 0.250, 0.900, 0.500 } },
 //          { "Vanilla Organ", { 0, 0, 1.000, 10.000, 10.000, 0, 1.000, 0.000, 0.000, 0.000, 1.000, 0.000 } },
+            // { "Warm Xylophone", { 2, 0, 1.000, 10.000, 10.000, 1, 4.0, 0.40, 0.21, 0.42, 0.80, 0.58 } },
+
+            // { "Bitcrush Vibrato", { 0, 0, 1.000, 10.000, 10.000, 1, 1.000, 0.191, 0.406, 0.504, 0.900, 0.500, 3, 8.45, 0.900 } },
 //	    };
 		notes.add<SimpleNote>(32);
 	}
