@@ -8,9 +8,10 @@ tags: [🎵music, 💻code]
 Project code. It's additive synthesis and keeping presets.
 
 more todos:
-* search better base samples
 * use flanger instead of vibrato
 * use envelopes (ADSR)
+
+* search better base samples
 * add bitcrash (and other types of distortions)
 * add filter (low, mid, high) and master gain
 
@@ -26,10 +27,6 @@ Dials are placed specifically now.
 using namespace klang::optimised;
 
 using HMap = std::vector<std::pair<float, dB>>; // harmonic pairs (Hz / dB) (first pair is the fundamental)
-
-using DTG = std::pair<param, param>;  // Delay Time and Gain
-
-
 
 namespace hsg { // harmonics groups
 
@@ -115,6 +112,9 @@ struct MySynth : Synth {
 		MyModularOscillator* osc;
 		param osc_gain; // to store velocity, will be used as gain
 		
+		// amplitude envelope
+		ADSR adsr;
+		
 		// ---- wah_fx -----
 		Sine wah_lfo;
 		LPF wah_filter;
@@ -148,13 +148,13 @@ struct MySynth : Synth {
 			}
   	   		osc->set(frequency);
 			osc_gain = velocity * velocity * velocity; 
+			adsr(0.25, 0.25, 0.8, 0.5); 
+            adsr(controls[8], controls[9], controls[10], controls[11]);
 		}
 		
-//		// called once per buffer
-//		void prepare() {
-//			param rev_cutoff = controls[8];
-//			rev_filter(rev_cutoff);
-//		}
+		event off(Amplitude velocity) {
+			adsr.release();
+		}
 		
 		signal wah_fx(signal in_sig){
 			param wah_switch = controls[1];
@@ -198,13 +198,15 @@ struct MySynth : Synth {
 			
 			return out_sig;
 		}
-		
-		
+			
 		void process() {
 			signal osc_sig = (*osc)*osc_gain;
-			signal wah_out = wah_fx(osc_sig);
+			signal env_sig = osc_sig * adsr;
+			signal wah_out = wah_fx(env_sig);
 			signal delay_out = delay_fx(wah_out);
 			delay_out >> out;
+			if(adsr.finished())
+				stop();
 		}
 	};
 
@@ -212,7 +214,7 @@ struct MySynth : Synth {
 	MySynth() {
 		controls = {
 	      {
-	        "Sound Type",
+	        "Base Sound",
 	        Menu("", { 20, 40, 60, 20 }, "Organ", "Trumpet", "Xylophone") // controls[0]
 	      },
 	      {
@@ -223,16 +225,19 @@ struct MySynth : Synth {
 	        Dial("Centre", 10, 2000, 400, { 270, 40, 40, 40 }),
 	      },
 	      {
-	        "Vibrato (Delay) Fx",
+	        "Delay Fx",
 	        Menu("Switch", { 110, 130, 40, 20 }, "Off", "Vibrato", "Flanger"), // controls[5]
 	        Dial("Rate", 1, 10, 3, { 170, 130, 40, 40 }), // range: 1 to 10 Hz
 	        Dial("Depth", 0.0, 1.0, 0.5, { 220, 130, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
 	      },
+          { "AMP Envelope",    	
+            Slider("A", 0, 1, 0.5, { 20, 130, 10, 40 } ), // time (0.0 to 1.0 sec) // controls[8]
+            Slider("D", 0, 1, 0.5, { 35, 130, 10, 40 } ), // time (0.0 to 1.0 sec)
+            Slider("S", 0, 1, 1.0, { 50, 130, 10, 40 } ), // amplitude (none to max dB)
+            Slider("R", 0, 1, 0.5, { 65, 130, 10, 40 } ), // time (0.0 to 1.0 sec)
+          }   
 	    };
 		notes.add<SimpleNote>(32);
 	}
 };
-
-
-
 ```
