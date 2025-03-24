@@ -526,6 +526,9 @@ struct MySynth : Synth {
 		// ---- distortion fx ----
 		Sine dis_lfo;
 		
+		// ---- master fx ----
+		LPF mas_lpf;
+		HPF mas_hpf;
 		
 
 		SimpleNote()
@@ -542,6 +545,8 @@ struct MySynth : Synth {
 		  }
 		{
 			osc = nullptr;
+			mas_lpf.set(200);
+        	mas_hpf.set(5000);
 		}
 
 		event on(Pitch pitch, Amplitude velocity) {
@@ -627,16 +632,36 @@ struct MySynth : Synth {
 				return dsg::bitcrush(in_sig, mod);
 			}
 		}
+		
+		signal master_fx(signal in_sig){
+			// filter lo-mid-hi and all gain
+			param low_gain = controls[15];
+			param mid_gain = controls[16];
+			param high_gain = controls[17];
+			param out_gain =  controls[18];
+			
+			// extract the lows
+			signal low_sig = (in_sig >> mas_lpf);
+			// extract the highs
+			signal high_sig = (in_sig >> mas_hpf);
+			// derive the mids
+			signal mid_sig = in_sig - high_sig - low_sig;
+			
+			// apply gains and mix
+			signal out_sig = low_gain*low_sig + mid_gain*mid_sig + high_gain*high_sig;
+			
+			return out_gain * out_sig;
+		}
 			
 		void process() {
 			signal osc_sig = (*osc)*osc_gain;
 			signal env_sig = osc_sig * adsr;
 			signal dis_out = dis_fx(env_sig);
 			signal wah_out = wah_fx(dis_out);
-			signal out_sig = delay_fx(wah_out);
+			signal delay_out = delay_fx(wah_out);
+			signal out_sig = master_fx(delay_out);
 			
-			param out_gain =  controls[15];
-			out_sig * out_gain >> out;
+			out_sig >> out;
 			if(adsr.finished())
 				stop();
 		}
@@ -653,7 +678,7 @@ struct MySynth : Synth {
 	      {
 	        "Filter Fx",
 	        Menu("Switch", { 120, 40, 70, 20 }, "Off", "Wah Wah"), // controls[1]
-	        Dial("Rate", 1, 10, 5.5, { 200, 40, 40, 40 }), // 1 to 10 Hz
+	        Dial("Rate", 0.1, 10, 5.5, { 200, 40, 40, 40 }), // 1 to 10 Hz
 	        Dial("Depth", 10, 1000, 500, { 260, 40, 40, 40 }), 
 	        Dial("Centre", 10, 2000, 1000, { 320, 40, 40, 40 }),
 	      },
@@ -676,12 +701,16 @@ struct MySynth : Synth {
 	        Dial("Depth", 0.0, 1.0, 0.5, { 260, 200, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
           },
           {
-          	"Master",
-          	Dial("Gain", 0.0, 1.0, 1.0, { 320, 200, 40, 40 }), // controls[15]
+          	"Master / EQ",
+          	Dial("Low", 0.0, 1.0, 1.0, { 310, 120, 20, 20 }), // controls[15]
+          	Dial("Mid", 0.0, 1.0, 1.0, { 310, 160, 20, 20 }), 
+          	Dial("High", 0.0, 1.0, 1.0, { 310, 200, 20, 20 }), 
+          	Dial("Gain", 0.0, 1.0, 1.0, { 340, 160, 40, 40 }), // controls[18]
           }
 	    };
 	    
 	    presets = {
+	    	{ "Solid Organ", { 0, 1, 0.100, 661.993, 1334.097, 0, 6.244, 0.130, 0.084, 0.179, 0.672, 0.170, 0, 5.500, 0.500, 1.000, 0.800, 0.650, 1.000 } },
 	    	{ "Diabolic Base (Harmonica)", { 3, 1, 5.500, 746.410, 829.998, 0, 1.000, 0.462, 0.043, 0.092, 0.882, 0.508, 2, 1.472, 0.220, 1.000 } },
 	    	{ "Bad Bass", { 1, 1, 6.735, 1000.000, 2000.000, 0, 1.000, 0.890, 0.072, 0.066, 1.000, 0.559, 2, 10.000, 1.000, 1.000 } },
 	    	{ "Vanilla Saw", { 6, 0, 1.000, 10.000, 10.000, 0, 1.000, 0.000, 0.035, 0.068, 1.000, 0.000, 2, 1.000, 0.000, 1.000 } },
