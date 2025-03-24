@@ -20,7 +20,6 @@ Wah effect and delay/vibrato.
 Dials are placed specifically now.
 
 ```cpp
-
 #include <utility>
 #include <vector>
 #include <klang.h>
@@ -191,6 +190,11 @@ struct MySynth : Synth {
 			
 			signal mod = delay_lfo(rate) * depth + depth;
 			signal out_sig = delay(mod * fs);
+
+			bool is_flanger = (delay_switch == 2);
+			if (is_flanger){
+				out_sig += in_sig;
+			}
 			
 			return out_sig;
 		}
@@ -220,7 +224,7 @@ struct MySynth : Synth {
 	      },
 	      {
 	        "Vibrato (Delay) Fx",
-	        Menu("Switch", { 110, 130, 40, 20 }, "Off", "On"), // controls[5]
+	        Menu("Switch", { 110, 130, 40, 20 }, "Off", "Vibrato", "Flanger"), // controls[5]
 	        Dial("Rate", 1, 10, 3, { 170, 130, 40, 40 }), // range: 1 to 10 Hz
 	        Dial("Depth", 0.0, 1.0, 0.5, { 220, 130, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
 	      },
@@ -230,5 +234,5 @@ struct MySynth : Synth {
 };
 
 
-```
 
+```
