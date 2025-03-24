@@ -8,21 +8,28 @@ tags: [🎵music, 💻code]
 Project code. It's additive synthesis and keeping presets.
 
 more todos:
-* use ADSR
-* use better samples
-* change default hgs to use namespace value
+* search better base samples
+* use flanger instead of vibrato
+* use envelopes (ADSR)
+* add bitcrash (and other types of distortions)
+* add filter (low, mid, high) and master gain
 
 ### latest version - with wah wah effect
 
-Wah effect is split on seperate function now.
+Wah effect and delay/vibrato.
+Dials are placed specifically now.
 
 ```cpp
+
 #include <utility>
 #include <vector>
 #include <klang.h>
 using namespace klang::optimised;
 
 using HMap = std::vector<std::pair<float, dB>>; // harmonic pairs (Hz / dB) (first pair is the fundamental)
+
+using DTG = std::pair<param, param>;  // Delay Time and Gain
+
 
 
 namespace hsg { // harmonics groups
@@ -107,10 +114,22 @@ struct MySynth : Synth {
 	struct SimpleNote : public Note {
 		MyModularOscillator oscs[3];
 		MyModularOscillator* osc;
-		param gain; // to store velocity, will be used as gain
+		param osc_gain; // to store velocity, will be used as gain
 		
+		// ---- wah_fx -----
 		Sine wah_lfo;
 		LPF wah_filter;
+		
+		// ---- delay fx ----
+		Delay<192000> delay;
+		Sine delay_lfo;
+
+//		LPF delay_filter;
+//		// early delay reflections: time (in miliseconds) and gain
+//		const DTG early_delays[8] = {{2.078, .609}, {5.154, .262}, {5.947, -.3600}, {7.544, -.470}, {8.878, .290}, {10.422, -.423}, {13.938, .100}, {17.140, .200}};
+//		// late delay reflections: time (in seconds) and gain
+//		const DTG late_delays[3] = {{0.2, 1.0}, {0.324, 0.6}, {0.777, 0.2}};
+
 
 		SimpleNote()
 		: oscs{MyModularOscillator{hsg::gpt_synth}, MyModularOscillator{hsg::trumpet}, MyModularOscillator{hsg::xylophone}}
@@ -129,8 +148,14 @@ struct MySynth : Synth {
 				osc = &oscs[2];
 			}
   	   		osc->set(frequency);
-			gain = velocity * velocity * velocity; 
+			osc_gain = velocity * velocity * velocity; 
 		}
+		
+//		// called once per buffer
+//		void prepare() {
+//			param rev_cutoff = controls[8];
+//			rev_filter(rev_cutoff);
+//		}
 		
 		signal wah_fx(signal in_sig){
 			param wah_switch = controls[1];
@@ -150,28 +175,60 @@ struct MySynth : Synth {
 			
 			return out_sig;
 		}
+
+		signal delay_fx(signal in_sig){
+			in_sig >> delay; // save feedforward delay
+			
+			param delay_switch = controls[5];
+			bool is_delay_off = (delay_switch == 0);
+			if (is_delay_off){
+				return in_sig;
+			}
+			
+
+			param rate = controls[6]; // range: 1 to 10 Hz
+			param depth = controls[7] * 0.001;  // range: 0 to 0.001 seconds (delay time in seconds)
+			
+			signal mod = delay_lfo(rate) * depth + depth;
+			signal out_sig = delay(mod * fs);
+			
+			return out_sig;
+		}
+		
 		
 		void process() {
-			signal osc_sig = (*osc)*gain;
+			signal osc_sig = (*osc)*osc_gain;
 			signal wah_out = wah_fx(osc_sig);
-			wah_out >> out;
+			signal delay_out = delay_fx(wah_out);
+			delay_out >> out;
 		}
 	};
 
 
 	MySynth() {
-		controls = { 
-			Menu("Sound", "Organ", "Trumpet", "Xylophone"), 
-			{ "WahWah", {
-				Menu("Switch", "Off", "On"), 
-				Dial("Rate", 1, 10, 3), 
-				Dial("Depth", 10, 1000, 100),
-				Dial("Centre", 10, 2000, 400),
-			}}
-		};
+		controls = {
+	      {
+	        "Sound Type",
+	        Menu("", { 20, 40, 60, 20 }, "Organ", "Trumpet", "Xylophone") // controls[0]
+	      },
+	      {
+	        "WahWah Fx",
+	        Menu("Switch", { 110, 40, 40, 20 }, "Off", "On"), // controls[1]
+	        Dial("Rate", 1, 10, 3, { 170, 40, 40, 40 }), // 1 to 10 Hz
+	        Dial("Depth", 10, 1000, 100, { 220, 40, 40, 40 }), 
+	        Dial("Centre", 10, 2000, 400, { 270, 40, 40, 40 }),
+	      },
+	      {
+	        "Vibrato (Delay) Fx",
+	        Menu("Switch", { 110, 130, 40, 20 }, "Off", "On"), // controls[5]
+	        Dial("Rate", 1, 10, 3, { 170, 130, 40, 40 }), // range: 1 to 10 Hz
+	        Dial("Depth", 0.0, 1.0, 0.5, { 220, 130, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
+	      },
+	    };
 		notes.add<SimpleNote>(32);
 	}
 };
+
 
 ```
 
