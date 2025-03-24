@@ -71,7 +71,6 @@ const HMap gpt_trumpet = {{1,0.0},{2,-4.0},{3,-8.0},{4,-12.0},{5,-14.0},{6,-17.0
 // A soft pad sound with gentle harmonic content.
 const HMap gpt_synth = {{1,0.0}, {2,-10.0}, {3,-15.0}, {4,-20.0}, {5,-25.0}, {6,-30.0}, {7,-35.0}};
 
-
 }
 
 struct MyModularOscillator : Oscillator {
@@ -83,7 +82,6 @@ struct MyModularOscillator : Oscillator {
 		hs = in_hs.size() > 0 ? in_hs : hsg::gpt_synth; // we need at least one harmonic
 		osc = std::vector<Sine>(hs.size(), Sine());
 	}
-
 
 	void set(param f){ // runs one time when we press the note
 		const float base_freq = hs[0].first;
@@ -122,13 +120,6 @@ struct MySynth : Synth {
 		// ---- delay fx ----
 		Delay<192000> delay;
 		Sine delay_lfo;
-
-//		LPF delay_filter;
-//		// early delay reflections: time (in miliseconds) and gain
-//		const DTG early_delays[8] = {{2.078, .609}, {5.154, .262}, {5.947, -.3600}, {7.544, -.470}, {8.878, .290}, {10.422, -.423}, {13.938, .100}, {17.140, .200}};
-//		// late delay reflections: time (in seconds) and gain
-//		const DTG late_delays[3] = {{0.2, 1.0}, {0.324, 0.6}, {0.777, 0.2}};
-
 
 		SimpleNote()
 		: oscs{MyModularOscillator{hsg::gpt_synth}, MyModularOscillator{hsg::trumpet}, MyModularOscillator{hsg::xylophone}}
@@ -198,11 +189,16 @@ struct MySynth : Synth {
 			
 			return out_sig;
 		}
+		
+		signal dis_fx(signal in_sig){ // TODO
+			return in_sig;
+		}
 			
 		void process() {
 			signal osc_sig = (*osc)*osc_gain;
 			signal env_sig = osc_sig * adsr;
-			signal wah_out = wah_fx(env_sig);
+			signal dis_out = dis_fx(env_sig); // TODO: distortion functions (softclipping, bitcrush)
+			signal wah_out = wah_fx(dis_out);
 			signal delay_out = delay_fx(wah_out);
 			delay_out >> out;
 			if(adsr.finished())
@@ -231,13 +227,20 @@ struct MySynth : Synth {
 	        Dial("Depth", 0.0, 1.0, 0.5, { 220, 130, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
 	      },
           { "AMP Envelope",    	
-            Slider("A", 0, 1, 0.5, { 20, 130, 10, 40 } ), // time (0.0 to 1.0 sec) // controls[8]
-            Slider("D", 0, 1, 0.5, { 35, 130, 10, 40 } ), // time (0.0 to 1.0 sec)
-            Slider("S", 0, 1, 1.0, { 50, 130, 10, 40 } ), // amplitude (none to max dB)
+            Slider("A", 0, 1, 0.25, { 20, 130, 10, 40 } ), // time (0.0 to 1.0 sec) // controls[8]
+            Slider("D", 0, 1, 0.25, { 35, 130, 10, 40 } ), // time (0.0 to 1.0 sec)
+            Slider("S", 0, 1, 0.9, { 50, 130, 10, 40 } ), // amplitude (none to max dB)
             Slider("R", 0, 1, 0.5, { 65, 130, 10, 40 } ), // time (0.0 to 1.0 sec)
           }   
 	    };
+	    
+//	    presets = {
+//	    	{ "Sensitive Organ", { 0, 1, 1.000, 741.798, 1437.639, 2, 4.771, 0.500, 0.603, 0.581, 0.747, 0.647 } },
+//          { "Copied Preset", { 0, 0, 3.000, 100.000, 400.000, 0, 4.189, 0.020, 0.000, 0.250, 0.900, 0.500 } },
+//          { "Vanilla Organ", { 0, 0, 1.000, 10.000, 10.000, 0, 1.000, 0.000, 0.000, 0.000, 1.000, 0.000 } },
+//	    };
 		notes.add<SimpleNote>(32);
 	}
 };
+
 ```
