@@ -131,24 +131,30 @@ struct MySynth : Synth {
   	   		osc->set(frequency);
 			gain = velocity * velocity * velocity; 
 		}
-
-		void process() {
-			signal osc_sig = (*osc)*gain;
 		
-			// wah wah effect
+		signal wah_fx(signal in_sig){
 			param wah_switch = controls[1];
-			bool is_wah_on = (wah_switch == 1);
-			signal wah_sig = osc_sig;
-			if (is_wah_on) {
-				param wah_rate = controls[2];
-				param wah_depth = controls[3];
-				param wah_centre = controls[4];
-				wah_depth = min(wah_depth, wah_centre); // to prevent usage over limits
-				signal wah_mod = wah_lfo(wah_rate) * wah_depth + wah_centre;
-				osc_sig >> wah_filter(wah_mod) >> wah_sig;
+			bool is_wah_off = (wah_switch == 0);
+			if (is_wah_off){
+				return in_sig;
 			}
 			
-			wah_sig >> out;
+			signal out_sig = 0;
+			param wah_rate = controls[2];
+			param wah_depth = controls[3];
+			param wah_centre = controls[4];
+			
+			wah_depth = min(wah_depth, wah_centre); // to prevent usage over limits
+			signal wah_mod = wah_lfo(wah_rate) * wah_depth + wah_centre;
+			in_sig >> wah_filter(wah_mod) >> out_sig;
+			
+			return out_sig;
+		}
+		
+		void process() {
+			signal osc_sig = (*osc)*gain;
+			signal wah_out = wah_fx(osc_sig);
+			wah_out >> out;
 		}
 	};
 
@@ -166,5 +172,6 @@ struct MySynth : Synth {
 		notes.add<SimpleNote>(32);
 	}
 };
+
 ```
 
