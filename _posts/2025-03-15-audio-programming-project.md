@@ -11,7 +11,7 @@ more todos:
 * use flanger instead of vibrato
 * use envelopes (ADSR)
 
-* search better base samples
+* search better base sounds samples
 * add tremolo
 * add bitcrash (and other types of distortions)
 * add filter (low, mid, high) and master gain
@@ -25,11 +25,112 @@ Dials are placed specifically now.
 #include <utility>
 #include <vector>
 #include <klang.h>
+
 using namespace klang::optimised;
 
 using HMap = std::vector<std::pair<float, dB>>; // harmonic pairs (Hz / dB) (first pair is the fundamental)
 
 namespace hsg { // harmonics groups
+
+// -------- included in synth --------
+
+
+const HMap cathedral_organ = {
+   // Principal stops (8', 4', 2')
+    {130.81,   0.0},   // 8' (fundamental)
+    {261.63,  -1.0},   // 4' (octave)
+    {523.25,  -3.0},   // 2' (super-octave)
+    
+    // Mixture stops (harmonic series)
+    {392.0,   -6.0},   // 12th (3f, Quint)
+    {784.0,   -8.0},   // 15th (4f, Octave + Quint)
+    {1046.5, -10.0},   // 17th (5f, Tierce)
+    
+    // Pipe resonances
+    {900.0,  -12.0},   // Chiff (attack noise)
+    {2500.0, -15.0},   // Air turbulence
+    
+    // Subharmonic (32' stop simulation)
+    {65.41,  -10.0}    // 32' (sub-octave)
+};
+
+const HMap angelic_harmonica = {
+    {523.25,   0.0},   // 1f
+    {1570.0,  -2.0},   // ~3f (slightly detuned)
+    {2617.0,  -5.0},   // ~5f
+    {3664.0, -10.0},   // ~7f
+    {4700.0, -20.0},   // ~9f
+    {8000.0, -25.0},   // High-frequency shimmer
+    {12000.0, -40.0},  // Airy noise tail
+    {261.63, -15.0}    // 0.5f (sub-octave)
+
+};
+const HMap gritty_bass = {
+ 	// Core harmonics (saturated and slightly detuned)
+    {65.41,    0.0},   // 1f
+    {130.82,  -3.0},   // 2f
+    {196.23,  -9.0},   // ~3f (drifted)
+    {261.64, -15.0},   // 4f
+    
+    // Subharmonic (for "fatness")
+    {32.7,    -6.0},   // 0.5f (sub-bass)
+    
+    // Analog imperfections
+    {100.0,  -18.0},   // Power supply hum
+    {450.0,  -12.0},   // Saturation "grunge"
+    {2000.0, -30.0}    // Filtered noise (key click)
+};
+const HMap vintage_trumpet = {
+    {466.16,   0.0},    // 1f (fundamental)
+    {800.0,   -8.0},    // Mouthpiece "buzz" peak
+    {932.32,  -1.5},    // 2f (strong, near-ideal harmonic)
+    {1398.5,  -3.0},    // ~3f (slightly sharp)
+    {1500.0, -10.0},    // Mid-range "brassiness"
+    {1864.6,  -6.0},    // ~4f 
+    {2330.8,  -9.0},    // ~5f 
+    {2797.0, -12.0},    // ~6f 
+    {2800.0, -20.0},    // High-frequency "air"
+    {3263.2, -18.0},    // ~7f (rapid high-end rolloff)
+    {4000.0, -30.0},    // Key click/air turbulence
+    {6000.0, -40.0}     // High-frequency noise tail
+};
+const HMap forest_flute = {
+    // Core harmonics (weak even harmonics)
+    {392.0,    0.0},   // 1f
+    {784.0,   -12.0},  // 2f
+    {1176.0,  -8.0},   // 3f (stronger)
+    {1568.0, -20.0},   // 4f
+    
+    // Breath noise and overtones
+    {2000.0, -15.0},   // Air turbulence
+    {3000.0, -25.0},   // Whistle tone
+    {5000.0, -40.0},   // Wind noise
+    
+    // Non-integer resonances
+    {610.0,  -10.0},   // Finger hole resonance
+    {950.0,  -14.0}    // Bamboo body resonance
+};
+const HMap retro_guitar = {
+    {261.63,  0.0},    // 1f (fundamental)
+    {273.0,  -22.0},   // Body resonance (near 1f)
+    {522.5,  -4.0},    // ~2f (detuned +0.25 Hz)
+    {650.0,  -16.0},   // Mid-range resonance
+    {783.0,  -8.0},    // ~3f (detuned -1.88 Hz)
+    {1045.0, -12.0},   // ~4f (detuned -1.5 Hz)
+    {1306.0, -18.0},   // ~5f (detuned -2.1 Hz)
+    {1200.0, -30.0},   // High-frequency "pluck" noise
+    {1567.0, -24.0},   // ~6f (detuned -2.8 Hz)
+};
+const HMap simple_sine = { 
+	{1.0, 0.0} 
+};
+const HMap simple_saw = {    
+	{261.63,  0.0}, 
+    {523.25, -6.0},
+    {784.88, -9.5}, 
+    {1046.5, -12.0},  
+    {1308.1, -14.0}
+};
 
 // -------- visually investigate frequency spectrum with Audacity --------
 const HMap trumpet = {
@@ -52,6 +153,277 @@ const HMap xylophone = {
 	{1582, -58.5}, {1763, -60.8}, {2565, -26.1}, {2736, -16.6}, {3454, -54.4}, 
 	{4332, -48.6}, {4837, -45.3}, {5419, -42.1}, {6100, -39.5}, {6666, -52.3}, {7428, -55.4}
 };
+
+const HMap m1_korg = {
+	{65, -14.5}, {131, -14.2}, {196, -14.3}, {263, -50.0}, {327, -47.2}, {393, -24.5}
+};
+
+// -------- experiments --------
+
+const HMap misc = {
+   // Principal stops (8', 4', 2')
+    {130.81,   0.0},   // 8' (fundamental)
+    {261.63,  -1.0},   // 4' (octave)
+    {523.25,  -3.0},   // 2' (super-octave)
+    
+    // Mixture stops (harmonic series)
+    {392.0,   -6.0},   // 12th (3f, Quint)
+    {784.0,   -8.0},   // 15th (4f, Octave + Quint)
+    {1046.5, -10.0},   // 17th (5f, Tierce)
+    
+    // Pipe resonances
+    {900.0,  -12.0},   // Chiff (attack noise)
+    {2500.0, -15.0},   // Air turbulence
+    
+    // Subharmonic (32' stop simulation)
+    {65.41,  -10.0}    // 32' (sub-octave)
+};
+
+
+const HMap my_trumpet = {
+    {268, -23.5}, {528, -12.5}, {788, -10.4}, {1048, -6.1}, {1309, -3.4}, 
+	{1570, -8.2}, {1829, -12.9}, {2090, -22.5}, {2349, -30.6}, {26.11, -35.1}
+};
+
+// -------- i also deepseek to produce some sounds --------
+// C4 ≈ 261.63 Hz
+
+const HMap piano_ds = {
+    {261.63,  0.0},   // 1f (fundamental)
+    {523.25, -3.1},   // 2f
+    {784.88, -6.0},   // 3f
+    {1046.5, -10.5},  // 4f
+    {1308.1, -14.0},  // 5f
+    {1569.8, -20.0},  // 6f
+    {1831.4, -30.0}   // 7f (higher harmonics decay sharply)
+};
+
+// (Strong fundamental, moderate harmonics)
+const HMap guitar_ds = {
+    {261.63,  0.0},   // 1f
+    {523.25, -4.4},   // 2f
+    {784.88, -8.0},   // 3f
+    {1046.5, -14.0},  // 4f
+    {1308.1, -20.0},  // 5f
+    {1569.8, -26.0}   // 6f
+};
+
+// (Near-sinusoidal, weak harmonics)
+const HMap flute_ds = {
+    {261.63,  0.0},   // 1f
+    {523.25, -14.0},  // 2f
+    {784.88, -26.0}   // 3f (higher harmonics negligible)
+};
+
+// (Bright, strong harmonics)
+const HMap trumpet_ds = {
+    {261.63,  0.0},   // 1f
+    {523.25, -1.9},   // 2f
+    {784.88, -3.1},   // 3f
+    {1046.5, -6.0},   // 4f
+    {1308.1, -10.5},  // 5f
+    {1569.8, -14.0}   // 6f
+};
+
+const HMap guitar_improved_ds = {
+    // Fundamental + harmonics (slightly detuned for realism)
+    {261.63,  0.0},    // 1f (fundamental)
+    {522.5,  -4.0},    // ~2f (detuned +0.25 Hz)
+    {783.0,  -8.0},    // ~3f (detuned -1.88 Hz)
+    {1045.0, -12.0},   // ~4f (detuned -1.5 Hz)
+    {1306.0, -18.0},   // ~5f (detuned -2.1 Hz)
+    {1567.0, -24.0},   // ~6f (detuned -2.8 Hz)
+    
+    // String resonance peaks (not strictly harmonic)
+    {273.0,  -22.0},   // Body resonance (near 1f)
+    {350.0,  -20.0},   // Neck/body interaction
+    {650.0,  -16.0},   // Mid-range resonance
+    {1200.0, -30.0},   // High-frequency "pluck" noise
+};
+
+const HMap trumpet_improved_ds = {
+    // Core harmonics (slightly detuned and shaped like a real trumpet)
+    {466.16,   0.0},    // 1f (fundamental)
+    {932.32,  -1.5},    // 2f (strong, near-ideal harmonic)
+    {1398.5,  -3.0},    // ~3f (slightly sharp)
+    {1864.6,  -6.0},    // ~4f 
+    {2330.8,  -9.0},    // ~5f 
+    {2797.0, -12.0},    // ~6f 
+    {3263.2, -18.0},    // ~7f (rapid high-end rolloff)
+
+    // Formants and resonances (from mouthpiece/body)
+    {800.0,   -8.0},    // Mouthpiece "buzz" peak
+    {1500.0, -10.0},    // Mid-range "brassiness"
+    {2800.0, -20.0},    // High-frequency "air"
+
+    // Breath noise (modeled as non-harmonic content)
+    {4000.0, -30.0},    // Key click/air turbulence
+    {6000.0, -40.0}     // High-frequency noise tail
+};
+
+// (Rich harmonics, nasal tone)
+const HMap violin_ds = {
+    {261.63,  0.0},   // 1f
+    {523.25, -1.9},   // 2f
+    {784.88, -4.4},   // 3f
+    {1046.5, -8.0},   // 4f
+    {1308.1, -10.5},  // 5f
+    {1569.8, -14.0}   // 6f
+};
+
+// (Odd harmonics only)
+const HMap clarinet_ds = {
+    {261.63,  0.0},   // 1f
+    {784.88, -3.1},   // 3f (odd)
+    {1308.1, -6.0},   // 5f
+    {1831.4, -14.0}   // 7f
+    // Even harmonics omitted (~-inf dB)
+};
+
+
+// (1/n amplitude rolloff → ~6 dB/octave)
+const HMap sawtooth_ds = {
+    {261.63,  0.0},   // 1f (0 dB)
+    {523.25, -6.0},   // 2f (-6 dB)
+    {784.88, -9.5},   // 3f (-9.5 dB)
+    {1046.5, -12.0},  // 4f (-12 dB)
+    {1308.1, -14.0},  // 5f (-14 dB)
+    {1569.8, -15.6}   // 6f (-15.6 dB)
+};
+
+//  "Cathedral Pipe Organ"
+// (Pure, expansive, with 8’ + 4’ + 2’ stops and harmonic flute pipes.)
+const HMap cathedral_organ_ds = {
+    // Principal stops (8', 4', 2')
+    {130.81,   0.0},   // 8' (fundamental)
+    {261.63,  -1.0},   // 4' (octave)
+    {523.25,  -3.0},   // 2' (super-octave)
+    
+    // Mixture stops (harmonic series)
+    {392.0,   -6.0},   // 12th (3f, Quint)
+    {784.0,   -8.0},   // 15th (4f, Octave + Quint)
+    {1046.5, -10.0},   // 17th (5f, Tierce)
+    
+    // Pipe resonances
+    {900.0,  -12.0},   // Chiff (attack noise)
+    {2500.0, -15.0},   // Air turbulence
+    
+    // Subharmonic (32' stop simulation)
+    {65.41,  -10.0}    // 32' (sub-octave)
+};
+
+// (Ethereal, metallic, and haunting with high-frequency shimmer.)
+const HMap glass_harmonica_ds = {
+    // Odd harmonics dominate (metallic bell-like sound)
+    {523.25,   0.0},   // 1f
+    {1570.0,  -2.0},   // ~3f (slightly detuned)
+    {2617.0,  -5.0},   // ~5f
+    {3664.0, -10.0},   // ~7f
+    {4700.0, -20.0},   // ~9f
+    
+    // Non-harmonic "glass friction" peaks
+    {8000.0, -25.0},   // High-frequency shimmer
+    {12000.0, -40.0},  // Airy noise tail
+    
+    // Subharmonic (for "weight")
+    {261.63, -15.0}    // 0.5f (sub-octave)
+};
+
+// (Think Moog-style bass with oscillator drift and saturation.)
+const HMap analog_bass_ds = {
+    // Core harmonics (saturated and slightly detuned)
+    {65.41,    0.0},   // 1f
+    {130.82,  -3.0},   // 2f
+    {196.23,  -9.0},   // ~3f (drifted)
+    {261.64, -15.0},   // 4f
+    
+    // Subharmonic (for "fatness")
+    {32.7,    -6.0},   // 0.5f (sub-bass)
+    
+    // Analog imperfections
+    {100.0,  -18.0},   // Power supply hum
+    {450.0,  -12.0},   // Saturation "grunge"
+    {2000.0, -30.0}    // Filtered noise (key click)
+};
+
+// (Lo-fi, wobbly, and nostalgic with pitch instability.)
+const HMap vinyl_record_ds = {
+    // Fundamental + harmonics (warped)
+    {440.0,    0.0},   // 1f
+    {880.0,   -8.0},   // 2f
+    {1320.0, -16.0},   // 3f
+    
+    // Wow/flutter effects (pitch modulation)
+    {441.5,   -5.0},   // 1f + slight drift
+    {882.5,  -10.0},   // 2f + drift
+    
+    // Vinyl noise artifacts
+    {7000.0, -20.0},   // Crackle
+    {12000.0, -35.0},  // Hiss
+    {50.0,   -15.0}    // Rumble
+};
+
+// (Organic, breathy, and dynamically alive with natural randomness.)
+const HMap forest_flute_ds = {
+    // Core harmonics (weak even harmonics)
+    {392.0,    0.0},   // 1f
+    {784.0,   -12.0},  // 2f
+    {1176.0,  -8.0},   // 3f (stronger)
+    {1568.0, -20.0},   // 4f
+    
+    // Breath noise and overtones
+    {2000.0, -15.0},   // Air turbulence
+    {3000.0, -25.0},   // Whistle tone
+    {5000.0, -40.0},   // Wind noise
+    
+    // Non-integer resonances
+    {610.0,  -10.0},   // Finger hole resonance
+    {950.0,  -14.0}    // Bamboo body resonance
+};
+
+// "Vintage Jazz Muted Trumpet": (Dark, velvety, and slightly distorted with a Harmon mute effect.)
+const HMap jazz_muted_trumpet_ds = {
+    // Fundamental + muted harmonics (strong midrange)
+    {466.16,   0.0},   // 1f
+    {932.32,  -8.0},   // 2f (suppressed by mute)
+    {1398.5,  -4.0},   // 3f (boosted "nasal" peak)
+    {1864.6, -12.0},   // 4f
+    {2330.8, -20.0},   // 5f
+
+    // Mute-induced resonances
+    {1100.0,  -6.0},   // Metallic "buzz" of Harmon mute
+    {2800.0, -25.0},   // High-end staccato noise
+
+    // Valve click and breath
+    {6000.0, -30.0},   // Key noise
+    {80.0,   -18.0}    // Puffing breath
+}; 
+
+// "Brass Fanfare Herald" (Bright, heroic, with extra "blare" and harmonic shimmer.)
+const HMap fanfare_trumpet_ds = {
+    // Strong harmonics for "brightness"
+    {523.25,   0.0},   // 1f
+    {1046.5,  -1.0},   // 2f (near-unison)
+    {1569.8,  -2.0},   // 3f
+    {2093.0,  -5.0},   // 4f
+    {2616.2,  -8.0},   // 5f
+
+    // Formant peaks (chest resonance)
+    {800.0,   -4.0},   // "Blare" region
+    {2500.0,  -6.0},   // "Shimmer" peak
+
+    // Overblow effect (fortissimo)
+    {3700.0, -12.0},   // Extra edge
+    {5000.0, -25.0}    // Air noise
+};
+
+// dB Reference: 0.0 dB = full amplitude of the fundamental; negative values are quieter.
+
+// Tips for Additive Synthesis:
+// Detuning Harmonics: Real instruments have slight inharmonicity—try adding small random detuning (±1-5%).
+// Dynamic Envelopes: Harmonics don’t all decay at the same rate (e.g., high harmonics fade faster in pianos).
+// Formants: Some instruments (like brass) have resonant peaks that don’t follow exact harmonic ratios.
+// Experiment!: Adjust amplitudes to match the brightness/darkness you want.
 
 // -------- i also asked ChatGPT to produce some sounds --------
 // Organ (Smooth, Hollow Sound)
@@ -130,10 +502,14 @@ struct MyModularOscillator : Oscillator {
 	}
 };
 
+#define osc_amount 8
+// cathedral_organ, gritty_bass, retro_guitar, angelic_harmonica, vintage_trumpet, forest_flute, simple_saw, simple_sine;
+
 
 struct MySynth : Synth {
 	struct SimpleNote : public Note {
-		MyModularOscillator oscs[3];
+		// the amount of oscillators is 8
+		MyModularOscillator oscs[8];
 		MyModularOscillator* osc;
 		param osc_gain; // to store velocity, will be used as gain
 		
@@ -152,7 +528,17 @@ struct MySynth : Synth {
 		Sine dis_lfo;
 
 		SimpleNote()
-		: oscs{MyModularOscillator{hsg::gpt_synth}, MyModularOscillator{hsg::sopsax}, MyModularOscillator{hsg::xylophone}}
+		: oscs{
+			// should match osc_amount
+			MyModularOscillator{hsg::cathedral_organ}, 
+			MyModularOscillator{hsg::gritty_bass}, 
+			MyModularOscillator{hsg::retro_guitar}, 
+			MyModularOscillator{hsg::angelic_harmonica}, 
+			MyModularOscillator{hsg::vintage_trumpet}, 
+			MyModularOscillator{hsg::forest_flute}, 
+			MyModularOscillator{hsg::simple_saw}, 
+			MyModularOscillator{hsg::simple_sine}, 
+		  }
 		{
 			osc = nullptr;
 		}
@@ -160,13 +546,8 @@ struct MySynth : Synth {
 		event on(Pitch pitch, Amplitude velocity) {
 			param frequency = pitch -> Frequency;
 			param type = controls[0];
-			if(type == 0){
-				osc = &oscs[0];
-			} else if (type == 1) {
-				osc = &oscs[1];
-			} else {
-				osc = &oscs[2];
-			}
+			int osc_num = min(type, osc_amount-1);
+			osc = &oscs[osc_num]; // check for amount of modulators defined
   	   		osc->set(frequency);
 			osc_gain = velocity * velocity * velocity; 
 			adsr(0.25, 0.25, 0.8, 0.5); 
@@ -263,7 +644,9 @@ struct MySynth : Synth {
 		controls = {
 	      {
 	        "Base Sound",
-	        Menu("", { 20, 40, 60, 20 }, "Organ", "Trumpet", "Xylophone") // controls[0]
+	        // cathedral_organ, gritty_bass, retro_guitar, angelic_harmonica, vintage_trumpet, forest_flute, simple_saw, simple_sine;
+
+	        Menu("", { 20, 40, 60, 20 }, "Cathedral Organ", "Gritty Bass", "Retro Guitar", "Angelic Harmonica", "Vintage Trumpet", "Forest Flute", "Simple Saw", "Simple Sine") // controls[0]
 	      },
 	      {
 	        "WahWah Fx",
@@ -299,6 +682,7 @@ struct MySynth : Synth {
 		notes.add<SimpleNote>(32);
 	}
 };
+
 ```
 
 
@@ -310,7 +694,14 @@ struct MySynth : Synth {
             // { "Warm Xylophone", { 2, 0, 1.000, 10.000, 10.000, 1, 4.0, 0.40, 0.21, 0.42, 0.80, 0.58 } },
 
             // { "Bitcrush Vibrato", { 0, 0, 1.000, 10.000, 10.000, 1, 1.000, 0.191, 0.406, 0.504, 0.900, 0.500, 3, 8.45, 0.900 } },
-//	    };
+
+            // {{ "Korg Base", { 1, 1, 5.029, 427.933, 1784.272, 1, 4.795, 0.895, 0.000, 0.000, 1.000, 0.000, 2, 5.176, 0.726 } },}
+
+
+
+
+    //	    };
+
 		notes.add<SimpleNote>(32);
 	}
 };
