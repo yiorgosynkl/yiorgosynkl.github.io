@@ -76,20 +76,8 @@ struct MyModularOscillator : Oscillator {
 	HMap hs; // harmonics
 	int enhance_dBs; // enhance dBs
 	
-	static const HMap getDefaultHs(){
-		static const HMap d_hs = { 
-			{65, -14.5},
-			{131, -14.2}, 
-			{195, -14.3}, 
-			{263, -50.0}, 
-			{327, -47.2}, 
-			{393, -24.5}, 
-		};
-		return d_hs;
-	}
-
-	MyModularOscillator(HMap in_hs = getDefaultHs()){
-		hs = in_hs.size() > 0 ? in_hs : getDefaultHs(); // we need at least one harmonic
+	MyModularOscillator(HMap in_hs = hsg::gpt_synth){
+		hs = in_hs.size() > 0 ? in_hs : hsg::gpt_synth; // we need at least one harmonic
 		osc = std::vector<Sine>(hs.size(), Sine());
 	}
 
