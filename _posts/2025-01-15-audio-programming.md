@@ -490,6 +490,14 @@ Make sure the synth is compatible with your operating system and that your compu
 I hope this information helps you find the perfect free software synths for your music production needs!
 
 
+## Lesson 10 
+
+Project deliverables:
+* Code 
+* Documentation
+* Video / Audio
+
+
 ## Lesson 08 - AM and FM
 
 Wavetables is a type of oscillator. 
@@ -2362,7 +2370,6 @@ General notes:
 * Some filter designs — especially in synthesis — exhibit resonance
 
 
-
 Resonance (Q)
 * the sharpness of the spike
 
@@ -2374,8 +2381,6 @@ In EQ, we want to correct the sound.
 * high-pass (low-cut) filter
 * band-pass filter (center frequency and bandwidth) (cuttoff vs b)
 * band-reject filter (or band-cut filter) (notch filter)
-
-> Analog filters do not have 
 
 
 For a low pass filter, we want to smooth it out -> moving average
@@ -2461,9 +2466,7 @@ struct MyIIR : Effect {
 };
 ```
 
-
-
-> We can minus the lower frequencies we produced to only keep the high frequencies. And that how we produce a high pass filter. !! AMAZING !!
+> We can minus the lower frequencies we produced to only keep the high frequencies. And that how we produce a high pass filter. (!! AMAZING !!)
 
 ```cpp
 #include <klang.h>
@@ -2485,8 +2488,8 @@ struct MyIIR : Effect {
 		signal lpf = a*in + b*last;
 		last << lpf;
 
-		singal hpf = in - lpf;
-		hpf >> in;
+		signal hpf = in - lpf;
+		hpf >> out;
 	}
 };
 ```
@@ -2505,6 +2508,9 @@ That frequncy get boosted. It's a desirable effect.
 this has FIR and IIR.
 the 5 coefficients can create anything (lowpass, highpass, bandpass).
 
+
+TODO: make a biquad filter in klang
+
 RBJ biquad filters
 
 * [klang makes it](https://github.com/nashaudio/klang/blob/f1f9b6e7896345664537eabaa03be0e075371420/klang.h#L4578)
@@ -2514,10 +2520,29 @@ RBJ biquad filters
 
 We are going to be using it as a black box.
 
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
 
+struct FilterAsBlackBox : Effect {
+	LPF filter;
+
+	FilterAsBlackBox() {
+		controls = { 
+			Dial("Cutoff", 100, 10000) // 100 Hz -> 10 KHz
+		};
+	}
+
+	void process() {
+		param cutoff = controls[0];
+		in >> filter(cutoff) >> out;
+	}
+};
+
+
+```
 
 > White noise is a singal generation. Random numbers from 0 to 1.
-
 
 Mapping values.
 
@@ -2531,12 +2556,81 @@ We want to smoothen the cutoff. (we add a filter essentially)
 > Rule of Thumb: 100ms latency feels instant to humans
 
 
+Combining two identical filters serially with the same cutoff will double the slope.
+Combining an LPF and a HPF serially will result in BPF (or silence).
+Combining an LPF and a HPF in parallel will result in BRF.
+Combining two filters in parallel we correctly aligned areas, we get a bass (low frequencies) / treble (high frequencies) contorls.
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+struct FilterAsBlackBox : Effect {
+	LPF lpf;
+    HPF hpf;
+
+	FilterAsBlackBox() {
+		controls = { 
+			Dial("Cutoff", 100, 10000), // 100 Hz -> 10 KHz
+			Dial("Bass Gain", 0, 1, 0.5),
+			Dial("Treble Gain", 0, 1, 0.5)
+		};
+	}
+
+	void process() {
+		param cutoff = controls[0];
+		param bg = controls[1];
+		param tg = controls[2];
+		in >> bg*lpf(cutoff) + tg*hpf(cutoff) >> out;
+	}
+};
+
+```
+
+* Band filtering enables multi-band processing effects, providing more precise, targetted control of a signal's spectral content
+
+Equalisation (EQ), simply uses gain for different frequency bands.
+
+Creating a simple 3-band EQ, just like the dj decks. This could be done by chaning two LPF or two HPF. But this will distort the phase twice (remember that filters introduce phase problems).
+The prefreable solution is using one LPF and one HPF in parallel.
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+struct EQ : Effect {
+	LPF lpf;
+	HPF hpf;
+
+	EQ() {
+		controls = { { "EQ", Dial("Low"), 
+		                     Dial("Mid"), 
+		                     Dial("High") } };
+		// configure the filters
+        lpf.set(200);
+        hpf.set(5000);
+	}
+
+	void process() {
+		// get the low, mid, high controls
+        param low = controls[0];
+        param mid = controls[1];
+        param high = controls[2];
+		// extract the lows
+        signal low_sig = (in >> lpf);
+		// extract the highs
+        signal high_sig = (in >> hpf);
+		// derive the mids
+        signal mid_sig = in - highs - lows;
+		// apply gains and mix
+        low*low_sig + mid*mid_sig + high*high_sig >> out;
+	}
+};
+```
+
 doubling the filter (makes the slope more steep)
 * each one will distort the phase
 * treble and bass (if you link them up to be inverse)
-
-
-
 
 dynamic level compressors 
 * first we had limiters (automatic way to stop too loud signals)
@@ -2558,6 +2652,41 @@ dynamic level compressors
 	* second approach: low-pass, high-pass and mid is subraction of them.
 
 > each time you pass the signal, you get the cost of one phase. For FIR you have predictable phase. But with IIR, it's unpredictable (the price you pay for efficiency).
+
+
+Last effect we can make is a wah-wah effect. Essentially we use an LFO to control the low pass filter.
+
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+struct WahWah : Effect {
+	Sine lfo;
+	LPF filter;
+
+	WahWah() {
+		controls = { 
+			Dial("Rate", 1, 10, 3), 
+			Dial("Depth", 10, 1000, 100),
+			Dial("Centre", 10, 2000, 400),
+		};
+	}
+
+	void process() {
+        param rate = controls[0];
+        param depth = controls[1];
+        param centre = controls[2];
+		// calculate the mod signal
+        signal mod = lfo(rate) * depth + centre;
+		// use it to modulate cutoff
+        in >> filter(mod) >> out;
+	}
+};
+
+
+```
+
+
 
 ### More Qs:
 
