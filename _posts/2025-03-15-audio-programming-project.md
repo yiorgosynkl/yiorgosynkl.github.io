@@ -34,7 +34,6 @@ namespace hsg { // harmonics groups
 
 // -------- included in synth --------
 
-
 const HMap cathedral_organ = {
    // Principal stops (8', 4', 2')
     {130.81,   0.0},   // 8' (fundamental)
@@ -570,7 +569,7 @@ struct MySynth : Synth {
 			param wah_depth = controls[3];
 			param wah_centre = controls[4];
 			
-			wah_depth = min(wah_depth, wah_centre); // to prevent usage over limits
+			wah_depth = min(wah_depth, wah_centre-10); // to prevent usage over limits
 			signal wah_mod = wah_lfo(wah_rate) * wah_depth + wah_centre;
 			in_sig >> wah_filter(wah_mod) >> out_sig;
 			
@@ -632,8 +631,10 @@ struct MySynth : Synth {
 			signal env_sig = osc_sig * adsr;
 			signal dis_out = dis_fx(env_sig);
 			signal wah_out = wah_fx(dis_out);
-			signal delay_out = delay_fx(wah_out);
-			delay_out >> out;
+			signal out_sig = delay_fx(wah_out);
+			
+			param out_gain =  controls[15];
+			out_sig * out_gain >> out;
 			if(adsr.finished())
 				stop();
 		}
@@ -645,33 +646,36 @@ struct MySynth : Synth {
 	      {
 	        "Base Sound",
 	        // cathedral_organ, gritty_bass, retro_guitar, angelic_harmonica, vintage_trumpet, forest_flute, simple_saw, simple_sine;
-
-	        Menu("", { 20, 40, 60, 20 }, "Cathedral Organ", "Gritty Bass", "Retro Guitar", "Angelic Harmonica", "Vintage Trumpet", "Forest Flute", "Simple Saw", "Simple Sine") // controls[0]
+	        Menu("", { 20, 40, 80, 20 }, "Cathedral Organ", "Gritty Bass", "Retro Guitar", "Angelic Harmonica", "Vintage Trumpet", "Forest Flute", "Simple Saw", "Simple Sine") // controls[0]
 	      },
 	      {
-	        "WahWah Fx",
-	        Menu("Switch", { 110, 40, 40, 20 }, "Off", "On"), // controls[1]
-	        Dial("Rate", 1, 10, 3, { 170, 40, 40, 40 }), // 1 to 10 Hz
-	        Dial("Depth", 10, 1000, 100, { 220, 40, 40, 40 }), 
-	        Dial("Centre", 10, 2000, 400, { 270, 40, 40, 40 }),
+	        "Filter Fx",
+	        Menu("Switch", { 120, 40, 70, 20 }, "Off", "Wah Wah"), // controls[1]
+	        Dial("Rate", 1, 10, 5.5, { 200, 40, 40, 40 }), // 1 to 10 Hz
+	        Dial("Depth", 10, 1000, 10, { 260, 40, 40, 40 }), 
+	        Dial("Centre", 10, 2000, 10, { 320, 40, 40, 40 }),
 	      },
 	      {
 	        "Delay Fx",
-	        Menu("Switch", { 110, 130, 40, 20 }, "Off", "Vibrato", "Flanger"), // controls[5]
-	        Dial("Rate", 1, 10, 3, { 170, 130, 40, 40 }), // range: 1 to 10 Hz
-	        Dial("Depth", 0.0, 1.0, 0.5, { 220, 130, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
+	        Menu("Switch", { 120, 120, 70, 20 }, "Off", "Vibrato", "Flanger"), // controls[5]
+	        Dial("Rate", 1, 10, 5.5, { 200, 120, 40, 40 }), // range: 1 to 10 Hz
+	        Dial("Depth", 0.0, 1.0, 0.5, { 260, 120, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
 	      },
           { "AMP Envelope",    	
-            Slider("A", 0, 1, 0.25, { 20, 130, 10, 40 } ), // time (0.0 to 1.0 sec) // controls[8]
-            Slider("D", 0, 1, 0.25, { 35, 130, 10, 40 } ), // time (0.0 to 1.0 sec)
-            Slider("S", 0, 1, 0.9, { 50, 130, 10, 40 } ), // amplitude (none to max dB)
-            Slider("R", 0, 1, 0.5, { 65, 130, 10, 40 } ), // time (0.0 to 1.0 sec)
+            Slider("A", 0, 1, 0.25, { 20, 130, 15, 40 } ), // time (0.0 to 1.0 sec) // controls[8]
+            Slider("D", 0, 1, 0.25, { 41, 130, 15, 40 } ), // time (0.0 to 1.0 sec)
+            Slider("S", 0, 1, 0.9, { 63, 130, 15, 40 } ), // amplitude (none to max dB)
+            Slider("R", 0, 1, 0.5, { 84, 130, 15, 40 } ), // time (0.0 to 1.0 sec)
           }, 
           {	
 	        "Amp Fx",
-	        Menu("Switch", { 110, 220, 40, 20 }, "Off", "Tremolo", "Softclip", "Bitcrush"), // controls[12]
-	        Dial("Rate", 1.0, 10, 3, { 170, 220, 40, 40 }), // range: 1 to 10 Hz
-	        Dial("Depth", 0.0, 1.0, 0.5, { 220, 220, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
+	        Menu("Switch", { 120, 200, 70, 20 }, "Off", "Tremolo", "Softclip", "Bitcrush"), // controls[12]
+	        Dial("Rate", 1.0, 10, 5.5, { 200, 200, 40, 40 }), // range: 1 to 10 Hz
+	        Dial("Depth", 0.0, 1.0, 0.0, { 260, 200, 40, 40 }), // range: 0 to 0.001 seconds (delay time in seconds)
+          },
+          {
+          	"Master",
+          	Dial("Gain", 0.0, 1.0, 1.0, { 320, 200, 40, 40 }), // controls[15]
           }
 	    };
 	    
