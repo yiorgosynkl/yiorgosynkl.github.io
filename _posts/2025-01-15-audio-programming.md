@@ -7,14 +7,25 @@ tags: [🎵music, 💻code]
 
 This is a post about audio programming and what people of the field call DSP (digital signal processing). I just started a course and here is the place where I will be keeping my notes. 
 
-what are the plugins in the industry? 
-what projects can we do at the end?
-I would like more resources to check (during the lesson, code and plugins).
-I would like to use JUCE for my plugin at the end. I have to find my level. 
-book a studio.
+> DONT FORGET: you don't learn music in unis. You learn it playing, on the street, breaking rules and enjoying it as much as possible. For me it's more of a hobby, rather than work.
 
+## Blog contents overview
 
-DONT FORGET: you don't learn music in unis. You learn it playing, on the street, breaking rules and enjoying it as much as possible. It's a hobby, not a work.
+* [Online resources](#online-resources)
+* [Lesson 10: Outro - Plugin Project](#lesson-10)
+* [Lesson 09: Synthesis - Physical Modeling](#)
+* [Lesson 08: Synthesis - AM & FM](#lesson-08-am-and-fm)
+* [Lesson 07: Synthesis - Subtractive](#lesson-07-subtractive-synthesis)
+* [Lesson 06: Synthesis - Additive](#lesson-06-additive-synthesis)
+* [Lesson 05: Effects - Modulation (Flanger)](#lesson-05-modulation)
+* [Lesson 04: Effects - Delay](#lesson-04-delay)
+* [Lesson 03: Effects - Filters/EQ](#lesson-03-filters)
+* [Lesson 02: Effects - Distortion](#lesson-02-distortion)
+* [Lesson 01: Intro - DSP Basics](#lesson-01-dsp-basics)
+
+## Online resources
+
+The following are notes about books/synths/plugins that are good to know, based on my reasearch browsing online and querying LLM agents.
 
 ### Most important books / resources
 
@@ -125,11 +136,11 @@ Software Synths (VSTs):
 * Omnisphere (Spectrasonics) – Known for its deep sound library and cinematic textures.
 
 
-## Deepseek answer for most popular synths (also with categories)
+### Deepseek answer for most popular synths (also with categories)
 
 The most popular synthesizers of all time are iconic for their sound, design, and influence on music. Here’s a list of some of the most legendary synths:
 
-### **Analog Synths (Classic Era)**
+#### **Analog Synths (Classic Era)**
 1. **Moog Minimoog (1970)**  
    - The first portable synthesizer, defining the sound of analog synths.  
    - Used in prog rock, funk, and early electronic music.  
@@ -154,9 +165,7 @@ The most popular synthesizers of all time are iconic for their sound, design, an
    - The first fully programmable polyphonic synth.  
    - Used by Michael Jackson, Madonna, and Tangerine Dream.
 
----
-
-### **Digital Synths (1980s and Beyond)**
+#### **Digital Synths (1980s and Beyond)**
 1. **Yamaha DX7 (1983)**  
    - The best-selling synth of all time, thanks to its FM synthesis.  
    - Iconic for its electric piano, bass, and bell sounds.  
@@ -175,7 +184,7 @@ The most popular synthesizers of all time are iconic for their sound, design, an
 
 ---
 
-### **Modern Synths (2000s and Beyond)**
+#### **Modern Synths (2000s and Beyond)**
 1. **Moog Subsequent 37 (2015)**  
    - A modern take on the Minimoog, loved for its versatility and rich analog sound.
 
@@ -193,7 +202,7 @@ The most popular synthesizers of all time are iconic for their sound, design, an
 
 ---
 
-### **Modular Synths**
+#### **Modular Synths**
 1. **Eurorack Modular System**  
    - A modular synth format that has become a standard for experimental and custom setups.  
    - Popularized by artists like Aphex Twin and Deadmau5.
@@ -203,7 +212,7 @@ The most popular synthesizers of all time are iconic for their sound, design, an
 
 ---
 
-### **Honorable Mentions**
+#### **Honorable Mentions**
 - **Oberheim OB-Xa** (used by Van Halen, Prince)  
 - **Korg MS-20** (a gritty semi-modular synth)  
 - **Waldorf Wave** (a rare and powerful digital synth)  
@@ -219,7 +228,7 @@ Software synthesizers (soft synths) have become incredibly popular due to their 
 
 ---
 
-### **Classic Emulations**
+#### **Classic Emulations**
 1. **Arturia V Collection**  
    - A suite of software emulations of iconic synths like the Minimoog, Prophet-5, Jupiter-8, and DX7.  
    - Known for its accuracy and versatility.
@@ -235,7 +244,7 @@ Software synthesizers (soft synths) have become incredibly popular due to their 
 
 ---
 
-### **Modern Soft Synths**
+#### **Modern Soft Synths**
 1. **Serum by Xfer Records**  
    - A wavetable synth that has become a staple in EDM, dubstep, and modern production.  
    - Known for its intuitive interface and powerful sound design capabilities.
@@ -261,7 +270,7 @@ Software synthesizers (soft synths) have become incredibly popular due to their 
 
 ---
 
-### **Experimental and Unique Synths**
+#### **Experimental and Unique Synths**
 1. **Absynth by Native Instruments**  
    - A semi-modular synth known for its atmospheric and evolving sounds.  
    - Popular in ambient and experimental music.
@@ -278,7 +287,7 @@ Software synthesizers (soft synths) have become incredibly popular due to their 
 
 ---
 
-### **Free and Budget-Friendly Synths**
+#### **Free and Budget-Friendly Synths**
 1. **Surge XT**  
    - An open-source wavetable synth with a rich feature set.
 
@@ -293,7 +302,7 @@ Software synthesizers (soft synths) have become incredibly popular due to their 
 
 ---
 
-### **Hybrid and Sampler-Based Synths**
+#### **Hybrid and Sampler-Based Synths**
 1. **Kontakt by Native Instruments**  
    - A sampler-based platform used for creating and playing realistic instruments and experimental sounds.
 
@@ -305,7 +314,7 @@ Software synthesizers (soft synths) have become incredibly popular due to their 
 
 ---
 
-### **Honorable Mentions**
+#### **Honorable Mentions**
 - **Diva by u-he** (analog modeling synth)  
 - **Phase Plant by Kilohearts** (modular-style soft synth)  
 - **Zebra by u-he** (hybrid synth for film scoring and sound design)  
@@ -315,7 +324,7 @@ Software synthesizers (soft synths) have become incredibly popular due to their 
 
 These soft synths have become essential tools for producers, offering everything from classic analog emulations to cutting-edge sound design capabilities. Many are used across genres, from pop and hip-hop to experimental and cinematic music.
 
-## Best free synths to use
+### Best free synths to use
 
 There are a lot of great free software synths available, whether you’re looking for analog emulations, wavetable synthesis, or experimental sound design tools. Here are some of the best free synth plugins you can use:
 
@@ -346,7 +355,7 @@ There are many high-quality free software synths available that rival paid optio
 
 ---
 
-### **Analog Emulations**
+#### **Analog Emulations**
 1. **Vital**  
    - A powerful wavetable synth with a Serum-like interface.  
    - Features include wavetable editing, FM synthesis, and a flexible modulation system.  
@@ -366,7 +375,7 @@ There are many high-quality free software synths available that rival paid optio
 
 ---
 
-### **FM Synthesis**
+#### **FM Synthesis**
 1. **Dexed**  
    - A free FM synth based on the Yamaha DX7.  
    - Comes with thousands of presets and allows you to load DX7 sysex files.
@@ -377,7 +386,7 @@ There are many high-quality free software synths available that rival paid optio
 
 ---
 
-### **Modular and Experimental**
+#### **Modular and Experimental**
 1. **VCV Rack**  
    - A free modular synth environment with a vast library of modules.  
    - Perfect for creating experimental and complex sounds.
@@ -403,7 +412,7 @@ There are many high-quality free software synths available that rival paid optio
 
 ---
 
-### **Other Notable Free Synths**
+#### **Other Notable Free Synths**
 1. **OB-Xd**  
    - A free emulation of the Oberheim OB-X synthesizer.  
    - Known for its warm, vintage sound.
@@ -426,7 +435,7 @@ There are many high-quality free software synths available that rival paid optio
 
 ---
 
-### **Free Synth Plugins for Specific DAWs**
+#### **Free Synth Plugins for Specific DAWs**
 1. **Ableton Live (Suite)**  
    - **Operator**: A built-in FM synth.  
    - **Wavetable**: A wavetable synth included in Live 10 and later.  
@@ -442,7 +451,7 @@ There are many high-quality free software synths available that rival paid optio
 
 ---
 
-### **Where to Find Free Synths**
+#### **Where to Find Free Synths**
 - **Plugin Boutique**: Offers free synths and plugins regularly.  
 - **Bedroom Producers Blog**: A great resource for finding free plugins.  
 - **KVRAudio**: A database of free and paid plugins.
@@ -492,13 +501,9 @@ I hope this information helps you find the perfect free software synths for your
 
 ## Lesson 10 
 
-Project deliverables:
-* Code 
-* Documentation
-* Video / Audio
+I have completed a project for the purposes of this course. It's in a separate file. The project deliverables were the Code, Documentation and descriptive Video / Audio of plugin.
 
-
-## Lesson 08 - AM and FM
+## Lesson 08: AM and FM
 
 Wavetables is a type of oscillator. 
 You get samples of maximum 1 second (more than one second is called sample based synthesis). And you repeat them.
@@ -800,7 +805,7 @@ some other
 
 
 
-## Lesson 07 - Subtractive synthesis
+## Lesson 07: Subtractive synthesis
 
 Adding a 3rd dimension. 
 
@@ -1083,7 +1088,7 @@ We can do the project now.
 * they were trying to recreate the bass sound, horribly failed
 * they fucked up the filter design and later on lead to the creation of ACID house
 
-## Lesson 06 - Additive synthesis
+## Lesson 06: Additive synthesis
 
 Enjoy and find a synthesis technique. 
 You can use any of the effects we discussed. 
@@ -1661,7 +1666,7 @@ A = g^{1/3}
 
 as a simple function to adjust amplitude based on desired perceived loudness.
 
-## Lesson 05 - Modulation
+## Lesson 05: Modulation
 
 ## first half modulation
 
@@ -1670,7 +1675,7 @@ modulation effects: Flanger, Chorus
 
 * chorus of different types: multiple voices (ensemble effect) vs New Order sound 
 
-We have already seen modulation with Whah-What and Tremolo.
+We have already seen modulation with Whah-Whah and Tremolo.
 
 modulation means controling/chaning one parameter with an LFO (low frequency oscillator, 1Hz - 10Hz). Meaning 
 
@@ -1678,7 +1683,6 @@ modulation means controling/chaning one parameter with an LFO (low frequency osc
 * A wah-wah effect is created by modulating filter cutoff using an LFO for the cutoff parameter.
 * A flanger or chorus (mod delay) effects are created by modulating time (affects pitch and frequency) using an LFO for the delay time parameter.
 	* LFO-modulated delay repeatedly speeds up and slows down the signal, in turn modulating frequency and pitch, producing a vibrato effect.
-
 
 > we multiply and add with delay to keep the range to positive [0, 2*delay] (instead of [-delay, delay] range)
 
@@ -1941,7 +1945,7 @@ The manual by Edelweiss: a psynical way of how to make hit songs
 
 TODO idea: Use AI to optimise parameters of many models. And then start producing plugins.
 
-## Lesson 04 - Delay
+## Lesson 04: Delay
 
 In this lesson we are going to look at delay:
 * We will look simple echo effects and then feedback.
@@ -1955,11 +1959,11 @@ In this lesson we are going to look at delay:
 * The implementation happens using a ring buffer (essentially shifting the start of the list instead of all the elements).
 
 * The z-1 block diagram is a one-sample delay.
-* The time is usually a variable of the dealy system (how long ahead to reproduce the past sound).
-
+* The time is usually a variable of the delay system (how long ahead to reproduce the past sound).
 
 Let's implement an Echo effect. In it's simplest form it is adding a quieter dealyed signal (attenuated).
-The echo practially gives a good sense of space (like listening music into an open area). That is because in real life, we here many echoes of every sound, because it bounces on surfaces around the room.
+
+> The echo practially gives a sense of space (like listening music into an open area). That is because in real life, we here many echoes of every sound, because it bounces on surfaces around the room.
 
 ```cpp
 #include <klang.h>
@@ -1983,14 +1987,13 @@ struct MyEcho : Effect {
 		param gain = controls[1];
 
 		// every time we add something to the delay, the head moves	
-		in >> delay;  // send input to the delay
+		in >> delay;  // send input to the delay (save the clean signal) !!
 		in + gain * delay(time * fs) >> out; // echo is the delayed signal but quitter
 	}
 };
 ```
 
-We now want feedback, that why save the output to the saved samples (in delay array/buffer).
-This way, we save all of the previous echoes. 
+We now create a feedback loop, that mixes the input signal with the delayed output signal. This way it not only echoes the input, but also previous echoes, thus creating infinite echoes. 
 
 ```cpp
 #include <klang.h>
@@ -2011,7 +2014,7 @@ struct MyEcho : Effect {
 		param gain = controls[1];
 				
 		in + gain * delay(time * fs) >> out; // echo is the delayed signal but quitter
-		out >> delay; // feeed the output to the delay
+		out >> delay; // send output to the delay (save the mixed signal) !!
 	}
 };
 ```
@@ -2066,6 +2069,9 @@ struct MyPingPong : Stereo::Effect {
 		in.r + delay.r(time.r * fs) * gain.r >> out.r;
 	}
 ```
+
+A ping pong effect is a stereo extension of feedback echo, in which left and right delays are cross-fed (left echoes right, echoes right, echoes left).
+
 ```cpp
 #include <klang.h>
 using namespace klang::optimised;
@@ -2118,10 +2124,10 @@ For the following effect, we make the delay pattern of multiple feedforward sign
 #include <klang.h>
 using namespace klang::optimised;
 
-struct Patterns : Effect {
+struct DelayTaps : Effect {
 	Delay<192000> delay;
 
-	Patterns() {
+	DelayTaps() {
 		controls = { 
 			{ "Delay 1", Dial("Time"), Dial("Gain") },
 			{ "Delay 2", Dial("Time"), Dial("Gain") },
@@ -2169,11 +2175,13 @@ struct MyEchoWithFilter : Effect {
 	void process() {
 		param time = controls[0];
 		param gain = controls[1];
-				
+		
+        // TODO: use filter
 		in + gain * delay(time * fs) >> out; // echo is the delayed signal but quitter
-		out >> delay; // feeed the output to the delay
+		out >> delay; // feed the output to the delay
 	}
 };
+
 ```
 
 It's important to not do heavy/costly operation in process function. 
@@ -2198,8 +2206,6 @@ How are we going to implement it?
 
 
 * the best amplifier (you want total harmonic distortion "how much does it distort sounds", the less the better)
-* the synthesizers
-
 
 We use random numbers for parameters (prime numbers that don't even have common factors).
 
@@ -2209,7 +2215,6 @@ Resonance vs Ringing. (avoid ringing)
 
 * Feeback delay networks (FDNs). Network of feedback delays.
 It can be a very good reverb.
-
 
 
 
@@ -2227,6 +2232,7 @@ Another approach of making reverb that mimic real spaces is known as convolution
 
 
 There are so many reverb plugins in the market (you can pay as much as 500$ for some). In general, it's not really hard to make reverbs. But what is really hard to choosing good presets. It's difficult to tune the dials is difficult for different setting (e.g. a small room or a cathedral, etc). 
+
 These algorithms were kept secret for long time. 
 An popular design for reverb is called **Schroeder-Moorer**. It uses an all pass filter by cascading a feedback comb-filter with a feedforward comb-filter. A popular open source reverb is called free-verb ([stanford site](https://ccrma.stanford.edu/~jos/pasp/Freeverb.html)) (open source [github](https://github.com/sinshu/freeverb)).
 
@@ -2354,13 +2360,73 @@ If time is really high, we need more taps (for the forward signal)
 
 The reverb is one of the holy grails in DSP design.
 
+Recreate multi-stage reverb from before.
+```cpp
+#include <klang.h>
+using namespace klang::optimised;
+
+using DTG = std::pair<param, param>;  // Delay Time and Gain
+
+struct MyEffect : Effect {
+	Delay<192000> feedforward, feedback;
+	LPF filter;
+
+	// early delay reflections: time (in miliseconds) and gain
+	const DTG early_delays[8] = {{2.078, .609}, {5.154, .262}, {5.947, -.3600}, {7.544, -.470}, {8.878, .290}, {10.422, -.423}, {13.938, .100}, {17.140, .200}};
+	// late delay reflections: time (in seconds) and gain
+	const DTG late_delays[3] = {{0.2, 1.0}, {0.324, 0.6}, {0.777, 0.2}};
+
+	MyEffect() {
+		controls = { "Feedback", Dial("Time", 0, 0.5, 0.4), // in seconds
+		                         Dial("Gain", 0, 0.4, 0.1),
+		                         Dial("Cutoff", 500, 5000, 1500) 
+		};
+	}
+
+	// called once per buffer
+	void prepare() {
+		filter.set(controls[2]);
+	}
+	
+	// multi-stage reverb
+	signal ms_reverb(signal in){
+		signal early_mix = in;
+		signal late_mix = 0;
+		
+		early_mix >> feedforward; // save feedforward delay
+		
+		// create pattern of early reflections
+		for (const auto [time, gain]: early_delays){
+			early_mix += gain * feedforward( time / 1000 * fs);
+		}
+		
+		// feed early reflections into feedback delay to increase density
+		param time_c = controls[0];
+		param gain_c = controls[1];
+		
+		for (const auto [time, gain]: late_delays){
+			late_mix += feedback( time_c*time * fs) * gain_c*gain;
+		}
+		
+		// filter feedback delay and create out signal
+		signal out = early_mix + (late_mix >> filter);
+		out >> feedback; // save feedback delay
+		
+		return out;
+	}
+
+	void process() {
+		ms_reverb(in) >> out;
+	}
+};
+```
 
 ### Questions / Todos / Ideas
 
 * TODO: make a fast way to compute FFTs and convolutional filters (computers can do this now)
 * TODO: use AI for parameter tuning of reverb to create decent plugins that mimic real reverbs
 
-## Lesson 03 - Filters
+## Lesson 03: Filters
 
 General notes:
 * Filters are used to remove frequency content from a signal.
@@ -2697,7 +2763,7 @@ struct WahWah : Effect {
 * RTFM: read the fucking manual
 
 
-## Lesson 02 - Distortion
+## Lesson 02: Distortion
 
 * Distortion describes any process that changes (distorts) the shape of the waveform.
 * The pitch (effectively the frequency and wavelenght) do not change.
@@ -2963,7 +3029,7 @@ In summary:
 Symmetrical transfer functions (odd functions): Produce only odd harmonics.
 Asymmetric transfer functions (even + odd terms): Produce both even and odd harmonics."
 
-## Lesson 01 - DSP Basics
+## Lesson 01: DSP Basics
 
 Sound in a digital form is just a sequence of numbers (that express the amplitutde at a given point in time).
 
@@ -3128,17 +3194,4 @@ Who ([example video](https://youtu.be/qUL0xwEbkJs)). It often creates metallic o
 In the professional community, the industry standard framework for developing plugins is [Juce](https://juce.com/). Juce is used by Traction, maxMSP, FocusRight, etc. Every year during November there is a [ADC (audio developer conference)](https://audio.dev/), and it's the number 1 networking opportunity. In 2025 it takes place in Bristol. 
 
 Why is 44.1kHz (44,100 Hz) the standard sampling frequency? Explanation in [wiki](https://en.wikipedia.org/wiki/44,100_Hz). In brief, the Nyquist–Shannon sampling theorem says the sampling frequency must be greater than twice the maximum frequency one wishes to reproduce. To capture the human hearing range of roughly 20 Hz to 20,000 Hz, the sampling rate had to be greater than 40 kHz. Furthermore, the ideal filter is practically impossible to implement, so in practice a transition band is necessary, where frequencies are partly attenuated (reduced in force). The wider this transition band is, the easier and more economical. The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.
-
-## Lessons overview
-
-* Lesson 01: Intro - DSP Basics
-* Lesson 02: Effects - Distortion
-* Lesson 03: Effects - EQ
-* Lesson 04: Effects - Delay
-* Lesson 05: Effects - Flanger
-* Lesson 06: Synthesis - Additive
-* Lesson 07: Synthesis - Subtractive
-* Lesson 08: Synthesis - AM & FM
-* Lesson 09: Synthesis - Physical Modeling
-* Lesson 10: Outro - Plugin Project
 
